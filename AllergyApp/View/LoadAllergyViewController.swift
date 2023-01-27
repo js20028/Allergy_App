@@ -12,14 +12,16 @@ import RxCocoa
 class LoadAllergyViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    let allergyList = ["알러지1", "알러지2", "알러지3", "알러지4", "알러지5", "알러지6", "알러지1", "알러지2", "알러지3", "알러지4", "알러지5", "알러지6"]
+
+    var disposeBag = DisposeBag()
+    let viewModel = LoadAllergyViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.configureCollectionView()
         self.registerXib()
+        self.bindUI()
     }
     
     private func registerXib() {
@@ -28,23 +30,18 @@ class LoadAllergyViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        self.collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-    }
-}
-
-extension LoadAllergyViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allergyList.count
+        collectionView.rx.contentInset.onNext(UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+        collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "LoadAllergyCell", for: indexPath) as? LoadAllergyCollectionViewCell else { return UICollectionViewCell() }
-        cell.allergyName.text = self.allergyList[indexPath.row]
-        
-        return cell
+    private func bindUI() {
+    
+        viewModel.loadAllergyList
+            .bind(to: self.collectionView.rx.items(cellIdentifier: "LoadAllergyCell", cellType: LoadAllergyCollectionViewCell.self)) { index, text, cell in
+                cell.allergyName.text = text
+            }
+            .disposed(by: disposeBag)
     }
 }
 
