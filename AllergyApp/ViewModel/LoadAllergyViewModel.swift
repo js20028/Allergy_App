@@ -13,8 +13,12 @@ class LoadAllergyViewModel {
 
     var disposeBag = DisposeBag()
     
-    let loadAllergyList: BehaviorSubject<[String]>
-    let loadList = ["알러지1", "알러지2", "알러지3", "알러지4", "알러지5", "알러지6"]
+    let loadAllergyList: BehaviorSubject<[Allergy]>
+    let loadList = [
+        Allergy(productName: "소고기", productIngredient: "단백질, 지방", allergyResult: "단백질"),
+        Allergy(productName: "사과", productIngredient: "탄수화물, 비타민", allergyResult: "없음"),
+        Allergy(productName: "치즈", productIngredient: "우유, 지방", allergyResult: "우유")
+    ]
     
     init() {
         

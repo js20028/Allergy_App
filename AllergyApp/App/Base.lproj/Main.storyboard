@@ -134,7 +134,7 @@
         <!--Load Allergy Detail View Controller-->
         <scene sceneID="MmR-dR-Rm0">
             <objects>
-                <viewController id="TUD-pQ-XcO" customClass="LoadAllergyDetailViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadAllergyDetailViewController" id="TUD-pQ-XcO" customClass="LoadAllergyDetailViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3h-oI-LV9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWI-4O-Zw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="-35"/>
+            <point key="canvasLocation" x="1544" y="-35"/>
         </scene>
     </scenes>
     <resources>

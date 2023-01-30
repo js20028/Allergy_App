@@ -8,5 +8,8 @@
 import Foundation
 
 struct Allergy {
-    
+//    let date: Date
+    let productName: String
+    let productIngredient: String
+    let allergyResult: String
 }

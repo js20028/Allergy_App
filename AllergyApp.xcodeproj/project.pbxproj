@@ -14,6 +14,7 @@
 		0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */; };
 		0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */; };
 		0F83758B2982783300ACE1A5 /* LoadAllergyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */; };
+		0F8375B42987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */; };
 		0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8512B42843B7F800A059A1 /* AppDelegate.swift */; };
 		0F8512B72843B7F800A059A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8512B62843B7F800A059A1 /* SceneDelegate.swift */; };
 		0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8512B82843B7F800A059A1 /* MainViewController.swift */; };
@@ -31,6 +32,7 @@
 		0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyViewModel.swift; sourceTree = "<group>"; };
 		0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadAllergyCollectionViewCell.xib; sourceTree = "<group>"; };
+		0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyDetailViewModel.swift; sourceTree = "<group>"; };
 		0F8512B12843B7F800A059A1 /* AllergyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8512B42843B7F800A059A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F8512B62843B7F800A059A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				0F8375842981074200ACE1A5 /* MainViewModel.swift */,
 				0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */,
+				0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
 				0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */,
+				0F8375B42987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift in Sources */,
 				0F837581297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift in Sources */,
 				0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */,
 				0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */,

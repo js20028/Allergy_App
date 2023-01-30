@@ -36,17 +36,26 @@ class LoadAllergyViewController: UIViewController {
     }
     
     private func bindUI() {
-    
         viewModel.loadAllergyList
-            .bind(to: self.collectionView.rx.items(cellIdentifier: "LoadAllergyCell", cellType: LoadAllergyCollectionViewCell.self)) { index, text, cell in
-                cell.allergyName.text = text
+            .bind(to: self.collectionView.rx.items(cellIdentifier: "LoadAllergyCell", cellType: LoadAllergyCollectionViewCell.self)) { index, item, cell in
+                cell.allergyName.text = item.productName
             }
             .disposed(by: disposeBag)
+        
+        collectionView.rx.itemSelected
+            .subscribe(onNext: { [weak self] index in
+                guard let loadDetailVC = self?.storyboard?.instantiateViewController(withIdentifier: "LoadAllergyDetailViewController") as? LoadAllergyDetailViewController else { return }
+                
+                self?.navigationController?.pushViewController(loadDetailVC, animated: true)
+                
+            })
+            .disposed(by: disposeBag)
+        
     }
 }
 
 extension LoadAllergyViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 150)
+        return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 100)
     }
 }
