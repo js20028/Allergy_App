@@ -13,10 +13,15 @@ class LoadAllergyDetailViewModel {
     var disposeBag = DisposeBag()
     
     let allergyDetail: PublishSubject<AllergyResult>
+    let productNameText: PublishSubject<String>
+    let productIngredientText: PublishSubject<String>
+    let allergyResultText: PublishSubject<String>
     
     init(_ selectedAllergy: AllergyResult) {
         allergyDetail = PublishSubject()
-        
+        productNameText = PublishSubject()
+        productIngredientText = PublishSubject()
+        allergyResultText = PublishSubject()
         
     }
     
