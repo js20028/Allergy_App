@@ -14,7 +14,7 @@ class LoadAllergyDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("123")
+        print("12345123")
         
     }
 }
