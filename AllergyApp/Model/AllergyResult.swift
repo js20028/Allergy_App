@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Allergy {
+struct AllergyResult {
 //    let date: Date
     let productName: String
     let productIngredient: String

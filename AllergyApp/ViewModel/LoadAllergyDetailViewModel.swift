@@ -12,9 +12,9 @@ import RxCocoa
 class LoadAllergyDetailViewModel {
     var disposeBag = DisposeBag()
     
-    let allergyDetail: PublishSubject<Allergy>
+    let allergyDetail: PublishSubject<AllergyResult>
     
-    init(_ selectedAllergy: Allergy) {
+    init(_ selectedAllergy: AllergyResult) {
         allergyDetail = PublishSubject()
         
         
