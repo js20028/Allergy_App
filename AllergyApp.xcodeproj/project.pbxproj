@@ -58,6 +58,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F01F3B42988FFC20053A0C5 /* AllergyResultView */ = {
+			isa = PBXGroup;
+			children = (
+				0F8512B82843B7F800A059A1 /* MainViewController.swift */,
+				0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */,
+				0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */,
+				0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */,
+				0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */,
+			);
+			path = AllergyResultView;
+			sourceTree = "<group>";
+		};
+		0F01F3B7298900450053A0C5 /* AllergyResultViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F8375842981074200ACE1A5 /* MainViewModel.swift */,
+				0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */,
+				0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */,
+			);
+			path = AllergyResultViewModel;
+			sourceTree = "<group>";
+		};
 		0F83757A297FD9FC00ACE1A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +91,7 @@
 		0F83757B297FDA0200ACE1A5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0F8375842981074200ACE1A5 /* MainViewModel.swift */,
-				0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */,
-				0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */,
+				0F01F3B7298900450053A0C5 /* AllergyResultViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -79,11 +99,7 @@
 		0F83757C297FDA1700ACE1A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F8512B82843B7F800A059A1 /* MainViewController.swift */,
-				0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */,
-				0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */,
-				0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */,
-				0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */,
+				0F01F3B42988FFC20053A0C5 /* AllergyResultView */,
 			);
 			path = View;
 			sourceTree = "<group>";
