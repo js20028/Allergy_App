@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+import RxSwift
+
+class ShowAllergyTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var allergyTitleLabel: UILabel!
+    @IBOutlet weak var checkAllergyImageView: UIImageView!
+    
+    
+}
