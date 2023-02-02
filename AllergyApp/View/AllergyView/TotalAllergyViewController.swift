@@ -25,7 +25,7 @@ class TotalAllergyViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         self.totalAllergyViewModel = TotalAllergyViewModel()
-        super.init(nibName: nil, bundle: nil)
+        super.init(coder: coder)
     }
     
     override func viewDidLoad() {

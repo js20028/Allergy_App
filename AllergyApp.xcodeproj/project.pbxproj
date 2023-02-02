@@ -26,6 +26,7 @@
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
 		93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */; };
 		93CEC022298A6E330021BD4F /* ShowAllergyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEC021298A6E330021BD4F /* ShowAllergyTableViewCell.swift */; };
+		93CEC026298BA85F0021BD4F /* AllergyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEC025298BA85F0021BD4F /* AllergyModel.swift */; };
 		93FBFBF12989605600337B86 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF02989605600337B86 /* Allergy.swift */; };
 		93FBFBF52989612B00337B86 /* MyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */; };
 		93FBFBF72989618900337B86 /* MyAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */; };
@@ -56,6 +57,7 @@
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
 		93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllergyTableViewCell.xib; sourceTree = "<group>"; };
 		93CEC021298A6E330021BD4F /* ShowAllergyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllergyTableViewCell.swift; sourceTree = "<group>"; };
+		93CEC025298BA85F0021BD4F /* AllergyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyModel.swift; sourceTree = "<group>"; };
 		93FBFBF02989605600337B86 /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
 		93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAllergyViewController.swift; sourceTree = "<group>"; };
 		93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAllergyViewModel.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		93FBFBF3298960EA00337B86 /* AllergyViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				93CEC025298BA85F0021BD4F /* AllergyModel.swift */,
 				93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */,
 				93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */,
 			);
@@ -332,6 +335,7 @@
 				0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */,
 				0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */,
 				93FBFBF52989612B00337B86 /* MyAllergyViewController.swift in Sources */,
+				93CEC026298BA85F0021BD4F /* AllergyModel.swift in Sources */,
 				93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */,
 				93FBFBF72989618900337B86 /* MyAllergyViewModel.swift in Sources */,
 				93CEC022298A6E330021BD4F /* ShowAllergyTableViewCell.swift in Sources */,
