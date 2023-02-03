@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TotalAllergyViewController: UIViewController {
+class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var totalAllergyTableView: UITableView!
     
@@ -31,19 +31,34 @@ class TotalAllergyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        totalAllergyViewModel.observerAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (_, model, cell) in
+        // tableview delegate
+        totalAllergyTableView.rx.setDelegate(self)
+                    .disposed(by: disposeBag)
+        
+        
+        totalAllergyViewModel.observerAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
             
-//            cell.allergyTitleLabel.text =
+            cell.allergyTitleLabel.text = model.allergyName
+            cell.checkAllergyImageView.isHidden = model.myAllergy
 
         }
         .disposed(by: disposeBag)
         
+        
+        
         // 4. Cell selection을 처리하는 delegate 정의
         totalAllergyTableView.rx.itemSelected
-            .subscribe(onNext: { [weak self] indexPath in
-                self?.totalAllergyTableView.deselectRow(at: indexPath, animated: true)
+            .subscribe(onNext: { indexPath in
+                
+                self.totalAllergyTableView.deselectRow(at: indexPath, animated: false) // cell선택 해제
+                let cell = self.totalAllergyTableView.cellForRow(at: indexPath) as! ShowAllergyTableViewCell
+                cell.selectionStyle = .none // 회색으로 바뀌는 cell 선택 스타일 none으로 변경
+                cell.checkAllergyImageView.isHidden = !cell.checkAllergyImageView.isHidden // 선택시 체크 이미지 isHiddden속성 변경
+
             })
             .disposed(by: disposeBag)
+        
+
         
     }
     

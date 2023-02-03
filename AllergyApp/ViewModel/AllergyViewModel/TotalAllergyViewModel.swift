@@ -13,9 +13,9 @@ import RxCocoa
 class TotalAllergyViewModel {
     
     var allergyList: [Allergy] = [
-        Allergy(myAllergy: "myallergy1", allergyName: "allergy1"),
-        Allergy(myAllergy: "myallergy2", allergyName: "allergy2"),
-        Allergy(myAllergy: "myallergy3", allergyName: "allergy3")
+        Allergy(allergyName: "allergy1", myAllergy: true),
+        Allergy(allergyName: "allergy2", myAllergy: false),
+        Allergy(allergyName: "allergy3", myAllergy: true)
     ]
     
     var observerAllergy = BehaviorSubject<[Allergy]>(value: [])
