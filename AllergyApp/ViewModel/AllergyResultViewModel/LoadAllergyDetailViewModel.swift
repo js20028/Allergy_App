@@ -13,15 +13,24 @@ class LoadAllergyDetailViewModel {
     var disposeBag = DisposeBag()
     
     let allergyDetail: PublishSubject<AllergyResult>
-    let productNameText: PublishSubject<String>
-    let productIngredientText: PublishSubject<String>
-    let allergyResultText: PublishSubject<String>
+    
+    let createDateText: BehaviorSubject<String>
+    let productNameText: BehaviorSubject<String>
+    let productIngredientText: BehaviorSubject<String>
+    let allergyResultText: BehaviorSubject<String>
+    
+    let deleteButtonTapped: PublishSubject<Void>
     
     init(_ selectedAllergy: AllergyResult) {
+        
         allergyDetail = PublishSubject()
-        productNameText = PublishSubject()
-        productIngredientText = PublishSubject()
-        allergyResultText = PublishSubject()
+        
+        createDateText = BehaviorSubject(value: selectedAllergy.dateToString())
+        productNameText = BehaviorSubject(value: selectedAllergy.productName)
+        productIngredientText = BehaviorSubject(value: selectedAllergy.productIngredient)
+        allergyResultText = BehaviorSubject(value: selectedAllergy.allergyResult)
+        
+        deleteButtonTapped = PublishSubject()
         
     }
     
