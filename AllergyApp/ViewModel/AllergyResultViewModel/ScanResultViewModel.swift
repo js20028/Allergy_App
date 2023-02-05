@@ -11,5 +11,22 @@ import RxCocoa
 
 class ScanResultViewModel {
     
+    var disposeBag = DisposeBag()
+    
+    let productNameText: BehaviorSubject<String>
+    let productIngredientText: BehaviorSubject<String>
+    let allergyResultText: BehaviorSubject<String>
+    
+    let saveButtonTapped: PublishSubject<Void>
+    
+    init() {
+        productNameText = BehaviorSubject(value: "")
+        productIngredientText = BehaviorSubject(value: "")
+        allergyResultText = BehaviorSubject(value: "")
+        
+        saveButtonTapped = PublishSubject()
+    }
+    
+    
 }
 

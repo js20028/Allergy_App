@@ -37,6 +37,23 @@ class ScanResultViewController: UIViewController {
     }
     
     private func bindUI() {
+        viewModel.productNameText
+            .bind(to: self.productNameLabel.rx.text)
+            .disposed(by: disposeBag)
         
+        viewModel.productIngredientText
+            .bind(to: self.productIngredientTextView.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.allergyResultText
+            .bind(to: self.allergyResultTextView.rx.text)
+            .disposed(by: disposeBag)
+        
+        self.scanResultSaveButton.rx.tap
+            .do(onNext: {
+                self.navigationController?.popViewController(animated: true)
+            })
+            .bind(to: viewModel.saveButtonTapped)
+            .disposed(by: disposeBag)
     }
 }
