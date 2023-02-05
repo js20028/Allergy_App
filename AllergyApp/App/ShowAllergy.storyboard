@@ -35,7 +35,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q52-cS-GZp">
                                         <rect key="frame" x="256.66666666666669" y="0.0" width="108.33333333333331" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="등록하기"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="삭제하기"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -111,6 +111,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="mjH-0y-dwH"/>
                     <connections>
+                        <outlet property="registerMyAllergyButton" destination="1Qp-Ab-acf" id="L0G-kV-82K"/>
                         <outlet property="totalAllergyTableView" destination="1Qp-Ab-acf" id="cZV-R1-A5f"/>
                     </connections>
                 </viewController>

@@ -7,40 +7,33 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class AllergyModel {
     
-    // 각각 totalAllergy, myAllergy값을 저장하는 객체
-    var totalAllergy: [Allergy] = []
-    var myAllergy: [Allergy] = []
-    
-    // 각각 totalAllergy, myAllergy값을 관찰하는 객체
-    private let totalAllergySubject = BehaviorSubject<[Allergy]>(value: [])
-    private let myAllergySubject = BehaviorSubject<[Allergy]>(value: [])
-    
-    
-    // init에서 자동으로 coredata에 저장된 allergy값 불러오기
-    init() {
-        self.fetchAlergy()
-    }
-    
-    // totalAllergy, myallergy를 update해주는 메서드
-    func updateTotalAllergy(allergies: [Allergy]) {
-        totalAllergy = allergies
-        totalAllergySubject.onNext(allergies)
-        
-        myAllergy = allergies.filter({$0.myAllergy == true})
-        myAllergySubject.onNext(myAllergy)
-    }
-    
-    // core data에서 저장된 allergy를 불러오는 메서드
-    func fetchAlergy() {
-        print("coredata fetch Allergy")
-    }
-    
-    // core data에 allergy 저장하는 메서드
-    func loadAllergy() {
-        print("coredata load Allergy")
-    }
+    let testAllergy: [Allergy] = [
+        Allergy(allergyName: "allergy1", myAllergy: true),
+        Allergy(allergyName: "allergy2", myAllergy: true),
+        Allergy(allergyName: "allergy3", myAllergy: false),
+        Allergy(allergyName: "allergy4", myAllergy: true),
+        Allergy(allergyName: "allergy5", myAllergy: false)
+    ]
 
+    // value에는 coredata에서 받아온 값을 넣어줌 (일단은 임시로 testAllergy를 넣음)
+    lazy var totalAllergy = BehaviorRelay<[Allergy]>(value: testAllergy)
+    let myAllergy = BehaviorRelay<[Allergy]>(value: [])
+    
+    let disposeBag = DisposeBag()
+    
+    init() {
+        totalAllergy.bind(onNext: { allergies in
+            print(self.totalAllergy.value,"전체 알러지는?")
+            self.myAllergy.accept(allergies.filter{ $0.myAllergy == true })
+//            print(self.myAllergy.value, "마이 알러지는?")
+        }).disposed(by: disposeBag)
+        
+        myAllergy.bind(onNext: { myAllergies in
+            print(myAllergies,"마이 알러지?")
+        }).disposed(by: disposeBag)
+    }
 }
