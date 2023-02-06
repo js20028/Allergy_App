@@ -14,9 +14,23 @@ class LoadAllergyDetailViewModel {
     
     let allergyDetail: PublishSubject<AllergyResult>
     
+    let createDateText: BehaviorSubject<String>
+    let productNameText: BehaviorSubject<String>
+    let productIngredientText: BehaviorSubject<String>
+    let allergyResultText: BehaviorSubject<String>
+    
+    let deleteButtonTapped: PublishSubject<Void>
+    
     init(_ selectedAllergy: AllergyResult) {
+        
         allergyDetail = PublishSubject()
         
+        createDateText = BehaviorSubject(value: selectedAllergy.dateToString())
+        productNameText = BehaviorSubject(value: selectedAllergy.productName)
+        productIngredientText = BehaviorSubject(value: selectedAllergy.productIngredient)
+        allergyResultText = BehaviorSubject(value: selectedAllergy.compareResult)
+        
+        deleteButtonTapped = PublishSubject()
         
     }
     

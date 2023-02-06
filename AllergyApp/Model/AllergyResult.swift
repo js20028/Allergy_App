@@ -8,12 +8,15 @@
 import Foundation
 
 struct AllergyResult {
-//    let date: Date
+    let date: Date
     let productName: String
     let productIngredient: String
-    let allergyResult: String
+    let compareResult: String
     
-    func dateToString() {
-        
+    func dateToString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy년 MM월 dd일(EEEEE)"
+        formatter.locale = Locale(identifier: "ko_KR")
+        return formatter.string(from: date)
     }
 }

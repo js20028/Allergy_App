@@ -14,7 +14,17 @@ class LoadAllergyViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var disposeBag = DisposeBag()
-    let viewModel = LoadAllergyViewModel()
+    let viewModel: LoadAllergyViewModel
+    
+    init(viewModel: LoadAllergyViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        viewModel = LoadAllergyViewModel()
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +52,22 @@ class LoadAllergyViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        collectionView.rx.itemSelected
-            .subscribe(onNext: { [weak self] index in
+        
+        Observable.zip(collectionView.rx.modelSelected(AllergyResult.self), collectionView.rx.itemSelected)
+            .subscribe(onNext: { [weak self] (item, indexPath) in
                 guard let loadDetailVC = self?.storyboard?.instantiateViewController(withIdentifier: "LoadAllergyDetailViewController") as? LoadAllergyDetailViewController else { return }
+                let viewModel = LoadAllergyDetailViewModel(item)
+                loadDetailVC.viewModel = viewModel
+                
+                viewModel.deleteButtonTapped
+                    .subscribe(onNext: { [weak self] in
+                        self?.viewModel.deleteIndex.onNext(indexPath)
+                    })
+                    .disposed(by: self!.disposeBag)
                 
                 self?.navigationController?.pushViewController(loadDetailVC, animated: true)
-                
             })
             .disposed(by: disposeBag)
-        
     }
 }
 

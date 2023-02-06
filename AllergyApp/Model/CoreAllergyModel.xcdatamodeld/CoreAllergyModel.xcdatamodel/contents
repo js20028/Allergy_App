@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreAllergy" representedClassName="CoreAllergy" syncable="YES" codeGenerationType="class">
+        <attribute name="allergyName" optional="YES" attributeType="String"/>
+        <attribute name="myAllergy" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="CoreAllergyResult" representedClassName="CoreAllergyResult" syncable="YES" codeGenerationType="class">
+        <attribute name="compareResult" optional="YES" attributeType="String"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="productIngredient" optional="YES" attributeType="String"/>
+        <attribute name="productName" optional="YES" attributeType="String"/>
+    </entity>
+</model>

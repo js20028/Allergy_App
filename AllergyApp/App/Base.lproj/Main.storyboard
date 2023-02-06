@@ -62,6 +62,9 @@
                                 <rect key="frame" x="20" y="667.33333333333337" width="353" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="바코드 스캔하기"/>
+                                <connections>
+                                    <segue destination="2Yf-Kw-xyg" kind="show" id="pe0-sq-NFE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uat-vk-tg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="-35"/>
+            <point key="canvasLocation" x="813" y="-35"/>
         </scene>
         <!--Load Allergy Detail View Controller-->
         <scene sceneID="MmR-dR-Rm0">
@@ -154,7 +157,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지성분" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7jd-1i-k1v">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제품 성분" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7jd-1i-k1v">
                                         <rect key="frame" x="0.0" y="140.66666666666666" width="333" height="418.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -187,10 +190,82 @@
                             <constraint firstItem="EGT-Ef-cRd" firstAttribute="trailing" secondItem="TO4-A6-8er" secondAttribute="trailing" constant="30" id="rUA-ZP-O7C"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bLX-7C-L6E">
+                        <barButtonItem key="rightBarButtonItem" title="삭제" id="4UM-yS-Ck6">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allergyResultTextView" destination="q0v-Ux-X0i" id="SJS-cD-03b"/>
+                        <outlet property="createDateLabel" destination="1TG-8y-96N" id="GCC-cm-j1s"/>
+                        <outlet property="deleteButton" destination="4UM-yS-Ck6" id="XTu-nj-Bfg"/>
+                        <outlet property="productIngredientTextView" destination="7jd-1i-k1v" id="Arf-nM-TZb"/>
+                        <outlet property="productNameLabel" destination="UtB-rb-13p" id="mQw-9f-2qY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWI-4O-Zw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1544" y="-35"/>
+        </scene>
+        <!--바코드 스캔 결과-->
+        <scene sceneID="MN8-fZ-XHO">
+            <objects>
+                <viewController id="2Yf-Kw-xyg" customClass="ScanResultViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rgh-pO-7hU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Gjk-IV-sjh">
+                                <rect key="frame" x="30" y="123" width="333" height="665"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSh-lh-Va0">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제품 성분" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-QJ-GGa">
+                                        <rect key="frame" x="0.0" y="58.333333333333343" width="333" height="418.66666666666663"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지 비교 결과" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-0L-vwv">
+                                        <rect key="frame" x="0.0" y="515" width="333" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="s46-ME-eih"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fk5-KK-XF4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gjk-IV-sjh" firstAttribute="leading" secondItem="fk5-KK-XF4" secondAttribute="leading" constant="30" id="8WQ-53-TV2"/>
+                            <constraint firstItem="fk5-KK-XF4" firstAttribute="trailing" secondItem="Gjk-IV-sjh" secondAttribute="trailing" constant="30" id="Pc4-iI-Y2d"/>
+                            <constraint firstItem="fk5-KK-XF4" firstAttribute="bottom" secondItem="Gjk-IV-sjh" secondAttribute="bottom" constant="30" id="cwQ-EL-8L6"/>
+                            <constraint firstItem="Gjk-IV-sjh" firstAttribute="top" secondItem="fk5-KK-XF4" secondAttribute="top" constant="20" id="nd8-eA-GaJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="바코드 스캔 결과" id="d9t-S9-Jm1">
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="8ea-LE-N2X"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allergyResultTextView" destination="Quc-0L-vwv" id="FKF-Od-11k"/>
+                        <outlet property="productIngredientTextView" destination="Xml-QJ-GGa" id="TzM-v5-CqF"/>
+                        <outlet property="productNameLabel" destination="jSh-lh-Va0" id="HbN-1j-v4x"/>
+                        <outlet property="scanResultSaveButton" destination="8ea-LE-N2X" id="4Vo-aM-cIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2k-Vv-9GI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="685"/>
         </scene>
     </scenes>
     <resources>
@@ -200,6 +275,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
