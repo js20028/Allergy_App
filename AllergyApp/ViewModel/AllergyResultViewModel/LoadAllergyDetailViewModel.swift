@@ -28,7 +28,7 @@ class LoadAllergyDetailViewModel {
         createDateText = BehaviorSubject(value: selectedAllergy.dateToString())
         productNameText = BehaviorSubject(value: selectedAllergy.productName)
         productIngredientText = BehaviorSubject(value: selectedAllergy.productIngredient)
-        allergyResultText = BehaviorSubject(value: selectedAllergy.allergyResult)
+        allergyResultText = BehaviorSubject(value: selectedAllergy.compareResult)
         
         deleteButtonTapped = PublishSubject()
         
