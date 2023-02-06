@@ -8,6 +8,7 @@
 import Foundation
 
 struct Allergy {
-    var myAllergy: String
     var allergyName: String
+    var myAllergy: Bool
+    
 }
