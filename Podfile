@@ -8,5 +8,6 @@ target 'AllergyApp' do
   # Pods for AllergyApp
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'MaterialComponents/BottomSheet'
 
 end
