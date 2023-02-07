@@ -13,31 +13,43 @@ import RxCocoa
 class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var totalAllergyTableView: UITableView!
-    @IBOutlet weak var registerMyAllergyButton: UITableView!
+    @IBOutlet weak var registerMyAllergyButton: UIButton!
+    @IBOutlet weak var dismissButton: UIButton!
     
-    let totalAllergyViewModel: TotalAllergyViewModel
+    var totalAllergyViewModel: TotalAllergyViewModel?
     
     let disposeBag = DisposeBag()
     
-    
-    init(totalAllergyViewModel: TotalAllergyViewModel) {
-        self.totalAllergyViewModel = totalAllergyViewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        self.totalAllergyViewModel = TotalAllergyViewModel(allergyModel: AllergyModel())
-        super.init(coder: coder)
+//    init(totalAllergyViewModel: TotalAllergyViewModel) {
+//        self.totalAllergyViewModel = totalAllergyViewModel
+//        print(totalAllergyViewModel, "값 들어온듯?")
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        self.totalAllergyViewModel = TotalAllergyViewModel(allergyModel: AllergyModel())
+//        super.init(coder: coder)
+//    }
+//
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+//        totalAllergyTableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         let tableViewNibName = UINib(nibName: "ShowAllergyTableViewCell", bundle: nil)
+        
         totalAllergyTableView.register(tableViewNibName, forCellReuseIdentifier: "ShowAllergyTableViewCell")
+
         
         // tableview bind
-        totalAllergyViewModel.totalAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
+        totalAllergyViewModel?.totalAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
+            
             cell.allergyTitleLabel.text = model.allergyName
             cell.checkImageView.isHidden = !model.myAllergy
         }
@@ -53,19 +65,27 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
             cell.checkImageView.isHidden = !cell.checkImageView.isHidden // 선택시 체크 이미지 isHiddden속성 변경
             
 
-            self.totalAllergyViewModel.tapAllergyCell.onNext((indexPath.row, !cell.checkImageView.isHidden))
+            self.totalAllergyViewModel?.tapAllergyCell.onNext((indexPath.row, !cell.checkImageView.isHidden))
             
-            print("클릭된 cell의 index: \(indexPath.row), \(!cell.checkImageView.isHidden)")
+            print("totalAllergy에서 클릭된 cell의 index: \(indexPath.row), \(!cell.checkImageView.isHidden)")
         }).disposed(by: disposeBag)
         
         
         
         // tap register button
         registerMyAllergyButton.rx.tap.bind(onNext: {
-            self.totalAllergyViewModel.totalAllergy.accept(self.totalAllergyViewModel.checkAllergy.value)
+            self.totalAllergyViewModel?.tapRegister.onNext(self.totalAllergyViewModel?.checkAllergy.value ?? [])
+            self.dismiss(animated: true)
+            
         }).disposed(by: disposeBag)
         
-            
+        
+        // 뒤로가기
+        dismissButton.rx.tap.bind(onNext: {
+            self.dismiss(animated: true)
+        }).disposed(by: disposeBag)
 
     }
+    
 }
+
