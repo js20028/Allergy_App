@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import MaterialComponents.MaterialBottomSheet
 
-class MyAllergyViewController: UIViewController {
+class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var deleteMyAllergyButton: UIButton!
     @IBOutlet weak var addMyAllergyButton: UIButton!
@@ -48,18 +48,19 @@ class MyAllergyViewController: UIViewController {
         .disposed(by: disposeBag)
         
         
+        
         // cell 클릭
         myAllergyTableView.rx.itemSelected.bind(onNext: { indexPath in
             self.myAllergyTableView.deselectRow(at: indexPath, animated: false)
             
             let cell = self.myAllergyTableView.cellForRow(at: indexPath) as! ShowAllergyTableViewCell
             cell.selectionStyle = .none // 회색으로 바뀌는 cell 선택 스타일 none으로 변경
-            cell.checkImageView.isHidden = !cell.checkImageView.isHidden // 선택시 체크 이미지 isHiddden속성 변경
+            cell.checkAllergyImageView.isHidden = !cell.checkAllergyImageView.isHidden // 선택시 체크 이미지 isHiddden속성 변경
             
 
-            self.totalAllergyViewModel.tapMyAllergyCell.onNext((indexPath.row, cell.checkImageView.isHidden))
+            self.totalAllergyViewModel.tapMyAllergyCell.onNext((indexPath.row, cell.checkAllergyImageView.isHidden))
             
-            print("my Allergy에서 클릭된 cell의 index: \(indexPath.row), \(!cell.checkImageView.isHidden)")
+            print("my Allergy에서 클릭된 cell의 index: \(indexPath.row), \(!cell.checkAllergyImageView.isHidden)")
         }).disposed(by: disposeBag)
         
         
@@ -88,6 +89,27 @@ class MyAllergyViewController: UIViewController {
         deleteMyAllergyButton.rx.tap.bind(onNext: {
             self.totalAllergyViewModel.tapdelete.onNext(self.totalAllergyViewModel.checkMyAllergy.value)
             print("삭제")
+        }).disposed(by: disposeBag)
+        
+        
+        
+        
+        // 직접 추가하기 버튼 클릭
+        directAddMyAllergyButton.rx.tap.bind(onNext: {
+            
+            guard let directAddMyAllergyViewController = self.storyboard?.instantiateViewController(withIdentifier: "DirectAddMyAllergyViewController") as? DirectAddMyAllergyViewController else { return }
+
+            directAddMyAllergyViewController.totalAllergyViewModel = self.totalAllergyViewModel
+            
+            directAddMyAllergyViewController.view.clipsToBounds = false
+            directAddMyAllergyViewController.view.layer.cornerRadius = 20
+            
+            let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: directAddMyAllergyViewController)
+//            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = self.view.bounds.size.height * 0.2
+            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = directAddMyAllergyViewController.contentViewheight ?? 1
+            print(directAddMyAllergyViewController.contentViewheight)
+            self.present(bottomSheet, animated: true)
+            
         }).disposed(by: disposeBag)
     }
 }

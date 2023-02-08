@@ -51,12 +51,12 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
             
             let cell = self.totalAllergyTableView.cellForRow(at: indexPath) as! ShowAllergyTableViewCell
             cell.selectionStyle = .none // 회색으로 바뀌는 cell 선택 스타일 none으로 변경
-            cell.checkImageView.isHidden = !cell.checkImageView.isHidden // 선택시 체크 이미지 isHiddden속성 변경
+            cell.checkAllergyImageView.isHidden = !cell.checkAllergyImageView.isHidden // 선택시 체크 이미지 isHiddden속성 변경
             
 
-            self.totalAllergyViewModel?.tapAllergyCell.onNext((indexPath.row, !cell.checkImageView.isHidden))
+            self.totalAllergyViewModel?.tapAllergyCell.onNext((indexPath.row, !cell.checkAllergyImageView.isHidden))
             
-            print("totalAllergy에서 클릭된 cell의 index: \(indexPath.row), \(!cell.checkImageView.isHidden)")
+            print("totalAllergy에서 클릭된 cell의 index: \(indexPath.row), \(!cell.checkAllergyImageView.isHidden)")
             
         }).disposed(by: disposeBag)
         

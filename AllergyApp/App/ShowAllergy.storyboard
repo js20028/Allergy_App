@@ -67,10 +67,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addMyAllergyButton" destination="wbm-dF-zkU" id="eAa-qs-RA6"/>
-                        <outlet property="deleteMyAllergyButton" destination="q52-cS-GZp" id="h41-d7-XwK"/>
-                        <outlet property="directAddMyAllergyButton" destination="dY2-VO-QPi" id="HEJ-gv-SJT"/>
-                        <outlet property="myAllergyTableView" destination="d2X-GF-ioa" id="Mkg-g0-c99"/>
+                        <outlet property="addMyAllergyButton" destination="wbm-dF-zkU" id="cC4-G4-tBg"/>
+                        <outlet property="deleteMyAllergyButton" destination="q52-cS-GZp" id="KvQ-0N-dqW"/>
+                        <outlet property="directAddMyAllergyButton" destination="dY2-VO-QPi" id="NcQ-9f-26U"/>
+                        <outlet property="myAllergyTableView" destination="d2X-GF-ioa" id="dhT-9a-yR7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihv-oL-UVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,7 +80,7 @@
         <!--Total Allergy View Controller-->
         <scene sceneID="UPq-Qw-Upw">
             <objects>
-                <viewController id="3iY-At-Ca6" customClass="TotalAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TotalAllergyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3iY-At-Ca6" customClass="TotalAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1fE-tp-ebo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,9 +118,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dismissButton" destination="Lz8-Pz-DBp" id="F13-eD-Zls"/>
-                        <outlet property="registerMyAllergyButton" destination="XEF-93-7Ac" id="0Tx-Sb-qLU"/>
-                        <outlet property="totalAllergyTableView" destination="eHy-iP-2qJ" id="9Ny-jM-b8g"/>
+                        <outlet property="dismissButton" destination="Lz8-Pz-DBp" id="XSZ-5T-gZx"/>
+                        <outlet property="registerMyAllergyButton" destination="XEF-93-7Ac" id="Rxa-ql-Spv"/>
+                        <outlet property="totalAllergyTableView" destination="eHy-iP-2qJ" id="u1s-yX-BH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4S-5f-9SC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
