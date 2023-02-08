@@ -15,8 +15,8 @@ class MyAllergyViewController: UIViewController {
     
     @IBOutlet weak var deleteMyAllergyButton: UIButton!
     @IBOutlet weak var addMyAllergyButton: UIButton!
-    
     @IBOutlet weak var myAllergyTableView: UITableView!
+    @IBOutlet weak var directAddMyAllergyButton: UIButton!
     
     let totalAllergyViewModel: TotalAllergyViewModel
     
@@ -43,7 +43,7 @@ class MyAllergyViewController: UIViewController {
         totalAllergyViewModel.myAllergy.bind(to: myAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
             
             cell.allergyTitleLabel.text = model.allergyName
-            cell.checkImageView.isHidden = model.myAllergy
+            cell.checkAllergyImageView.isHidden = model.myAllergy
         }
         .disposed(by: disposeBag)
         

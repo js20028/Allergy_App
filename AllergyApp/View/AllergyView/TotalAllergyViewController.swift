@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import MaterialComponents.MaterialBottomSheet
 
 class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     
@@ -20,22 +21,9 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     
     let disposeBag = DisposeBag()
     
-//    init(totalAllergyViewModel: TotalAllergyViewModel) {
-//        self.totalAllergyViewModel = totalAllergyViewModel
-//        print(totalAllergyViewModel, "값 들어온듯?")
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        self.totalAllergyViewModel = TotalAllergyViewModel(allergyModel: AllergyModel())
-//        super.init(coder: coder)
-//    }
-//
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-//        totalAllergyTableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -51,13 +39,14 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         totalAllergyViewModel?.totalAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
             
             cell.allergyTitleLabel.text = model.allergyName
-            cell.checkImageView.isHidden = !model.myAllergy
+            cell.checkAllergyImageView.isHidden = !model.myAllergy
         }
         .disposed(by: disposeBag)
         
         
         // cell 클릭
         totalAllergyTableView.rx.itemSelected.bind(onNext: { indexPath in
+            
             self.totalAllergyTableView.deselectRow(at: indexPath, animated: false)
             
             let cell = self.totalAllergyTableView.cellForRow(at: indexPath) as! ShowAllergyTableViewCell
@@ -68,6 +57,7 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
             self.totalAllergyViewModel?.tapAllergyCell.onNext((indexPath.row, !cell.checkImageView.isHidden))
             
             print("totalAllergy에서 클릭된 cell의 index: \(indexPath.row), \(!cell.checkImageView.isHidden)")
+            
         }).disposed(by: disposeBag)
         
         

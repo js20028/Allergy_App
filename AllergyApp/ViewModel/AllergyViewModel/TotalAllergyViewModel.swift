@@ -12,7 +12,7 @@ import RxCocoa
 
 class TotalAllergyViewModel {
     
-    var testAllergy = [Allergy]()
+    var totalAllergyArray = [Allergy]()
     
     var allergyModel: AllergyModel
     
@@ -29,6 +29,7 @@ class TotalAllergyViewModel {
     
     var tapdelete = PublishSubject<[Allergy]>() // delete button 관리
     
+    var directAddAllergy = PublishSubject<Allergy>()
     
     let disposeBag = DisposeBag()
     
@@ -36,10 +37,10 @@ class TotalAllergyViewModel {
         print("init 실행")
         self.allergyModel = allergyModel
         
-        testAllergy = allergyModel.totalAllergy.value
+        totalAllergyArray = allergyModel.totalAllergy.value
         
         // viewModel에 있는 totalAllergy값을 넣어줌
-        totalAllergy.accept(testAllergy)
+        totalAllergy.accept(totalAllergyArray)
     
         
         
@@ -62,8 +63,8 @@ class TotalAllergyViewModel {
         totalAllergy.bind(onNext: { allergy in
             // totalAllergyd에 값이 들어오면 true인것만 myAllergy에 값 전달
             self.myAllergy.accept(allergy.filter{ $0.myAllergy == true })
-            
-            self.testAllergy = allergy
+            self.checkAllergy.accept(allergy)
+            self.totalAllergyArray = allergy
 //            self.allergyModel.totalAllergy.accept(self.testAllergy)
             print(allergy,"알러지이!")
         }).disposed(by: disposeBag)
@@ -73,7 +74,7 @@ class TotalAllergyViewModel {
         tapRegister.bind(onNext: { register in
             print("tabRegister subscribe실행됨, \(register)")
             self.totalAllergy.accept(register)
-            self.testAllergy = register
+            self.totalAllergyArray = register
         }).disposed(by: disposeBag)
         
 
@@ -105,7 +106,7 @@ class TotalAllergyViewModel {
             }
             
             self.totalAllergy.accept(totalAllergy)
- 
+            self.totalAllergyArray = totalAllergy
         }).disposed(by: disposeBag)
         
         
@@ -123,6 +124,11 @@ class TotalAllergyViewModel {
         }).disposed(by: disposeBag)
         
 
+        directAddAllergy.bind(onNext: { allergy in
+            self.totalAllergyArray.append(allergy)
+            self.totalAllergy.accept(self.totalAllergyArray)
+        }).disposed(by: disposeBag)
         
     }
+    
 }
