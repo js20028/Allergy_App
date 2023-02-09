@@ -12,7 +12,7 @@ import RxCocoa
 
 class TotalAllergyViewModel {
     
-    var totalAllergyArray = [Allergy]()
+    var testAllergy = [Allergy]()
     
     var allergyModel: AllergyModel
     
@@ -36,25 +36,18 @@ class TotalAllergyViewModel {
     init(allergyModel: AllergyModel) {
         print("init 실행")
         self.allergyModel = allergyModel
-        
-        totalAllergyArray = allergyModel.totalAllergy.value
-        
+
+        testAllergy = self.allergyModel.testAllergy
+
         // viewModel에 있는 totalAllergy값을 넣어줌
-        totalAllergy.accept(totalAllergyArray)
-    
-        
-        
+        totalAllergy.accept(testAllergy)
+
         // checkAllergy에는 totalAllergy 값을 먼저 넣어줌
         checkAllergy.accept(totalAllergy.value)
         
+        // checkAllergy에는 myAllergy 값을 먼저 넣어줌
+        checkMyAllergy.accept(myAllergy.value)
         
-        
-        // cell 클릭할떄 마다 실행 (cell을 텝 할때마다 checkAllergy에 값을 보내줌)
-        tapAllergyCell.bind(onNext: { index, check in
-            var allergen = self.checkAllergy.value
-            allergen[index].myAllergy = check
-            self.checkAllergy.accept(allergen)
-        }).disposed(by: disposeBag)
         
         
         
@@ -64,20 +57,12 @@ class TotalAllergyViewModel {
             // totalAllergyd에 값이 들어오면 true인것만 myAllergy에 값 전달
             self.myAllergy.accept(allergy.filter{ $0.myAllergy == true })
             self.checkAllergy.accept(allergy)
-            self.totalAllergyArray = allergy
-//            self.allergyModel.totalAllergy.accept(self.testAllergy)
-            print(allergy,"알러지이!")
+            self.testAllergy = allergy
+            print(allergy,"값이 뭘까?")
+            
+            self.allergyModel.testAllergy = allergy
+            self.allergyModel.totalAllergy.accept(allergy)
         }).disposed(by: disposeBag)
-        
-        
-        
-        tapRegister.bind(onNext: { register in
-            print("tabRegister subscribe실행됨, \(register)")
-            self.totalAllergy.accept(register)
-            self.totalAllergyArray = register
-        }).disposed(by: disposeBag)
-        
-
         
         
         
@@ -89,15 +74,19 @@ class TotalAllergyViewModel {
         
         
         
-        // checkAllergy에는 myAllergy 값을 먼저 넣어줌
-        checkMyAllergy.accept(myAllergy.value)
+        // 등록하기 버튼누를때 실행
+        tapRegister.bind(onNext: { register in
+            print("tabRegister subscribe실행됨, \(register)")
+            self.totalAllergy.accept(register)
+            self.testAllergy = register
+        }).disposed(by: disposeBag)
         
         
         
         
         // checkMyallergy랑 totalAllergy를 비교해서 myAllergy에 값전달 해야함
         tapdelete.bind(onNext: { checkMyAllergy in
-            
+
             var totalAllergy = self.totalAllergy.value
             
             totalAllergy = totalAllergy.map { total in
@@ -106,7 +95,7 @@ class TotalAllergyViewModel {
             }
             
             self.totalAllergy.accept(totalAllergy)
-            self.totalAllergyArray = totalAllergy
+            self.testAllergy = totalAllergy
         }).disposed(by: disposeBag)
         
         
@@ -123,12 +112,23 @@ class TotalAllergyViewModel {
             print(self.checkMyAllergy.value,"체크 알러지?")
         }).disposed(by: disposeBag)
         
-
-        directAddAllergy.bind(onNext: { allergy in
-            self.totalAllergyArray.append(allergy)
-            self.totalAllergy.accept(self.totalAllergyArray)
+        
+        
+        // cell 클릭할떄 마다 실행 (cell을 텝 할때마다 checkAllergy에 값을 보내줌)
+        tapAllergyCell.bind(onNext: { index, check in
+            var allergen = self.checkAllergy.value
+            allergen[index].myAllergy = check
+            self.checkAllergy.accept(allergen)
         }).disposed(by: disposeBag)
         
+        
+        
+        
+        // 직접 버튼 누를때 실행
+        directAddAllergy.bind(onNext: { allergy in
+            self.testAllergy.append(allergy)
+            self.totalAllergy.accept(self.testAllergy)
+        }).disposed(by: disposeBag)
     }
-    
+
 }
