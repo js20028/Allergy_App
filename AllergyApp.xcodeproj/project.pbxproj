@@ -11,6 +11,7 @@
 		0F52F8DB298AB227005E2C93 /* ScanResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52F8DA298AB227005E2C93 /* ScanResultViewModel.swift */; };
 		0F52F8ED2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F52F8EB2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld */; };
 		0F64C1772994C4CE009AB81C /* AllergyResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C1762994C4CE009AB81C /* AllergyResultModel.swift */; };
+		0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */; };
 		0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */; };
 		0F837581297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */; };
 		0F8375832980F03C00ACE1A5 /* AllergyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375822980F03C00ACE1A5 /* AllergyResult.swift */; };
@@ -43,6 +44,7 @@
 		0F52F8DA298AB227005E2C93 /* ScanResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewModel.swift; sourceTree = "<group>"; };
 		0F52F8EC2990DC86005E2C93 /* CoreAllergyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreAllergyModel.xcdatamodel; sourceTree = "<group>"; };
 		0F64C1762994C4CE009AB81C /* AllergyResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyResultModel.swift; sourceTree = "<group>"; };
+		0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBarcodeInfo.swift; sourceTree = "<group>"; };
 		0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyViewController.swift; sourceTree = "<group>"; };
 		0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyDetailViewController.swift; sourceTree = "<group>"; };
 		0F8375822980F03C00ACE1A5 /* AllergyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyResult.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = AllergyResultViewModel;
 			sourceTree = "<group>";
 		};
+		0F64C178299627FF009AB81C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		0F83757A297FD9FC00ACE1A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		0F8512B32843B7F800A059A1 /* AllergyApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F64C178299627FF009AB81C /* Service */,
 				0F83757D297FE0F900ACE1A5 /* App */,
 				0F83757A297FD9FC00ACE1A5 /* Model */,
 				0F83757C297FDA1700ACE1A5 /* View */,
@@ -343,6 +354,7 @@
 				93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */,
 				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
+				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
 				0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */,
 				93FBFBF12989605600337B86 /* Allergy.swift in Sources */,
 				0F52F8DB298AB227005E2C93 /* ScanResultViewModel.swift in Sources */,
