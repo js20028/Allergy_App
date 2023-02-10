@@ -31,7 +31,7 @@ class LoadAllergyDetailViewModel {
         allergyResultText = BehaviorSubject(value: selectedAllergy.compareResult)
         
         deleteButtonTapped = PublishSubject()
-        
+    
     }
     
 }
