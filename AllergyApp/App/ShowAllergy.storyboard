@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Allergy View Controller-->
+        <scene sceneID="j3M-Wm-hwg">
+            <objects>
+                <viewController storyboardIdentifier="MyAllergyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u15-sJ-XPt" customClass="MyAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="25m-2F-NeT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2rs-aV-clN">
+                                <rect key="frame" x="14" y="73" width="365" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPv-YB-OnT">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 알러지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-hH-zIr">
+                                        <rect key="frame" x="77" y="0.0" width="57" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbm-dF-zkU">
+                                        <rect key="frame" x="154" y="0.0" width="57" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY2-VO-QPi">
+                                        <rect key="frame" x="231" y="0.0" width="57" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="직접"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q52-cS-GZp">
+                                        <rect key="frame" x="308" y="0.0" width="57" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="삭제"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-GF-ioa">
+                                <rect key="frame" x="0.0" y="127.33333333333331" width="393" height="690.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jFh-P7-FD3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2rs-aV-clN" firstAttribute="leading" secondItem="jFh-P7-FD3" secondAttribute="leading" constant="14" id="2Lj-Kp-GdB"/>
+                            <constraint firstItem="d2X-GF-ioa" firstAttribute="top" secondItem="2rs-aV-clN" secondAttribute="bottom" constant="20" id="6OX-DT-pKH"/>
+                            <constraint firstItem="jFh-P7-FD3" firstAttribute="bottom" secondItem="d2X-GF-ioa" secondAttribute="bottom" id="9bH-e2-y4K"/>
+                            <constraint firstItem="2rs-aV-clN" firstAttribute="top" secondItem="jFh-P7-FD3" secondAttribute="top" constant="14" id="9qA-h0-ABP"/>
+                            <constraint firstItem="jFh-P7-FD3" firstAttribute="trailing" secondItem="2rs-aV-clN" secondAttribute="trailing" constant="14" id="Ym2-Gz-hcj"/>
+                            <constraint firstItem="jFh-P7-FD3" firstAttribute="trailing" secondItem="d2X-GF-ioa" secondAttribute="trailing" id="gZH-pp-pPd"/>
+                            <constraint firstItem="d2X-GF-ioa" firstAttribute="leading" secondItem="jFh-P7-FD3" secondAttribute="leading" id="w3H-pC-jm1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMyAllergyButton" destination="wbm-dF-zkU" id="cC4-G4-tBg"/>
+                        <outlet property="deleteMyAllergyButton" destination="q52-cS-GZp" id="KvQ-0N-dqW"/>
+                        <outlet property="directAddMyAllergyButton" destination="dY2-VO-QPi" id="NcQ-9f-26U"/>
+                        <outlet property="myAllergyTableView" destination="d2X-GF-ioa" id="dhT-9a-yR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihv-oL-UVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1842" y="-311"/>
+        </scene>
+        <!--Total Allergy View Controller-->
+        <scene sceneID="UPq-Qw-Upw">
+            <objects>
+                <viewController storyboardIdentifier="TotalAllergyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3iY-At-Ca6" customClass="TotalAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fE-tp-ebo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eHy-iP-2qJ">
+                                <rect key="frame" x="14" y="73" width="365" height="682.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="43E-tE-Kiy">
+                                <rect key="frame" x="14" y="769.66666666666663" width="365" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-Pz-DBp">
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-93-7Ac">
+                                        <rect key="frame" x="209" y="0.0" width="156" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="등록하기"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9x6-MV-5ac"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eHy-iP-2qJ" firstAttribute="top" secondItem="9x6-MV-5ac" secondAttribute="top" constant="14" id="4At-Qi-Usc"/>
+                            <constraint firstItem="9x6-MV-5ac" firstAttribute="bottom" secondItem="43E-tE-Kiy" secondAttribute="bottom" constant="14" id="Mth-dP-hCP"/>
+                            <constraint firstItem="43E-tE-Kiy" firstAttribute="centerX" secondItem="9x6-MV-5ac" secondAttribute="centerX" id="eYl-wh-rVJ"/>
+                            <constraint firstItem="43E-tE-Kiy" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="14" id="i71-Jj-Fl3"/>
+                            <constraint firstItem="9x6-MV-5ac" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" constant="14" id="nWt-hD-ohm"/>
+                            <constraint firstItem="eHy-iP-2qJ" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="14" id="woE-Pu-0FQ"/>
+                            <constraint firstItem="43E-tE-Kiy" firstAttribute="top" secondItem="eHy-iP-2qJ" secondAttribute="bottom" constant="14" id="wy9-Vp-vP4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="Lz8-Pz-DBp" id="XSZ-5T-gZx"/>
+                        <outlet property="registerMyAllergyButton" destination="XEF-93-7Ac" id="Rxa-ql-Spv"/>
+                        <outlet property="totalAllergyTableView" destination="eHy-iP-2qJ" id="u1s-yX-BH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4S-5f-9SC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1055" y="-310"/>
+        </scene>
+        <!--Direct Add My Allergy View Controller-->
+        <scene sceneID="f5M-c7-cNa">
+            <objects>
+                <viewController storyboardIdentifier="DirectAddMyAllergyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bcB-mR-Yz6" customClass="DirectAddMyAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLe-yR-Kjm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Pp-hGR">
+                                <rect key="frame" x="14" y="34.999999999999986" width="365" height="191.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직접 알러지 등록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-MH-pgQ">
+                                        <rect key="frame" x="9" y="43" width="342" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-X4-ysx">
+                                        <rect key="frame" x="14" y="83.333333333333329" width="337" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-Q9-O6v">
+                                        <rect key="frame" x="14" y="137.33333333333334" width="337" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah5-so-E0Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-y7-E6w">
+                                                <rect key="frame" x="186.66666666666663" y="0.0" width="150.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="등록하기"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CfR-Q9-O6v" firstAttribute="trailing" secondItem="0Oz-X4-ysx" secondAttribute="trailing" id="GvI-Gr-Gaf"/>
+                                    <constraint firstItem="SpF-MH-pgQ" firstAttribute="leading" secondItem="pNQ-Pp-hGR" secondAttribute="leading" constant="9" id="Jp5-4B-AsW"/>
+                                    <constraint firstItem="0Oz-X4-ysx" firstAttribute="leading" secondItem="pNQ-Pp-hGR" secondAttribute="leading" constant="14" id="M0y-Yw-RKC"/>
+                                    <constraint firstItem="CfR-Q9-O6v" firstAttribute="leading" secondItem="0Oz-X4-ysx" secondAttribute="leading" id="UKo-HB-Asf"/>
+                                    <constraint firstAttribute="trailing" secondItem="SpF-MH-pgQ" secondAttribute="trailing" constant="14" id="ZZG-uh-mKb"/>
+                                    <constraint firstItem="SpF-MH-pgQ" firstAttribute="top" secondItem="pNQ-Pp-hGR" secondAttribute="top" constant="43" id="Zz5-4j-0hA"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Oz-X4-ysx" secondAttribute="trailing" constant="14" id="aBD-pe-jDF"/>
+                                    <constraint firstItem="0Oz-X4-ysx" firstAttribute="centerX" secondItem="pNQ-Pp-hGR" secondAttribute="centerX" id="izp-fx-uVl"/>
+                                    <constraint firstAttribute="bottom" secondItem="CfR-Q9-O6v" secondAttribute="bottom" constant="20" id="jav-eu-HQ8"/>
+                                    <constraint firstItem="0Oz-X4-ysx" firstAttribute="top" secondItem="SpF-MH-pgQ" secondAttribute="bottom" constant="20" id="mWC-Hp-Bcu"/>
+                                    <constraint firstItem="CfR-Q9-O6v" firstAttribute="top" secondItem="0Oz-X4-ysx" secondAttribute="bottom" constant="20" id="qwP-dV-SDQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qSV-II-62n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pNQ-Pp-hGR" firstAttribute="top" secondItem="XLe-yR-Kjm" secondAttribute="top" constant="35" id="UtB-Zn-Eme"/>
+                            <constraint firstItem="qSV-II-62n" firstAttribute="trailing" secondItem="pNQ-Pp-hGR" secondAttribute="trailing" constant="14" id="tta-8V-JH5"/>
+                            <constraint firstItem="pNQ-Pp-hGR" firstAttribute="centerX" secondItem="qSV-II-62n" secondAttribute="centerX" id="uXx-uu-6hD"/>
+                            <constraint firstItem="pNQ-Pp-hGR" firstAttribute="leading" secondItem="qSV-II-62n" secondAttribute="leading" constant="14" id="zCd-Uv-Fri"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="pNQ-Pp-hGR" id="r07-DN-z6K"/>
+                        <outlet property="directAllergyTextField" destination="0Oz-X4-ysx" id="29Q-18-BMd"/>
+                        <outlet property="directMyAllergyAddButton" destination="3tf-y7-E6w" id="JDN-lz-s0O"/>
+                        <outlet property="dismissButton" destination="Ah5-so-E0Y" id="TTD-85-9aD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reu-MZ-kOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284.73282442748092" y="-299.29577464788736"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

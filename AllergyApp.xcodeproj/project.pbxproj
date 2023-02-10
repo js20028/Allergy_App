@@ -7,27 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F52F8D9298AB1B0005E2C93 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52F8D8298AB1B0005E2C93 /* ScanResultViewController.swift */; };
+		0F52F8DB298AB227005E2C93 /* ScanResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52F8DA298AB227005E2C93 /* ScanResultViewModel.swift */; };
+		0F52F8ED2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F52F8EB2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld */; };
+		0F64C1772994C4CE009AB81C /* AllergyResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C1762994C4CE009AB81C /* AllergyResultModel.swift */; };
+		0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */; };
+		0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */; };
+		0F837581297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */; };
+		0F8375832980F03C00ACE1A5 /* AllergyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375822980F03C00ACE1A5 /* AllergyResult.swift */; };
+		0F8375852981074200ACE1A5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375842981074200ACE1A5 /* MainViewModel.swift */; };
+		0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */; };
+		0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */; };
+		0F83758B2982783300ACE1A5 /* LoadAllergyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */; };
+		0F8375B42987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */; };
 		0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8512B42843B7F800A059A1 /* AppDelegate.swift */; };
 		0F8512B72843B7F800A059A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8512B62843B7F800A059A1 /* SceneDelegate.swift */; };
+		0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8512B82843B7F800A059A1 /* MainViewController.swift */; };
 		0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8512BA2843B7F800A059A1 /* Main.storyboard */; };
 		0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8512BD2843B7FA00A059A1 /* Assets.xcassets */; };
 		0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8512BF2843B7FA00A059A1 /* LaunchScreen.storyboard */; };
-		933925F42843E9220098AF75 /* testViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933925F32843E9220098AF75 /* testViewModel.swift */; };
-		933925F62843E9640098AF75 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933925F52843E9630098AF75 /* Allergy.swift */; };
-		933925F82843E9C00098AF75 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933925F72843E9C00098AF75 /* Result.swift */; };
+		52E5A03AE8D7D98201D1CCC9 /* Pods_AllergyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */; };
+		931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */; };
+		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
+		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
+		93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */; };
+		93CEC022298A6E330021BD4F /* ShowAllergyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEC021298A6E330021BD4F /* ShowAllergyTableViewCell.swift */; };
+		93CEC026298BA85F0021BD4F /* AllergyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEC025298BA85F0021BD4F /* AllergyModel.swift */; };
+		93FBFBF12989605600337B86 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF02989605600337B86 /* Allergy.swift */; };
+		93FBFBF52989612B00337B86 /* MyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */; };
+		93FBFBF72989618900337B86 /* MyAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */; };
+		93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FBFBF8298A3B1900337B86 /* ShowAllergy.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F52F8D8298AB1B0005E2C93 /* ScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
+		0F52F8DA298AB227005E2C93 /* ScanResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewModel.swift; sourceTree = "<group>"; };
+		0F52F8EC2990DC86005E2C93 /* CoreAllergyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreAllergyModel.xcdatamodel; sourceTree = "<group>"; };
+		0F64C1762994C4CE009AB81C /* AllergyResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyResultModel.swift; sourceTree = "<group>"; };
+		0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBarcodeInfo.swift; sourceTree = "<group>"; };
+		0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyViewController.swift; sourceTree = "<group>"; };
+		0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyDetailViewController.swift; sourceTree = "<group>"; };
+		0F8375822980F03C00ACE1A5 /* AllergyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyResult.swift; sourceTree = "<group>"; };
+		0F8375842981074200ACE1A5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyViewModel.swift; sourceTree = "<group>"; };
+		0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadAllergyCollectionViewCell.xib; sourceTree = "<group>"; };
+		0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllergyDetailViewModel.swift; sourceTree = "<group>"; };
 		0F8512B12843B7F800A059A1 /* AllergyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8512B42843B7F800A059A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F8512B62843B7F800A059A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0F8512B82843B7F800A059A1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0F8512BB2843B7F800A059A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F8512BD2843B7FA00A059A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F8512C02843B7FA00A059A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F8512C22843B7FA00A059A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		933925F32843E9220098AF75 /* testViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewModel.swift; sourceTree = "<group>"; };
-		933925F52843E9630098AF75 /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
-		933925F72843E9C00098AF75 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		1C562F17ECB7C790266BA6A4 /* Pods-AllergyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.debug.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1F000C0B8422157402BE36D8 /* Pods-AllergyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.release.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.release.xcconfig"; sourceTree = "<group>"; };
+		4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddMyAllergyViewController.swift; sourceTree = "<group>"; };
+		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
+		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
+		93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllergyTableViewCell.xib; sourceTree = "<group>"; };
+		93CEC021298A6E330021BD4F /* ShowAllergyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllergyTableViewCell.swift; sourceTree = "<group>"; };
+		93CEC025298BA85F0021BD4F /* AllergyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyModel.swift; sourceTree = "<group>"; };
+		93FBFBF02989605600337B86 /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
+		93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAllergyViewController.swift; sourceTree = "<group>"; };
+		93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAllergyViewModel.swift; sourceTree = "<group>"; };
+		93FBFBF8298A3B1900337B86 /* ShowAllergy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowAllergy.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +81,93 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E5A03AE8D7D98201D1CCC9 /* Pods_AllergyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F01F3B42988FFC20053A0C5 /* AllergyResultView */ = {
+			isa = PBXGroup;
+			children = (
+				0F8512B82843B7F800A059A1 /* MainViewController.swift */,
+				0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */,
+				0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */,
+				0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */,
+				0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */,
+				0F52F8D8298AB1B0005E2C93 /* ScanResultViewController.swift */,
+			);
+			path = AllergyResultView;
+			sourceTree = "<group>";
+		};
+		0F01F3B7298900450053A0C5 /* AllergyResultViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F64C1762994C4CE009AB81C /* AllergyResultModel.swift */,
+				0F8375842981074200ACE1A5 /* MainViewModel.swift */,
+				0F837586298263BF00ACE1A5 /* LoadAllergyViewModel.swift */,
+				0F8375B32987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift */,
+				0F52F8DA298AB227005E2C93 /* ScanResultViewModel.swift */,
+			);
+			path = AllergyResultViewModel;
+			sourceTree = "<group>";
+		};
+		0F64C178299627FF009AB81C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0F83757A297FD9FC00ACE1A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F8375822980F03C00ACE1A5 /* AllergyResult.swift */,
+				0F52F8EB2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld */,
+				93FBFBF02989605600337B86 /* Allergy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F83757B297FDA0200ACE1A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93FBFBF3298960EA00337B86 /* AllergyViewModel */,
+				0F01F3B7298900450053A0C5 /* AllergyResultViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F83757C297FDA1700ACE1A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93FBFBF2298960DE00337B86 /* AllergyView */,
+				0F01F3B42988FFC20053A0C5 /* AllergyResultView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F83757D297FE0F900ACE1A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F8512B42843B7F800A059A1 /* AppDelegate.swift */,
+				0F8512B62843B7F800A059A1 /* SceneDelegate.swift */,
+				0F8512BA2843B7F800A059A1 /* Main.storyboard */,
+				93FBFBF8298A3B1900337B86 /* ShowAllergy.storyboard */,
+				0F8512BF2843B7FA00A059A1 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		0F8512A82843B7F800A059A1 = {
 			isa = PBXGroup;
 			children = (
 				0F8512B32843B7F800A059A1 /* AllergyApp */,
 				0F8512B22843B7F800A059A1 /* Products */,
+				DB00FF7DEF183DDC50E9A35C /* Pods */,
+				32E1515181FFB7472E26A476 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +182,11 @@
 		0F8512B32843B7F800A059A1 /* AllergyApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F64C178299627FF009AB81C /* Service */,
+				0F83757D297FE0F900ACE1A5 /* App */,
+				0F83757A297FD9FC00ACE1A5 /* Model */,
+				0F83757C297FDA1700ACE1A5 /* View */,
+				0F83757B297FDA0200ACE1A5 /* ViewModel */,
 				0F8512BD2843B7FA00A059A1 /* Assets.xcassets */,
 				0F8512C22843B7FA00A059A1 /* Info.plist */,
 				932DF7BA299630DF002223C9 /* App */,
@@ -69,32 +196,43 @@
 			path = AllergyApp;
 			sourceTree = "<group>";
 		};
-		932DF7BA299630DF002223C9 /* App */ = {
+		32E1515181FFB7472E26A476 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0F8512BA2843B7F800A059A1 /* Main.storyboard */,
-				0F8512BF2843B7FA00A059A1 /* LaunchScreen.storyboard */,
-				0F8512B42843B7F800A059A1 /* AppDelegate.swift */,
-				0F8512B62843B7F800A059A1 /* SceneDelegate.swift */,
+				4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */,
 			);
-			path = App;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		933925EE2843E6DE0098AF75 /* Model */ = {
+		93FBFBF2298960DE00337B86 /* AllergyView */ = {
 			isa = PBXGroup;
 			children = (
-				933925F52843E9630098AF75 /* Allergy.swift */,
-				933925F72843E9C00098AF75 /* Result.swift */,
+				93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */,
+				93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */,
+				93CEC021298A6E330021BD4F /* ShowAllergyTableViewCell.swift */,
+				93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */,
+				931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */,
 			);
-			path = Model;
+			path = AllergyView;
 			sourceTree = "<group>";
 		};
-		933925F02843E6EE0098AF75 /* ViewModel */ = {
+		93FBFBF3298960EA00337B86 /* AllergyViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				933925F32843E9220098AF75 /* testViewModel.swift */,
+				93CEC025298BA85F0021BD4F /* AllergyModel.swift */,
+				93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */,
+				93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */,
 			);
-			path = ViewModel;
+			path = AllergyViewModel;
+			sourceTree = "<group>";
+		};
+		DB00FF7DEF183DDC50E9A35C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C562F17ECB7C790266BA6A4 /* Pods-AllergyApp.debug.xcconfig */,
+				1F000C0B8422157402BE36D8 /* Pods-AllergyApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F8512C52843B7FA00A059A1 /* Build configuration list for PBXNativeTarget "AllergyApp" */;
 			buildPhases = (
+				0F988B55D7DAE2433E978B60 /* [CP] Check Pods Manifest.lock */,
 				0F8512AD2843B7F800A059A1 /* Sources */,
 				0F8512AE2843B7F800A059A1 /* Frameworks */,
 				0F8512AF2843B7F800A059A1 /* Resources */,
+				CD082011EE3850992ABFB848 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,22 +296,85 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */,
+				93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */,
 				0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */,
+				93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */,
 				0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */,
+				0F83758B2982783300ACE1A5 /* LoadAllergyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F988B55D7DAE2433E978B60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllergyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD082011EE3850992ABFB848 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllergyApp/Pods-AllergyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllergyApp/Pods-AllergyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllergyApp/Pods-AllergyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F8512AD2843B7F800A059A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				933925F82843E9C00098AF75 /* Result.swift in Sources */,
-				933925F62843E9640098AF75 /* Allergy.swift in Sources */,
+				0F8375852981074200ACE1A5 /* MainViewModel.swift in Sources */,
+				93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */,
+				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
+				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
+				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
+				0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */,
+				93FBFBF12989605600337B86 /* Allergy.swift in Sources */,
+				0F52F8DB298AB227005E2C93 /* ScanResultViewModel.swift in Sources */,
+				0F8375B42987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift in Sources */,
+				0F837581297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift in Sources */,
+				0F64C1772994C4CE009AB81C /* AllergyResultModel.swift in Sources */,
+				0F52F8ED2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld in Sources */,
+				0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */,
 				0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */,
-				933925F42843E9220098AF75 /* testViewModel.swift in Sources */,
+				931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */,
+				93FBFBF52989612B00337B86 /* MyAllergyViewController.swift in Sources */,
+				93CEC026298BA85F0021BD4F /* AllergyModel.swift in Sources */,
+				93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */,
+				93FBFBF72989618900337B86 /* MyAllergyViewModel.swift in Sources */,
+				0F52F8D9298AB1B0005E2C93 /* ScanResultViewController.swift in Sources */,
+				93CEC022298A6E330021BD4F /* ShowAllergyTableViewCell.swift in Sources */,
+				0F8375832980F03C00ACE1A5 /* AllergyResult.swift in Sources */,
 				0F8512B72843B7F800A059A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +517,7 @@
 		};
 		0F8512C62843B7FA00A059A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C562F17ECB7C790266BA6A4 /* Pods-AllergyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +546,7 @@
 		};
 		0F8512C72843B7FA00A059A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F000C0B8422157402BE36D8 /* Pods-AllergyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +595,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0F52F8EB2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0F52F8EC2990DC86005E2C93 /* CoreAllergyModel.xcdatamodel */,
+			);
+			currentVersion = 0F52F8EC2990DC86005E2C93 /* CoreAllergyModel.xcdatamodel */;
+			path = CoreAllergyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0F8512A92843B7F800A059A1 /* Project object */;
 }
