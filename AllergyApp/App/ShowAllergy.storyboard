@@ -12,7 +12,7 @@
         <!--My Allergy View Controller-->
         <scene sceneID="j3M-Wm-hwg">
             <objects>
-                <viewController id="u15-sJ-XPt" customClass="MyAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyAllergyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u15-sJ-XPt" customClass="MyAllergyViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25m-2F-NeT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Pp-hGR">
-                                <rect key="frame" x="14" y="93.999999999999986" width="365" height="191.66666666666663"/>
+                                <rect key="frame" x="14" y="34.999999999999986" width="365" height="191.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직접 알러지 등록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-MH-pgQ">
                                         <rect key="frame" x="9" y="43" width="342" height="20.333333333333329"/>
@@ -145,7 +145,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-X4-ysx">
-                                        <rect key="frame" x="14" y="83.333333333333343" width="337" height="34"/>
+                                        <rect key="frame" x="14" y="83.333333333333329" width="337" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -184,7 +184,7 @@
                         <viewLayoutGuide key="safeArea" id="qSV-II-62n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pNQ-Pp-hGR" firstAttribute="top" secondItem="qSV-II-62n" secondAttribute="top" constant="35" id="UtB-Zn-Eme"/>
+                            <constraint firstItem="pNQ-Pp-hGR" firstAttribute="top" secondItem="XLe-yR-Kjm" secondAttribute="top" constant="35" id="UtB-Zn-Eme"/>
                             <constraint firstItem="qSV-II-62n" firstAttribute="trailing" secondItem="pNQ-Pp-hGR" secondAttribute="trailing" constant="14" id="tta-8V-JH5"/>
                             <constraint firstItem="pNQ-Pp-hGR" firstAttribute="centerX" secondItem="qSV-II-62n" secondAttribute="centerX" id="uXx-uu-6hD"/>
                             <constraint firstItem="pNQ-Pp-hGR" firstAttribute="leading" secondItem="qSV-II-62n" secondAttribute="leading" constant="14" id="zCd-Uv-Fri"/>

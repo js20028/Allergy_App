@@ -82,6 +82,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kbg-7f-0sx"/>
+                    <connections>
+                        <outlet property="registerAllergyButton" destination="2nb-EE-5Db" id="rkJ-gQ-Imn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
