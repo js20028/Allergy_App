@@ -28,6 +28,8 @@
 		0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8512BF2843B7FA00A059A1 /* LaunchScreen.storyboard */; };
 		52E5A03AE8D7D98201D1CCC9 /* Pods_AllergyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */; };
 		931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */; };
+		932DF7BC2997DA49002223C9 /* FetchProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */; };
+		932DF7BE2997DAA9002223C9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BD2997DAA9002223C9 /* Product.swift */; };
 		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
 		93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */; };
@@ -65,6 +67,8 @@
 		1F000C0B8422157402BE36D8 /* Pods-AllergyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.release.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.release.xcconfig"; sourceTree = "<group>"; };
 		4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddMyAllergyViewController.swift; sourceTree = "<group>"; };
+		932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductInfo.swift; sourceTree = "<group>"; };
+		932DF7BD2997DAA9002223C9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
 		93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllergyTableViewCell.xib; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */,
+				932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				0F8375822980F03C00ACE1A5 /* AllergyResult.swift */,
 				0F52F8EB2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld */,
 				93FBFBF02989605600337B86 /* Allergy.swift */,
+				932DF7BD2997DAA9002223C9 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,12 +356,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932DF7BC2997DA49002223C9 /* FetchProductInfo.swift in Sources */,
 				0F8375852981074200ACE1A5 /* MainViewModel.swift in Sources */,
 				93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */,
 				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
 				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
 				0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */,
+				932DF7BE2997DAA9002223C9 /* Product.swift in Sources */,
 				93FBFBF12989605600337B86 /* Allergy.swift in Sources */,
 				0F52F8DB298AB227005E2C93 /* ScanResultViewModel.swift in Sources */,
 				0F8375B42987A81900ACE1A5 /* LoadAllergyDetailViewModel.swift in Sources */,
