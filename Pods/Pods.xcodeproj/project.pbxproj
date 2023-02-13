@@ -745,7 +745,7 @@
 		9C4BAD813CE4895AF4C31FB636313B74 /* RxPickerViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxPickerViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxPickerViewDataSourceType.swift; sourceTree = "<group>"; };
 		9C54D616B733C9078F9A2115032AB684 /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
 		9CF50158A5C9FB0E269FB70ABD21CC1B /* Switch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Switch.swift; path = RxSwift/Observables/Switch.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E2D44FA02F3E81150E1ADA7F6A12E70 /* RxPickerViewAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxPickerViewAdapter.swift; path = RxCocoa/iOS/DataSources/RxPickerViewAdapter.swift; sourceTree = "<group>"; };
 		9F0D224C94C38B3D9D6F8ED67A62F8CD /* Amb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Amb.swift; path = RxSwift/Observables/Amb.swift; sourceTree = "<group>"; };
 		9F2859EC4C544FB41B2E91A315A89941 /* AsMaybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsMaybe.swift; path = RxSwift/Observables/AsMaybe.swift; sourceTree = "<group>"; };
@@ -829,7 +829,7 @@
 		C8D1016CF75813E1DB2F15BF607C36AC /* MDCShapedShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCShapedShadowLayer.m; path = components/Shapes/src/MDCShapedShadowLayer.m; sourceTree = "<group>"; };
 		C8DA6836D8D58373E86FFE2F862AA571 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
 		C9D82EA618A323BDDD52A6EE54ED13DE /* PrimitiveSequence+Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequence+Zip+arity.swift"; path = "RxSwift/Traits/PrimitiveSequence/PrimitiveSequence+Zip+arity.swift"; sourceTree = "<group>"; };
-		CA14D675E1557D1E014E4200013EDA54 /* Pods-AllergyApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AllergyApp"; path = Pods_AllergyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA14D675E1557D1E014E4200013EDA54 /* Pods_AllergyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA32D00561A356B9D71C6BB15401A6C1 /* DistinctUntilChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistinctUntilChanged.swift; path = RxSwift/Observables/DistinctUntilChanged.swift; sourceTree = "<group>"; };
 		CA69E064E5EC5920CB0593412230C75F /* RxTableViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxTableViewDelegateProxy.swift; sourceTree = "<group>"; };
 		CAA7F76497065BEA9E7C28AD5B748BAA /* MDCPillShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCPillShapeGenerator.m; path = components/ShapeLibrary/src/MDCPillShapeGenerator.m; sourceTree = "<group>"; };
@@ -1173,7 +1173,6 @@
 				0F0F99C44F5CDF7346325D0A40B303BF /* Zip+Collection.swift */,
 				9A3673301610DEBA7AEFC0A07479A5F1 /* Support Files */,
 			);
-			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -1187,7 +1186,6 @@
 				56722DDCA918788356DFF31CA220CCF2 /* Utils.swift */,
 				10843E9672C62BF38D652ECE084F6345 /* Support Files */,
 			);
-			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -1406,7 +1404,6 @@
 				BCD3B20B9EC58011DC182526BB3EE846 /* WKWebView+Rx.swift */,
 				55881BDDC631E6524EA4A64EB20F32D7 /* Support Files */,
 			);
-			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1487,7 +1484,7 @@
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents */,
-				CA14D675E1557D1E014E4200013EDA54 /* Pods-AllergyApp */,
+				CA14D675E1557D1E014E4200013EDA54 /* Pods_AllergyApp.framework */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
 				FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay */,
 				809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */,
@@ -1508,7 +1505,6 @@
 				7D54D21D192ECB3F44C0DE12297CD438 /* Shapes */,
 				B223C485260C9FABE0F9DD17AEB9B77D /* Support Files */,
 			);
-			name = MaterialComponents;
 			path = MaterialComponents;
 			sourceTree = "<group>";
 		};
@@ -1577,7 +1573,6 @@
 				2ED3827B5741182C67E4E95B2E943E20 /* Validation.swift */,
 				F3F8CC2717C72707C188DE00CFE2D2BF /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1804,7 +1799,7 @@
 			);
 			name = "Pods-AllergyApp";
 			productName = Pods_AllergyApp;
-			productReference = CA14D675E1557D1E014E4200013EDA54 /* Pods-AllergyApp */;
+			productReference = CA14D675E1557D1E014E4200013EDA54 /* Pods_AllergyApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */ = {
