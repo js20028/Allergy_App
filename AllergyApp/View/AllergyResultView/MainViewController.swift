@@ -12,6 +12,21 @@ import RxCocoa
 class MainViewController: UIViewController {
     
     @IBOutlet weak var registerAllergyButton: UIButton!
+    @IBOutlet weak var barcodeScanButton: UIButton!
+
+    let viewModel: MainViewModel
+    
+    let disposeBag = DisposeBag()
+    
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        viewModel = MainViewModel(fetchBarcodeInfo: FetchBarcodeInfo(), fetchProductInfo: FetchProductInfo())
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +39,11 @@ class MainViewController: UIViewController {
                 
                 self.present(myAllergyViewController, animated: false, completion: nil)
             })
+            .disposed(by: disposeBag)
+        
+        barcodeScanButton.rx.tap
+            .bind(to: viewModel.scanButtonTapped)
+            .disposed(by: disposeBag)
         
     }
     

@@ -13,7 +13,7 @@ class FetchBarcodeInfo {
     
     let url = "http://openapi.foodsafetykorea.go.kr/api/sample/C005/json/1/5/BAR_CD=8801062521906"
     
-    func fetchBarcode(completion: @escaping((Error?, [Barcode]?) -> Void)) {
+    func fetchBarcode(completion: @escaping((Error?, Barcode?) -> Void)) {
         guard let barcodeURL = URL(string: url) else { return completion(NSError(domain: "what error", code: 404), nil) }
         
         AF.request(barcodeURL,
@@ -23,7 +23,7 @@ class FetchBarcodeInfo {
                    headers: nil,
                    interceptor: nil,
                    requestModifier: nil)
-        .responseDecodable(of: [Barcode].self) { response in
+        .responseDecodable(of: Barcode.self) { response in
             if let error = response.error {
                 print(error)
                 return completion(error, nil)
@@ -37,7 +37,7 @@ class FetchBarcodeInfo {
         
     }
     
-    func fetchBarcodeRx() -> Observable<[Barcode]> {
+    func fetchBarcodeRx() -> Observable<Barcode> {
         return Observable.create { (observer) -> Disposable in
             
             self.fetchBarcode(completion: {(error, barcodeInfo) in
@@ -46,11 +46,10 @@ class FetchBarcodeInfo {
                     observer.onError(error)
                 }
                 
-                //                if let barcodeInfo = barcodeInfo {
-                //                    let memos = barcodeInfo.map { $0.toMemo() }
-                //                    print(memos,"메모")
-                //                    observer.onNext(memos)
-                //                }
+                if let barcodeInfo = barcodeInfo {
+                    print(barcodeInfo, "바코드 인포")
+                    observer.onNext(barcodeInfo)
+                }
                 
                 observer.onCompleted()
             })
