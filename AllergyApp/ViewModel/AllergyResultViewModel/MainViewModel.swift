@@ -19,15 +19,18 @@ class MainViewModel {
     let productSubject = PublishSubject<String>()
     
     var testString: String = ""
+    var barcode = ""
     
+    let checkResultButtonTapped = PublishSubject<Void>()
     let scanButtonTapped = PublishSubject<Void>()
     
     init(fetchBarcodeInfo: FetchBarcodeInfo, fetchProductInfo: FetchProductInfo) {
         self.fetchBarcodeInfo = fetchBarcodeInfo
         self.fetchProductInfo = fetchProductInfo
         
-        scanButtonTapped.bind(onNext: {
-            fetchBarcodeInfo.fetchBarcodeRx()
+        // 팝업창 확인하기 클릭시 결과 확인
+        checkResultButtonTapped.subscribe(onNext: { _ in
+            fetchBarcodeInfo.fetchBarcodeRx(barcode: self.barcode)
                 .subscribe(onNext: { [weak self] barcode in
                     print(barcode.C005.row[0].PRDLST_REPORT_NO, "바코드 성공")
                     self?.productSubject.onNext(barcode.C005.row[0].PRDLST_REPORT_NO)
@@ -36,6 +39,14 @@ class MainViewModel {
                 })
                 .disposed(by: self.disposeBag)
         })
+        
+        
+        
+        // 바코드 스캔하기 버튼 클릭시 바코드 인식
+        barcodeSubject.bind(onNext: { code in
+            self.barcode = code
+        }).disposed(by: disposeBag)
+        
         
         
         

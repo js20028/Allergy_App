@@ -11,9 +11,12 @@ import RxSwift
 
 class FetchBarcodeInfo {
     
-    let url = "http://openapi.foodsafetykorea.go.kr/api/sample/C005/json/1/5/BAR_CD=8801062521906"
     
-    func fetchBarcode(completion: @escaping((Error?, Barcode?) -> Void)) {
+    
+    func fetchBarcode(barcode: String, completion: @escaping((Error?, Barcode?) -> Void)) {
+        
+        let url = "http://openapi.foodsafetykorea.go.kr/api/sample/C005/json/1/5/BAR_CD=\(barcode)"
+        
         guard let barcodeURL = URL(string: url) else { return completion(NSError(domain: "what error", code: 404), nil) }
         
         AF.request(barcodeURL,
@@ -37,10 +40,10 @@ class FetchBarcodeInfo {
         
     }
     
-    func fetchBarcodeRx() -> Observable<Barcode> {
+    func fetchBarcodeRx(barcode: String) -> Observable<Barcode> {
         return Observable.create { (observer) -> Disposable in
             
-            self.fetchBarcode(completion: {(error, barcodeInfo) in
+            self.fetchBarcode(barcode: barcode, completion: {(error, barcodeInfo) in
                 
                 if let error = error {
                     observer.onError(error)

@@ -52,14 +52,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-IB-Otv">
-                                <rect key="frame" x="20" y="188.33333333333334" width="353" height="447.66666666666663"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="450" id="eOC-SW-cuO"/>
-                                </constraints>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-Mx-Yep" customClass="BarcodeView" customModule="AllergyApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="197.33333333333334" width="353" height="506.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX3-sr-8qz">
-                                <rect key="frame" x="20" y="667.33333333333337" width="353" height="34.333333333333371"/>
+                                <rect key="frame" x="20" y="743.66666666666663" width="353" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="바코드 스캔하기"/>
                             </button>
@@ -67,20 +65,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="leading" secondItem="okG-ja-xYG" secondAttribute="leading" id="1dk-9j-EKN"/>
+                            <constraint firstItem="VX3-sr-8qz" firstAttribute="trailing" secondItem="9AJ-Mx-Yep" secondAttribute="trailing" id="3Xg-1X-ZLC"/>
                             <constraint firstItem="okG-ja-xYG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8bR-mq-6wV"/>
-                            <constraint firstItem="cBo-IB-Otv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AGy-Zw-NEu"/>
+                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="trailing" secondItem="okG-ja-xYG" secondAttribute="trailing" id="9th-cR-Zaq"/>
                             <constraint firstItem="okG-ja-xYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NZF-7V-xGz"/>
-                            <constraint firstItem="cBo-IB-Otv" firstAttribute="top" secondItem="okG-ja-xYG" secondAttribute="bottom" constant="30" id="R6O-11-Rid"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="top" secondItem="cBo-IB-Otv" secondAttribute="bottom" constant="30" id="bF4-Y5-9sc"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gfY-Av-TT6"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kBP-Qg-eUe"/>
+                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="top" secondItem="okG-ja-xYG" secondAttribute="bottom" constant="40" id="OGg-wB-1gf"/>
+                            <constraint firstItem="VX3-sr-8qz" firstAttribute="leading" secondItem="9AJ-Mx-Yep" secondAttribute="leading" id="gbt-gV-dLr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VX3-sr-8qz" secondAttribute="bottom" constant="40" id="icK-fD-V2y"/>
                             <constraint firstItem="okG-ja-xYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mFC-2e-RVQ"/>
-                            <constraint firstItem="cBo-IB-Otv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xFo-6k-rB4"/>
+                            <constraint firstItem="VX3-sr-8qz" firstAttribute="top" secondItem="9AJ-Mx-Yep" secondAttribute="bottom" constant="40" id="wMy-b5-xbh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kbg-7f-0sx"/>
                     <connections>
                         <outlet property="barcodeScanButton" destination="VX3-sr-8qz" id="Eeh-PM-fFI"/>
+                        <outlet property="barcodeView" destination="9AJ-Mx-Yep" id="c1k-Vn-7e5"/>
                         <outlet property="registerAllergyButton" destination="2nb-EE-5Db" id="rkJ-gQ-Imn"/>
                     </connections>
                 </viewController>
@@ -270,7 +270,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

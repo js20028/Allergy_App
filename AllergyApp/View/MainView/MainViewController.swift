@@ -13,7 +13,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var registerAllergyButton: UIButton!
     @IBOutlet weak var barcodeScanButton: UIButton!
-
+    @IBOutlet weak var barcodeView: BarcodeView!
+    
     let viewModel: MainViewModel
     
     let disposeBag = DisposeBag()
@@ -28,8 +29,11 @@ class MainViewController: UIViewController {
         super.init(coder: coder)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.barcodeView.delegate = self
         
         registerAllergyButton.rx.tap
             .bind(onNext: {
@@ -41,13 +45,50 @@ class MainViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        
+        
+//         바코드 스캔 버튼 클릭
         barcodeScanButton.rx.tap
+            .do(onNext: {
+                self.barcodeView.start()
+            })
             .bind(to: viewModel.scanButtonTapped)
             .disposed(by: disposeBag)
-        
+
     }
-    
-    
-    
+
 }
 
+
+extension MainViewController: ReaderViewDelegate {
+    func readerComplete(status: ReaderStatus) {
+
+
+        
+        switch status {
+        case let .success(code):
+            print(code,"코드")
+            
+            if let code = code {
+                viewModel.barcodeSubject.onNext(code)
+                
+                let checkResultPopup = CheckResultPopupViewController(nibName: "CheckResultPopup", bundle: nil)
+                
+                checkResultPopup.modalPresentationStyle = .overCurrentContext
+                checkResultPopup.modalTransitionStyle = .crossDissolve // 뷰가 투명해지면서 넘어가는 애니메이션
+                checkResultPopup.viewModel = self.viewModel
+                
+                self.present(checkResultPopup, animated: false, completion: nil)
+                
+                
+            }
+            
+        case .fail:
+            print("실패")
+            
+        case let .stop(isButtonTap):
+            print("스탑")
+        }
+        
+    }
+}

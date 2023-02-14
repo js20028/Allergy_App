@@ -31,6 +31,10 @@
 		931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */; };
 		932DF7BC2997DA49002223C9 /* FetchProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */; };
 		932DF7BE2997DAA9002223C9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BD2997DAA9002223C9 /* Product.swift */; };
+		932DF7C0299B595D002223C9 /* ScanBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BF299B595D002223C9 /* ScanBarcode.swift */; };
+		932DF7C5299B5A58002223C9 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7C4299B5A58002223C9 /* BarCodeView.swift */; };
+		932DF7C7299B7456002223C9 /* CheckResultPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932DF7C6299B7456002223C9 /* CheckResultPopup.xib */; };
+		932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */; };
 		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
 		93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */; };
@@ -38,7 +42,6 @@
 		93CEC026298BA85F0021BD4F /* AllergyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEC025298BA85F0021BD4F /* AllergyModel.swift */; };
 		93FBFBF12989605600337B86 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF02989605600337B86 /* Allergy.swift */; };
 		93FBFBF52989612B00337B86 /* MyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */; };
-		93FBFBF72989618900337B86 /* MyAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */; };
 		93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FBFBF8298A3B1900337B86 /* ShowAllergy.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,10 @@
 		931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddMyAllergyViewController.swift; sourceTree = "<group>"; };
 		932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductInfo.swift; sourceTree = "<group>"; };
 		932DF7BD2997DAA9002223C9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		932DF7BF299B595D002223C9 /* ScanBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBarcode.swift; sourceTree = "<group>"; };
+		932DF7C4299B5A58002223C9 /* BarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
+		932DF7C6299B7456002223C9 /* CheckResultPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckResultPopup.xib; sourceTree = "<group>"; };
+		932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckResultPopupViewController.swift; sourceTree = "<group>"; };
 		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
 		93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllergyTableViewCell.xib; sourceTree = "<group>"; };
@@ -78,7 +85,6 @@
 		93CEC025298BA85F0021BD4F /* AllergyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyModel.swift; sourceTree = "<group>"; };
 		93FBFBF02989605600337B86 /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
 		93FBFBF42989612B00337B86 /* MyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAllergyViewController.swift; sourceTree = "<group>"; };
-		93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAllergyViewModel.swift; sourceTree = "<group>"; };
 		93FBFBF8298A3B1900337B86 /* ShowAllergy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowAllergy.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +103,6 @@
 		0F01F3B42988FFC20053A0C5 /* AllergyResultView */ = {
 			isa = PBXGroup;
 			children = (
-				0F8512B82843B7F800A059A1 /* MainViewController.swift */,
 				0F83757E297FE14400ACE1A5 /* LoadAllergyViewController.swift */,
 				0F837580297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift */,
 				0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */,
@@ -124,6 +129,7 @@
 			children = (
 				0F64C1792996285D009AB81C /* FetchBarcodeInfo.swift */,
 				932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */,
+				932DF7BF299B595D002223C9 /* ScanBarcode.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 		0F83757C297FDA1700ACE1A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				932DF7C1299B5A2F002223C9 /* MainView */,
 				93FBFBF2298960DE00337B86 /* AllergyView */,
 				0F01F3B42988FFC20053A0C5 /* AllergyResultView */,
 			);
@@ -210,6 +217,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		932DF7C1299B5A2F002223C9 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				0F8512B82843B7F800A059A1 /* MainViewController.swift */,
+				932DF7C4299B5A58002223C9 /* BarCodeView.swift */,
+				932DF7C6299B7456002223C9 /* CheckResultPopup.xib */,
+				932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		93FBFBF2298960DE00337B86 /* AllergyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +245,6 @@
 			children = (
 				93CEC025298BA85F0021BD4F /* AllergyModel.swift */,
 				93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */,
-				93FBFBF62989618900337B86 /* MyAllergyViewModel.swift */,
 			);
 			path = AllergyViewModel;
 			sourceTree = "<group>";
@@ -306,6 +323,7 @@
 				0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */,
 				93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */,
 				0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */,
+				932DF7C7299B7456002223C9 /* CheckResultPopup.xib in Resources */,
 				0F83758B2982783300ACE1A5 /* LoadAllergyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,9 +380,11 @@
 				932DF7BC2997DA49002223C9 /* FetchProductInfo.swift in Sources */,
 				0F8375852981074200ACE1A5 /* MainViewModel.swift in Sources */,
 				93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */,
+				932DF7C5299B5A58002223C9 /* BarCodeView.swift in Sources */,
 				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
 				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
+				932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */,
 				0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */,
 				932DF7BE2997DAA9002223C9 /* Product.swift in Sources */,
 				93FBFBF12989605600337B86 /* Allergy.swift in Sources */,
@@ -375,12 +395,12 @@
 				0F64C1772994C4CE009AB81C /* AllergyResultModel.swift in Sources */,
 				0F52F8ED2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld in Sources */,
 				0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */,
+				932DF7C0299B595D002223C9 /* ScanBarcode.swift in Sources */,
 				0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */,
 				931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */,
 				93FBFBF52989612B00337B86 /* MyAllergyViewController.swift in Sources */,
 				93CEC026298BA85F0021BD4F /* AllergyModel.swift in Sources */,
 				93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */,
-				93FBFBF72989618900337B86 /* MyAllergyViewModel.swift in Sources */,
 				0F52F8D9298AB1B0005E2C93 /* ScanResultViewController.swift in Sources */,
 				93CEC022298A6E330021BD4F /* ShowAllergyTableViewCell.swift in Sources */,
 				0F8375832980F03C00ACE1A5 /* AllergyResult.swift in Sources */,
@@ -532,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5YFP2CJ2SY;
+				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -561,7 +581,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5YFP2CJ2SY;
+				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
