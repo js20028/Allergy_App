@@ -11,7 +11,8 @@ import RxCocoa
 
 class ScanResultViewController: UIViewController {
     
-    @IBOutlet weak var scanResultSaveButton: UIBarButtonItem!
+    @IBOutlet weak var scanResultSaveButton: UIButton!
+    @IBOutlet weak var dismissButton: UIButton!
     
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productIngredientTextView: UITextView!
@@ -49,11 +50,18 @@ class ScanResultViewController: UIViewController {
             .bind(to: self.allergyResultTextView.rx.text)
             .disposed(by: disposeBag)
         
+        self.dismissButton.rx.tap
+            .bind(onNext: {
+                self.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         self.scanResultSaveButton.rx.tap
             .do(onNext: {
-                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true)
             })
             .bind(to: viewModel.saveButtonTapped)
             .disposed(by: disposeBag)
+                
     }
 }

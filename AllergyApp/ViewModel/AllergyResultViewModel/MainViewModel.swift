@@ -18,7 +18,10 @@ class MainViewModel {
     let barcodeSubject = PublishSubject<String>()
     let productSubject = PublishSubject<String>()
     
-    var testString: String = ""
+    // publish로 해도 되나?
+    let resultSubject = PublishSubject<AllergyResult>()
+    
+//    var testString: String = ""
     var barcode = ""
     
     let checkResultButtonTapped = PublishSubject<Void>()
@@ -39,6 +42,7 @@ class MainViewModel {
                 })
                 .disposed(by: self.disposeBag)
         })
+        .disposed(by: disposeBag)
         
         
         
@@ -53,12 +57,16 @@ class MainViewModel {
         productSubject
             .subscribe(onNext: { productNum in
                 fetchProductInfo.fetchNews(productNum: productNum)
-                    .subscribe(onNext: { [weak self] product in
-                        self?.testString = product
-                        print(product, "완성")
+                    .subscribe(onNext: { [weak self] allergyResult in
+                        self?.resultSubject.onNext(allergyResult)
+//                        self?.testString = product
+                        print(allergyResult, "완성")
                     })
                     .disposed(by: self.disposeBag)
             })
             .disposed(by: disposeBag)
+        
+        
+        //
     }
 }

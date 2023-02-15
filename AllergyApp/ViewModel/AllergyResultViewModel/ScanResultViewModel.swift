@@ -19,19 +19,21 @@ class ScanResultViewModel {
     
     let allergyResult: PublishSubject<AllergyResult>
     
+    let createDateText: BehaviorSubject<Date>
     let productNameText: BehaviorSubject<String>
     let productIngredientText: BehaviorSubject<String>
     let allergyResultText: BehaviorSubject<String>
     
     let saveButtonTapped: PublishSubject<Void>
     
-    init() {
+    init(result: AllergyResult = AllergyResult(date: Date(), productName: "", productIngredient: "", compareResult: "")) {
         allergyResultModel = AllergyResultModel()
         allergyResult = PublishSubject()
         
-        productNameText = BehaviorSubject(value: "가나다")
-        productIngredientText = BehaviorSubject(value: "12345")
-        allergyResultText = BehaviorSubject(value: "ㅁㄴㅇㄹ")
+        createDateText = BehaviorSubject(value: result.date)
+        productNameText = BehaviorSubject(value: result.productName)
+        productIngredientText = BehaviorSubject(value: result.productIngredient)
+        allergyResultText = BehaviorSubject(value: result.compareResult)
         
         saveButtonTapped = PublishSubject()
         
