@@ -15,7 +15,7 @@ class FetchBarcodeInfo {
     
     func fetchBarcode(barcode: String, completion: @escaping((Error?, Barcode?) -> Void)) {
         
-        let url = "http://openapi.foodsafetykorea.go.kr/api/sample/C005/json/1/5/BAR_CD=\(barcode)"
+        let url = "http://openapi.foodsafetykorea.go.kr/api/e400aebdccb64dddbb17/C005/json/1/5/BAR_CD=\(barcode)"
         
         guard let barcodeURL = URL(string: url) else { return completion(NSError(domain: "what error", code: 404), nil) }
         

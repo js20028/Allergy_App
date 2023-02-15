@@ -46,7 +46,7 @@ class FetchProductInfo {
     }
     
 
-    func fetchNews(productNum: String) -> Observable<String> {
+    func fetchNews(productNum: String) -> Observable<AllergyResult> {
         return Observable.create { (observer) -> Disposable in
             
             self.downloadPost(productNum: productNum, completion: {(error, randomPosts) in
@@ -61,9 +61,13 @@ class FetchProductInfo {
                     
                     let nutrient = randomPosts.body.items[0].item.nutrient
                     let allergy = randomPosts.body.items[0].item.allergy
+                    
+                    let item = randomPosts.body.items[0].item
+                    let allergyResult = AllergyResult(date: Date(), productName: item.prdlstNm, productIngredient: item.rawmtrl, compareResult: item.allergy)
+                    
                     print(nutrient,"zzzzzzz")
                     print(allergy,"zzzz")
-                    observer.onNext(allergy)
+                    observer.onNext(allergyResult)
                     
                 }
                 

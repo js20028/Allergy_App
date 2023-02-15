@@ -22,18 +22,42 @@ class CheckResultPopupViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
+        
         dismissButton.rx.tap
             .bind(onNext: {
                 self.dismiss(animated: true)
-            }).disposed(by: disposeBag)
-        
+            })
+            .disposed(by: disposeBag)
         
         checkResultButton.rx.tap
+            .do(onNext: {
+                print("팝업 디스미스")
+//                self.dismiss(animated: true)
+                
+                
+            })
             .bind(to: self.viewModel?.checkResultButtonTapped ?? PublishSubject())
             .disposed(by: disposeBag)
         
+        viewModel?.resultSubject
+            .bind(onNext: {
+                print("resultSubject 바인드~~~~~~~~~~~~~~~~~~~~~")
+                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                guard let scanResultVC = storyboard.instantiateViewController(withIdentifier: "ScanResultViewController") as? ScanResultViewController else { return }
+                print(scanResultVC, "스캔결과 뷰컨트롤러")
+                let viewModel = ScanResultViewModel(result: $0)
+                scanResultVC.viewModel = viewModel
+//                self.navigationController?.pushViewController(scanResultVC, animated: true)
+//                self.present(scanResultVC, animated: true)
+                
+                guard let pvc = self.presentingViewController else { return }
+                print(pvc, "PVC 팝업")
+                self.dismiss(animated: true) {
+                            pvc.present(scanResultVC, animated: false, completion: nil)
+                        }
+            })
+            .disposed(by: disposeBag)
+        
     }
-    
-    
-    
 }

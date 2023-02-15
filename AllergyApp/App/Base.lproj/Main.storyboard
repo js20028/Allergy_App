@@ -211,7 +211,7 @@
         <!--바코드 스캔 결과-->
         <scene sceneID="MN8-fZ-XHO">
             <objects>
-                <viewController id="2Yf-Kw-xyg" customClass="ScanResultViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Yf-Kw-xyg" customClass="ScanResultViewController" customModule="AllergyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rgh-pO-7hU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,14 +226,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제품 성분" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-QJ-GGa">
-                                        <rect key="frame" x="0.0" y="58.333333333333343" width="333" height="462.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="58.333333333333343" width="333" height="390.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지 비교 결과" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-0L-vwv">
-                                        <rect key="frame" x="0.0" y="559" width="333" height="150"/>
+                                        <rect key="frame" x="0.0" y="486.66666666666663" width="333" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="s46-ME-eih"/>
@@ -242,6 +242,21 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Dsx-wV-mmC">
+                                        <rect key="frame" x="0.0" y="674.66666666666663" width="333" height="34.333333333333371"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwU-Np-idq">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsU-Hf-gaG">
+                                                <rect key="frame" x="185" y="0.0" width="148" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="저장"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -254,14 +269,13 @@
                             <constraint firstItem="Gjk-IV-sjh" firstAttribute="top" secondItem="fk5-KK-XF4" secondAttribute="top" constant="20" id="nd8-eA-GaJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="바코드 스캔 결과" id="d9t-S9-Jm1">
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="8ea-LE-N2X"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="바코드 스캔 결과" id="d9t-S9-Jm1"/>
                     <connections>
                         <outlet property="allergyResultTextView" destination="Quc-0L-vwv" id="FKF-Od-11k"/>
+                        <outlet property="dismissButton" destination="uwU-Np-idq" id="SnH-77-LhB"/>
                         <outlet property="productIngredientTextView" destination="Xml-QJ-GGa" id="TzM-v5-CqF"/>
                         <outlet property="productNameLabel" destination="jSh-lh-Va0" id="HbN-1j-v4x"/>
-                        <outlet property="scanResultSaveButton" destination="8ea-LE-N2X" id="4Vo-aM-cIE"/>
+                        <outlet property="scanResultSaveButton" destination="NsU-Hf-gaG" id="l2E-8e-RLv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2k-Vv-9GI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
