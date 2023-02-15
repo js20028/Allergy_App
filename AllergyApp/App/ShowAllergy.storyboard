@@ -89,16 +89,21 @@
                                 <rect key="frame" x="14" y="73" width="365" height="682.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="43E-tE-Kiy">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="43E-tE-Kiy">
                                 <rect key="frame" x="14" y="769.66666666666663" width="365" height="34.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-Pz-DBp">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-mT-mkI">
+                                        <rect key="frame" x="121.66666666666666" y="0.0" width="121.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="삭제하기"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-93-7Ac">
-                                        <rect key="frame" x="209" y="0.0" width="156" height="34.333333333333336"/>
+                                        <rect key="frame" x="243.33333333333329" y="0.0" width="121.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="등록하기"/>
                                     </button>
@@ -118,6 +123,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteAllergyButton" destination="DF3-mT-mkI" id="UKN-GF-ATv"/>
                         <outlet property="dismissButton" destination="Lz8-Pz-DBp" id="XSZ-5T-gZx"/>
                         <outlet property="registerMyAllergyButton" destination="XEF-93-7Ac" id="Rxa-ql-Spv"/>
                         <outlet property="totalAllergyTableView" destination="eHy-iP-2qJ" id="u1s-yX-BH9"/>

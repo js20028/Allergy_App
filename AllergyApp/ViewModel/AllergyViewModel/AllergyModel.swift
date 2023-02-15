@@ -31,11 +31,7 @@ class AllergyModel {
             
             self.deleteAlelrgies()
             self.saveAllergies()
-            
-            
-            
-            print(self.testAllergy,".  전체 알러지는?")
-            
+
         }).disposed(by: disposeBag)
 //        asd()
 

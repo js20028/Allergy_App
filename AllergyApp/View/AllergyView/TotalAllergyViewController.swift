@@ -16,6 +16,7 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var totalAllergyTableView: UITableView!
     @IBOutlet weak var registerMyAllergyButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var deleteAllergyButton: UIButton!
     
     var totalAllergyViewModel: TotalAllergyViewModel?
     
@@ -68,6 +69,15 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
             self.dismiss(animated: true)
             
         }).disposed(by: disposeBag)
+        
+        
+        
+        
+        deleteAllergyButton.rx.tap.bind(onNext: {
+            self.totalAllergyViewModel?.tapTotaldelete.onNext(self.totalAllergyViewModel?.checkAllergy.value ?? [])
+        }).disposed(by: disposeBag)
+        
+        
         
         
         // 뒤로가기

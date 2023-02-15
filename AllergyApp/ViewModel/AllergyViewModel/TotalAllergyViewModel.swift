@@ -26,7 +26,7 @@ class TotalAllergyViewModel {
     var checkMyAllergy = BehaviorRelay<[Allergy]>(value: []) // myAllergy 선택된 cell 관리
     
     var tapRegister = PublishSubject<[Allergy]>() // register button 관리
-    
+    var tapTotaldelete = PublishSubject<[Allergy]>() // totalAllergy에서 delete button 관리
     var tapdelete = PublishSubject<[Allergy]>() // delete button 관리
     
     var directAddAllergy = PublishSubject<Allergy>()
@@ -96,6 +96,17 @@ class TotalAllergyViewModel {
             
             self.totalAllergy.accept(totalAllergy)
             self.testAllergy = totalAllergy
+        }).disposed(by: disposeBag)
+        
+        
+        
+        // totalAllergy에서 값 삭제
+        tapTotaldelete.bind(onNext: { checkTotalAllergy in
+
+            var deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == false }
+            
+            self.totalAllergy.accept(deleteAllergy)
+            
         }).disposed(by: disposeBag)
         
         
