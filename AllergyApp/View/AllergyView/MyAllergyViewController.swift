@@ -105,9 +105,10 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
             directAddMyAllergyViewController.view.layer.cornerRadius = 20
             
             let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: directAddMyAllergyViewController)
-//            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = self.view.bounds.size.height * 0.2
+
             bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = directAddMyAllergyViewController.contentViewheight ?? 1
             print(directAddMyAllergyViewController.contentViewheight)
+            
             self.present(bottomSheet, animated: true)
             
         }).disposed(by: disposeBag)

@@ -137,8 +137,12 @@ class TotalAllergyViewModel {
         
         // 직접 버튼 누를때 실행
         directAddAllergy.bind(onNext: { allergy in
+
             self.testAllergy.append(allergy)
             self.totalAllergy.accept(self.testAllergy)
+            
+            
+
         }).disposed(by: disposeBag)
     }
 
