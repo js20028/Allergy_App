@@ -73,10 +73,11 @@ class MainViewModel {
         productSubject
             .subscribe(onNext: { productNum in
                 fetchProductInfo.fetchProductRx(productNum: productNum)
-                    .subscribe(onNext: { [weak self] allergyResult in
-                        self?.resultSubject.onNext(allergyResult)
+                    .subscribe(onNext: { [weak self] productData in
+                        let allergyResult = self?.compareAllergy(response: productData)
+                        self?.resultSubject.onNext(allergyResult ?? AllergyResult(date: Date(), productName: "제품명 오류", productIngredient: "제품 성분 오류", productAllergy: "제품 알러지 오류", compareResult: "비교 결과 오류"))
 //                        self?.testString = product
-                        print(allergyResult, "완성")
+//                        print(allergyResult, "완성")
     
                     }, onError: { _ in
                         print("fetchProductRx 실패")
@@ -89,13 +90,28 @@ class MainViewModel {
             .disposed(by: disposeBag)
     }
     
-    func compareAllergy(allergyResult: AllergyResult) -> String {
+    func compareAllergy(response: Response) -> AllergyResult {
+        
+        let item = response.body.items[0].item
+        
         let myAllergyList = allergyModel.testAllergy
             .filter { $0.myAllergy == true }
             .map { $0.allergyName }
-        
         print(myAllergyList, "내 알러지 리스트 필터한거")
         
-        return ""
+        var resultList: [String] = []
+        
+        for myAllergy in myAllergyList {
+            if item.rawmtrl.contains(myAllergy) || item.allergy.contains(myAllergy) {
+                resultList.append(myAllergy)
+            }
+        }
+        
+        let compareResultString =
+        resultList == [] ? "알러지가 없습니다" : resultList.joined(separator: ", " ) + " 알러지!!!"
+        
+        let allergyResult = AllergyResult(date: Date(), productName: item.prdlstNm, productIngredient: item.rawmtrl, productAllergy: item.allergy, compareResult: compareResultString)
+        
+        return allergyResult
     }
 }

@@ -34,6 +34,7 @@ class AllergyResultModel {
             allergyResultEntity.setValue(allergyResult.date, forKey: "createDate")
             allergyResultEntity.setValue(allergyResult.productName, forKey: "productName")
             allergyResultEntity.setValue(allergyResult.productIngredient, forKey: "productIngredient")
+            allergyResultEntity.setValue(allergyResult.productAllergy, forKey: "productAllergy")
             allergyResultEntity.setValue(allergyResult.compareResult, forKey: "compareResult")
 
             do {

@@ -46,30 +46,30 @@ class FetchProductInfo {
     }
     
 
-    func fetchProductRx(productNum: String) -> Observable<AllergyResult> {
+    func fetchProductRx(productNum: String) -> Observable<Response> {
         return Observable.create { (observer) -> Disposable in
             
-            self.fetchProduct(productNum: productNum, completion: {(error, randomPosts) in
+            self.fetchProduct(productNum: productNum, completion: {(error, product) in
                 
                 if let error = error {
                     print(error,"실패")
                     observer.onError(error)
                 }
                 
-                if let randomPosts = randomPosts {
-                    print(randomPosts, "랜덤포스트")
+                if let product = product {
+                    print(product, "프로덕트")
                     
-                    let nutrient = randomPosts.body.items[0].item.nutrient
-                    let allergy = randomPosts.body.items[0].item.allergy
+                    let nutrient = product.body.items[0].item.nutrient
+                    let allergy = product.body.items[0].item.allergy
                     
-                    let item = randomPosts.body.items[0].item
+                    let item = product.body.items[0].item
                     
                     // compareResult 수정하기
                     let allergyResult = AllergyResult(date: Date(), productName: item.prdlstNm, productIngredient: item.rawmtrl, productAllergy: item.allergy, compareResult: item.allergy)
                     
                     print(nutrient,"zzzzzzz")
                     print(allergy,"zzzz")
-                    observer.onNext(allergyResult)
+                    observer.onNext(product)
                     
                 }
                 
