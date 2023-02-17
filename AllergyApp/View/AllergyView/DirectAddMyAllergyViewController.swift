@@ -49,19 +49,26 @@ class DirectAddMyAllergyViewController: UIViewController {
         
         
         directMyAllergyAddButton.rx.tap.bind(onNext: {
-            
             // textfield.text 앞과 뒤의 공백을 없애줌 + 빈값인지 확인
             if let directAllergyText = self.directAllergyTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !directAllergyText.isEmpty {
-
-                let allergies = Allergy(allergyName: directAllergyText, myAllergy: true)
-                self.totalAllergyViewModel?.directAddAllergy.onNext(allergies)
-                self.dismiss(animated: true)
+                let allergyExists = self.totalAllergyViewModel?.totalAllergy.value.contains(where: { $0.allergyName == directAllergyText }) ?? false
                 
+                if allergyExists {
+                    print("이미 존재하는 알러지")
+                    DispatchQueue.main.async {
+                        self.textStatusLabel.text = "이미 있는 알러지 입니다."
+                    }
+                    
+                } else {
+                    let allergies = Allergy(allergyName: directAllergyText, myAllergy: true)
+                    self.totalAllergyViewModel?.directAddAllergy.onNext(allergies)
+                    self.dismiss(animated: true)
+                }
             } else {
                 print("?")
             }
-
-        }).disposed(by: disposeBag)
+        })
+        .disposed(by: disposeBag)
         
         
         dismissButton.rx.tap

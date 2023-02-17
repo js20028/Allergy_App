@@ -10,6 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum allCheckStatus {
+    case check
+    case nonCheck
+}
+
 class TotalAllergyViewModel {
     
     var testAllergy = [Allergy]()
@@ -31,6 +36,9 @@ class TotalAllergyViewModel {
     
     var directAddAllergy = PublishSubject<Allergy>()
     
+    var myAllergyCheckStatusSubject = BehaviorSubject<allCheckStatus>(value: .nonCheck)
+    var myAllergyCheckStatus: allCheckStatus = .nonCheck
+    
     let disposeBag = DisposeBag()
     
     init(allergyModel: AllergyModel) {
@@ -49,8 +57,7 @@ class TotalAllergyViewModel {
         checkMyAllergy.accept(myAllergy.value)
         
         
-        
-        
+
         
         // 등록하기 버튼을 누를때 실행 (allergyModel에 totalAllergy로 보냄)
         totalAllergy.bind(onNext: { allergy in
@@ -144,6 +151,22 @@ class TotalAllergyViewModel {
             
 
         }).disposed(by: disposeBag)
+        
+        
+        
+        // 전체 체크 버튼 클릭시 체크 알러지 변경
+        myAllergyCheckStatusSubject.bind(onNext: { _ in
+            switch self.myAllergyCheckStatus {
+            case .check :
+                self.myAllergyCheckStatus = .nonCheck
+                print("check")
+            case .nonCheck :
+                
+                self.myAllergyCheckStatus = .check
+                print("noncheck")
+            }
+        }).disposed(by: disposeBag)
+        
     }
 
 }

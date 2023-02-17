@@ -17,6 +17,7 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var addMyAllergyButton: UIButton!
     @IBOutlet weak var myAllergyTableView: UITableView!
     @IBOutlet weak var directAddMyAllergyButton: UIButton!
+    @IBOutlet weak var allCheckButton: UIButton!
     
     let totalAllergyViewModel: TotalAllergyViewModel
     
@@ -111,6 +112,12 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
             
             self.present(bottomSheet, animated: true)
             
+        }).disposed(by: disposeBag)
+        
+        
+        
+        allCheckButton.rx.tap.bind(onNext: {
+            self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
         }).disposed(by: disposeBag)
     }
 }

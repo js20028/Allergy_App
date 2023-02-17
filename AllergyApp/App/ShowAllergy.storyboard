@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,24 +51,35 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-GF-ioa">
-                                <rect key="frame" x="0.0" y="127.33333333333331" width="393" height="690.66666666666674"/>
+                                <rect key="frame" x="0.0" y="161.66666666666669" width="393" height="656.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20p-yJ-L1l">
+                                <rect key="frame" x="0.0" y="117.33333333333333" width="111" height="34.333333333333329"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" 전체 체크">
+                                    <imageReference key="image" image="checkmark.square" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jFh-P7-FD3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2rs-aV-clN" firstAttribute="leading" secondItem="jFh-P7-FD3" secondAttribute="leading" constant="14" id="2Lj-Kp-GdB"/>
-                            <constraint firstItem="d2X-GF-ioa" firstAttribute="top" secondItem="2rs-aV-clN" secondAttribute="bottom" constant="20" id="6OX-DT-pKH"/>
                             <constraint firstItem="jFh-P7-FD3" firstAttribute="bottom" secondItem="d2X-GF-ioa" secondAttribute="bottom" id="9bH-e2-y4K"/>
                             <constraint firstItem="2rs-aV-clN" firstAttribute="top" secondItem="jFh-P7-FD3" secondAttribute="top" constant="14" id="9qA-h0-ABP"/>
+                            <constraint firstItem="20p-yJ-L1l" firstAttribute="leading" secondItem="d2X-GF-ioa" secondAttribute="leading" id="IvI-j4-qpX"/>
                             <constraint firstItem="jFh-P7-FD3" firstAttribute="trailing" secondItem="2rs-aV-clN" secondAttribute="trailing" constant="14" id="Ym2-Gz-hcj"/>
                             <constraint firstItem="jFh-P7-FD3" firstAttribute="trailing" secondItem="d2X-GF-ioa" secondAttribute="trailing" id="gZH-pp-pPd"/>
+                            <constraint firstItem="20p-yJ-L1l" firstAttribute="top" secondItem="2rs-aV-clN" secondAttribute="bottom" constant="10" id="jFk-d4-71p"/>
+                            <constraint firstItem="d2X-GF-ioa" firstAttribute="top" secondItem="20p-yJ-L1l" secondAttribute="bottom" constant="10" id="rVn-mO-aGm"/>
                             <constraint firstItem="d2X-GF-ioa" firstAttribute="leading" secondItem="jFh-P7-FD3" secondAttribute="leading" id="w3H-pC-jm1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addMyAllergyButton" destination="wbm-dF-zkU" id="cC4-G4-tBg"/>
+                        <outlet property="allCheckButton" destination="20p-yJ-L1l" id="aRN-eE-0om"/>
                         <outlet property="deleteMyAllergyButton" destination="q52-cS-GZp" id="KvQ-0N-dqW"/>
                         <outlet property="directAddMyAllergyButton" destination="dY2-VO-QPi" id="NcQ-9f-26U"/>
                         <outlet property="myAllergyTableView" destination="d2X-GF-ioa" id="dhT-9a-yR7"/>
@@ -219,7 +231,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
