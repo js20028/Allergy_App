@@ -12,6 +12,8 @@ import RxSwift
 
 class CheckResultPopupViewController: UIViewController {
     
+    @IBOutlet weak var scanResultTitleLabel: UILabel!
+    @IBOutlet weak var scanResultContentLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var checkResultButton: UIButton!
     
@@ -23,6 +25,18 @@ class CheckResultPopupViewController: UIViewController {
         
         
         
+        viewModel?.popupTitleText
+            .bind(to: self.scanResultTitleLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel?.popupContentText
+            .bind(to: self.scanResultContentLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel?.popupCheckResultButtonIsHidden
+            .bind(to: self.checkResultButton.rx.isHidden)
+            .disposed(by: disposeBag)
+        
         
         dismissButton.rx.tap
             .bind(onNext: {
@@ -33,9 +47,6 @@ class CheckResultPopupViewController: UIViewController {
         checkResultButton.rx.tap
             .do(onNext: {
                 print("팝업 디스미스")
-//                self.dismiss(animated: true)
-                
-                
             })
             .bind(to: self.viewModel?.checkResultButtonTapped ?? PublishSubject())
             .disposed(by: disposeBag)

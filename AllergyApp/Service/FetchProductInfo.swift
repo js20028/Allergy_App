@@ -13,7 +13,7 @@ class FetchProductInfo {
     
 //    var productNum = ""
     
-    func downloadPost(productNum: String, completion: @escaping((Error?, Response?) -> Void)) {
+    func fetchProduct(productNum: String, completion: @escaping((Error?, Response?) -> Void)) {
         
         let urlString = "http://apis.data.go.kr/B553748/CertImgListService/getCertImgListService?returnType=json&prdlstReportNo=\(productNum)&serviceKey=uH8nZxYXbYR18xBZzXcmcbEavFYjx5wSCOjPjyxAZp0S3qY6Y5f63gTjGzknfSB3W%2Fx%2BcQinV0lwlqfChKhHjQ%3D%3D"
         
@@ -46,10 +46,10 @@ class FetchProductInfo {
     }
     
 
-    func fetchNews(productNum: String) -> Observable<AllergyResult> {
+    func fetchProductRx(productNum: String) -> Observable<AllergyResult> {
         return Observable.create { (observer) -> Disposable in
             
-            self.downloadPost(productNum: productNum, completion: {(error, randomPosts) in
+            self.fetchProduct(productNum: productNum, completion: {(error, randomPosts) in
                 
                 if let error = error {
                     print(error,"실패")
@@ -63,7 +63,9 @@ class FetchProductInfo {
                     let allergy = randomPosts.body.items[0].item.allergy
                     
                     let item = randomPosts.body.items[0].item
-                    let allergyResult = AllergyResult(date: Date(), productName: item.prdlstNm, productIngredient: item.rawmtrl, compareResult: item.allergy)
+                    
+                    // compareResult 수정하기
+                    let allergyResult = AllergyResult(date: Date(), productName: item.prdlstNm, productIngredient: item.rawmtrl, productAllergy: item.allergy, compareResult: item.allergy)
                     
                     print(nutrient,"zzzzzzz")
                     print(allergy,"zzzz")

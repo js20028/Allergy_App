@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="checkResultButton" destination="WPA-nR-DAc" id="t5z-pQ-U93"/>
                 <outlet property="dismissButton" destination="qA8-2F-I5R" id="O5I-31-av0"/>
+                <outlet property="scanResultContentLabel" destination="V5J-9G-tbg" id="dwj-a7-4n4"/>
+                <outlet property="scanResultTitleLabel" destination="Cst-W4-Fbh" id="A8r-50-Uee"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yyb-rV-UxR"/>
             </connections>
         </placeholder>
@@ -40,16 +42,16 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="lVj-TE-Sbr">
-                            <rect key="frame" x="40.666666666666657" y="20" width="158.33333333333334" height="53"/>
+                            <rect key="frame" x="42.666666666666657" y="20" width="154.33333333333334" height="53"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스캔 성공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-W4-Fbh">
-                                    <rect key="frame" x="42.000000000000021" y="0.0" width="74.333333333333314" height="24"/>
+                                    <rect key="frame" x="40.000000000000021" y="0.0" width="74.333333333333314" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과를 확인 하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5J-9G-tbg">
-                                    <rect key="frame" x="0.0" y="35" width="158.33333333333334" height="18"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과를 확인하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5J-9G-tbg">
+                                    <rect key="frame" x="0.0" y="35" width="154.33333333333334" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

@@ -83,7 +83,7 @@ class AllergyResultModel {
         guard let fetchResult =  fetchAllergyResult() else { return [] }
         
         for result in fetchResult {
-            let allergyResult = AllergyResult(date: result.createDate ?? Date() , productName: result.productName ?? "", productIngredient: result.productIngredient ?? "", compareResult: result.compareResult ?? "")
+            let allergyResult = AllergyResult(date: result.createDate ?? Date() , productName: result.productName ?? "", productIngredient: result.productIngredient ?? "", productAllergy: result.productAllergy ?? "", compareResult: result.compareResult ?? "")
             resultList.append(allergyResult)
         }
         

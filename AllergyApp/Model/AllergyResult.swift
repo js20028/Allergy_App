@@ -11,6 +11,7 @@ struct AllergyResult {
     let date: Date
     let productName: String
     let productIngredient: String
+    let productAllergy: String
     let compareResult: String
     
     func dateToString() -> String {

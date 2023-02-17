@@ -28,7 +28,7 @@ class LoadAllergyDetailViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        viewModel = LoadAllergyDetailViewModel(AllergyResult(date: Date(), productName: "", productIngredient: "", compareResult: ""))
+        viewModel = LoadAllergyDetailViewModel(AllergyResult(date: Date(), productName: "", productIngredient: "", productAllergy: "", compareResult: ""))
         super.init(coder: coder)
     }
     

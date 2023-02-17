@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        viewModel = MainViewModel(fetchBarcodeInfo: FetchBarcodeInfo(), fetchProductInfo: FetchProductInfo())
+        viewModel = MainViewModel(allergyModel: AllergyModel(), fetchBarcodeInfo: FetchBarcodeInfo(), fetchProductInfo: FetchProductInfo())
         super.init(coder: coder)
     }
     
@@ -77,6 +77,10 @@ extension MainViewController: ReaderViewDelegate {
                 checkResultPopup.modalPresentationStyle = .overCurrentContext
                 checkResultPopup.modalTransitionStyle = .crossDissolve // 뷰가 투명해지면서 넘어가는 애니메이션
                 checkResultPopup.viewModel = self.viewModel
+                
+                viewModel.popupTitleText.onNext("스캔 성공")
+                viewModel.popupContentText.onNext("결과를 확인하시겠습니까?")
+                viewModel.popupCheckResultButtonIsHidden.onNext(false)
                 
                 self.present(checkResultPopup, animated: false, completion: nil)
                 
