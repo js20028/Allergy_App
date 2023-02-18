@@ -41,7 +41,7 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         myAllergyTableView.register(tableViewNibName, forCellReuseIdentifier: "ShowAllergyTableViewCell")
         
         // tableview bind
-        totalAllergyViewModel.myAllergy.bind(to: myAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
+        totalAllergyViewModel.checkMyAllergy.bind(to: myAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
             
             cell.allergyTitleLabel.text = model.allergyName
             cell.checkAllergyImageView.isHidden = model.myAllergy
@@ -117,7 +117,19 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         
         allCheckButton.rx.tap.bind(onNext: {
-            self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            
+            if self.totalAllergyViewModel.myAllergyCheckStatus == .check {
+                print("체크인가")
+                self.totalAllergyViewModel.myAllergyCheckStatusSubject.onNext(.nonCheck)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                
+
+
+            } else {
+                print("체크아닌가")
+                self.totalAllergyViewModel.myAllergyCheckStatusSubject.onNext(.check)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
         }).disposed(by: disposeBag)
     }
 }

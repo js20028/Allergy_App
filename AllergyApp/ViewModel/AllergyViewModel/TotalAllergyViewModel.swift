@@ -34,7 +34,7 @@ class TotalAllergyViewModel {
     var tapTotaldelete = PublishSubject<[Allergy]>() // totalAllergy에서 delete button 관리
     var tapdelete = PublishSubject<[Allergy]>() // delete button 관리
     
-    var directAddAllergy = PublishSubject<Allergy>()
+    var directAddAllergy = PublishSubject<Allergy>() // allergy 직접 추가
     
     var myAllergyCheckStatusSubject = BehaviorSubject<allCheckStatus>(value: .nonCheck)
     var myAllergyCheckStatus: allCheckStatus = .nonCheck
@@ -132,6 +132,7 @@ class TotalAllergyViewModel {
         
         
         
+        
         // cell 클릭할떄 마다 실행 (cell을 텝 할때마다 checkAllergy에 값을 보내줌)
         tapAllergyCell.bind(onNext: { index, check in
             var allergen = self.checkAllergy.value
@@ -144,26 +145,42 @@ class TotalAllergyViewModel {
         
         // 직접 버튼 누를때 실행
         directAddAllergy.bind(onNext: { allergy in
-
             self.testAllergy.append(allergy)
             self.totalAllergy.accept(self.testAllergy)
-            
-            
-
         }).disposed(by: disposeBag)
+        
         
         
         
         // 전체 체크 버튼 클릭시 체크 알러지 변경
         myAllergyCheckStatusSubject.bind(onNext: { _ in
+            
+            let check = self.checkMyAllergy.value
+            
             switch self.myAllergyCheckStatus {
             case .check :
+
+                let checkMy = check.map{ my in
+                    var myAllergy = my
+                    myAllergy.myAllergy = false
+                    return myAllergy
+                }
+                
+                self.checkMyAllergy.accept(checkMy)
                 self.myAllergyCheckStatus = .nonCheck
-                print("check")
+                
             case .nonCheck :
+
+                let checkMy = check.map{ my in
+                    var myAllergy = my
+                    myAllergy.myAllergy = true
+                    return myAllergy
+                }
+                
+                self.checkMyAllergy.accept(checkMy)
                 
                 self.myAllergyCheckStatus = .check
-                print("noncheck")
+                
             }
         }).disposed(by: disposeBag)
         
