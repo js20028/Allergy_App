@@ -30,7 +30,6 @@ class LoadAllergyDetailViewModel {
         productNameText = BehaviorSubject(value: selectedAllergy.productName)
         productIngredientText = BehaviorSubject(value: selectedAllergy.productIngredient)
         productAllergyText = BehaviorSubject(value: selectedAllergy.productAllergy)
-        print(selectedAllergy.productAllergy, " 선택한것 프로덕트 알러지!@#!@#")
         allergyResultText = BehaviorSubject(value: selectedAllergy.compareResult)
         
         deleteButtonTapped = PublishSubject()

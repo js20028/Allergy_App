@@ -64,8 +64,6 @@ class FetchProductInfo {
                     
                     let item = product.body.items[0].item
                     
-                    // compareResult 수정하기
-                    let allergyResult = AllergyResult(date: Date(), productName: item.prdlstNm, productIngredient: item.rawmtrl, productAllergy: item.allergy, compareResult: item.allergy)
                     
                     print(nutrient,"zzzzzzz")
                     print(allergy,"zzzz")

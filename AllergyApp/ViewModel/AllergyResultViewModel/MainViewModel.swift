@@ -38,9 +38,6 @@ class MainViewModel {
         self.fetchProductInfo = fetchProductInfo
         
         
-        
-        
-        
         // 팝업창 확인하기 클릭시 결과 확인
         checkResultButtonTapped.subscribe(onNext: { _ in
             fetchBarcodeInfo.fetchBarcodeRx(barcode: self.barcode)
@@ -92,8 +89,9 @@ class MainViewModel {
     
     func compareAllergy(response: Response) -> AllergyResult {
         
-        let item = response.body.items[0].item
+        allergyModel.fetchAllergies()
         
+        let item = response.body.items[0].item
         let myAllergyList = allergyModel.testAllergy
             .filter { $0.myAllergy == true }
             .map { $0.allergyName }
