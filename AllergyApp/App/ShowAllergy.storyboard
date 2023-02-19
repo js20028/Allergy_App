@@ -80,6 +80,7 @@
                         <outlet property="allCheckButton" destination="20p-yJ-L1l" id="aRN-eE-0om"/>
                         <outlet property="deleteMyAllergyButton" destination="q52-cS-GZp" id="KvQ-0N-dqW"/>
                         <outlet property="directAddMyAllergyButton" destination="dY2-VO-QPi" id="NcQ-9f-26U"/>
+                        <outlet property="dismissButton" destination="qPv-YB-OnT" id="MXt-n6-0QE"/>
                         <outlet property="myAllergyTableView" destination="d2X-GF-ioa" id="dhT-9a-yR7"/>
                     </connections>
                 </viewController>

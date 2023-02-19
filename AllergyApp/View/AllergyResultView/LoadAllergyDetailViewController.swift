@@ -35,9 +35,11 @@ class LoadAllergyDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        bindUI()
+        productIngredientTextView.delegate = self
+        productAllergyTextView.delegate = self
+        allergyResultTextView.delegate = self
         
+        bindUI()
     }
     
     private func bindUI() {
@@ -70,4 +72,13 @@ class LoadAllergyDetailViewController: UIViewController {
         
         
     }
+}
+
+// MARK: 텍스트 뷰 수정x
+extension LoadAllergyDetailViewController: UITextViewDelegate {
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        return false
+    }
+
 }

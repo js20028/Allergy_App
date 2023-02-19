@@ -59,11 +59,11 @@ class CheckResultPopupViewController: UIViewController {
                 print(scanResultVC, "스캔결과 뷰컨트롤러")
                 let viewModel = ScanResultViewModel(result: $0)
                 scanResultVC.viewModel = viewModel
-//                self.navigationController?.pushViewController(scanResultVC, animated: true)
-//                self.present(scanResultVC, animated: true)
+                
+                scanResultVC.modalPresentationStyle = .fullScreen
                 
                 guard let pvc = self.presentingViewController else { return }
-                print(pvc, "PVC 팝업")
+                
                 self.dismiss(animated: true) {
                             pvc.present(scanResultVC, animated: false, completion: nil)
                         }

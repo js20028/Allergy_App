@@ -35,6 +35,10 @@ class ScanResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        productIngredientTextView.delegate = self
+        productAllergyTextView.delegate = self
+        allergyResultTextView.delegate = self
+        
         bindUI()
     }
     
@@ -69,4 +73,12 @@ class ScanResultViewController: UIViewController {
             .disposed(by: disposeBag)
                 
     }
+}
+
+// MARK: 텍스트 뷰 수정x
+extension ScanResultViewController: UITextViewDelegate {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        return false
+    }
+
 }

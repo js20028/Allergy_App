@@ -48,8 +48,10 @@ class MainViewModel {
                 }, onError: { error in
                     
                     print(error, "fetchBarcodeRx 실패")
-                    self.popupTitleText.onNext("api 불러오기 실패")
-                    self.popupContentText.onNext("fetchBarcodeRx 실패")
+//                    self.popupTitleText.onNext("api 불러오기 실패")
+//                    self.popupContentText.onNext("fetchBarcodeRx 실패")
+                    self.popupTitleText.onNext("스캔 실패")
+                    self.popupContentText.onNext("없는 제품 이거나 잘못된 바코드입니다.")
                     self.popupCheckResultButtonIsHidden.onNext(true)
                     
                 })
@@ -78,8 +80,10 @@ class MainViewModel {
     
                     }, onError: { _ in
                         print("fetchProductRx 실패")
-                        self.popupTitleText.onNext("api 불러오기 실패")
-                        self.popupContentText.onNext("fetchProductRx 실패")
+                        self.popupTitleText.onNext("스캔 실패")
+                        self.popupContentText.onNext("없는 제품 이거나 잘못된 바코드입니다.")
+//                        self.popupTitleText.onNext("api 불러오기 실패")
+//                        self.popupContentText.onNext("fetchProductRx 실패")
                         self.popupCheckResultButtonIsHidden.onNext(true)
                     })
                     .disposed(by: self.disposeBag)

@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Toast_Swift
 
 class MainViewController: UIViewController {
     
@@ -40,6 +41,7 @@ class MainViewController: UIViewController {
                 let showAllergyStoryboard = UIStoryboard.init(name: "ShowAllergy", bundle: nil)
                 
                 guard let myAllergyViewController = showAllergyStoryboard.instantiateViewController(withIdentifier: "MyAllergyViewController") as? MyAllergyViewController else { return }
+                myAllergyViewController.modalPresentationStyle = .fullScreen
                 
                 self.present(myAllergyViewController, animated: false, completion: nil)
             })
@@ -50,6 +52,9 @@ class MainViewController: UIViewController {
 //         바코드 스캔 버튼 클릭
         barcodeScanButton.rx.tap
             .do(onNext: {
+                self.view.hideToast()
+                self.view.makeToast("바코드를 가운데 선에 맞춰주세요", duration: 1.5, position: .center)
+            
                 self.barcodeView.start()
             })
             .bind(to: viewModel.scanButtonTapped)

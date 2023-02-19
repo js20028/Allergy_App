@@ -53,11 +53,18 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-Mx-Yep" customClass="BarcodeView" customModule="AllergyApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="197.33333333333334" width="353" height="506.33333333333326"/>
+                                <rect key="frame" x="20" y="197.33333333333334" width="353" height="510.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tW-hV-HE3">
+                                <rect key="frame" x="0.0" y="782" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="11d-Dd-waj"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX3-sr-8qz">
-                                <rect key="frame" x="20" y="743.66666666666663" width="353" height="34.333333333333371"/>
+                                <rect key="frame" x="20" y="727.66666666666663" width="353" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="바코드 스캔하기"/>
                             </button>
@@ -69,12 +76,15 @@
                             <constraint firstItem="VX3-sr-8qz" firstAttribute="trailing" secondItem="9AJ-Mx-Yep" secondAttribute="trailing" id="3Xg-1X-ZLC"/>
                             <constraint firstItem="okG-ja-xYG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8bR-mq-6wV"/>
                             <constraint firstItem="9AJ-Mx-Yep" firstAttribute="trailing" secondItem="okG-ja-xYG" secondAttribute="trailing" id="9th-cR-Zaq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6tW-hV-HE3" secondAttribute="trailing" id="J5K-on-huD"/>
                             <constraint firstItem="okG-ja-xYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NZF-7V-xGz"/>
                             <constraint firstItem="9AJ-Mx-Yep" firstAttribute="top" secondItem="okG-ja-xYG" secondAttribute="bottom" constant="40" id="OGg-wB-1gf"/>
+                            <constraint firstItem="6tW-hV-HE3" firstAttribute="top" secondItem="VX3-sr-8qz" secondAttribute="bottom" constant="20" id="QYB-6B-6Qw"/>
+                            <constraint firstItem="6tW-hV-HE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TCU-zA-5SM"/>
                             <constraint firstItem="VX3-sr-8qz" firstAttribute="leading" secondItem="9AJ-Mx-Yep" secondAttribute="leading" id="gbt-gV-dLr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VX3-sr-8qz" secondAttribute="bottom" constant="40" id="icK-fD-V2y"/>
+                            <constraint firstAttribute="bottom" secondItem="6tW-hV-HE3" secondAttribute="bottom" constant="20" id="kil-69-eSj"/>
                             <constraint firstItem="okG-ja-xYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mFC-2e-RVQ"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="top" secondItem="9AJ-Mx-Yep" secondAttribute="bottom" constant="40" id="wMy-b5-xbh"/>
+                            <constraint firstItem="VX3-sr-8qz" firstAttribute="top" secondItem="9AJ-Mx-Yep" secondAttribute="bottom" constant="20" id="wMy-b5-xbh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kbg-7f-0sx"/>
@@ -311,6 +321,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

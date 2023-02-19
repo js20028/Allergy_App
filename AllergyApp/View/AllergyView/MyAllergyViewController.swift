@@ -18,6 +18,8 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var myAllergyTableView: UITableView!
     @IBOutlet weak var directAddMyAllergyButton: UIButton!
     @IBOutlet weak var allCheckButton: UIButton!
+    @IBOutlet weak var dismissButton: UIButton!
+    
     
     let totalAllergyViewModel: TotalAllergyViewModel
     
@@ -130,6 +132,12 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
                 self.totalAllergyViewModel.myAllergyAllCheckStatusSubject.onNext(.check)
                 self.allCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
             }
+        }).disposed(by: disposeBag)
+        
+        
+        
+        dismissButton.rx.tap.bind(onNext: {
+            self.dismiss(animated: false)
         }).disposed(by: disposeBag)
     }
 }
