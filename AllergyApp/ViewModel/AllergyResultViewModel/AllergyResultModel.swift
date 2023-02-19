@@ -34,6 +34,7 @@ class AllergyResultModel {
             allergyResultEntity.setValue(allergyResult.date, forKey: "createDate")
             allergyResultEntity.setValue(allergyResult.productName, forKey: "productName")
             allergyResultEntity.setValue(allergyResult.productIngredient, forKey: "productIngredient")
+            allergyResultEntity.setValue(allergyResult.productAllergy, forKey: "productAllergy")
             allergyResultEntity.setValue(allergyResult.compareResult, forKey: "compareResult")
 
             do {
@@ -83,7 +84,7 @@ class AllergyResultModel {
         guard let fetchResult =  fetchAllergyResult() else { return [] }
         
         for result in fetchResult {
-            let allergyResult = AllergyResult(date: result.createDate ?? Date() , productName: result.productName ?? "", productIngredient: result.productIngredient ?? "", compareResult: result.compareResult ?? "")
+            let allergyResult = AllergyResult(date: result.createDate ?? Date() , productName: result.productName ?? "", productIngredient: result.productIngredient ?? "", productAllergy: result.productAllergy ?? "", compareResult: result.compareResult ?? "")
             resultList.append(allergyResult)
         }
         

@@ -17,6 +17,7 @@ class LoadAllergyDetailViewController: UIViewController {
     @IBOutlet weak var createDateLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productIngredientTextView: UITextView!
+    @IBOutlet weak var productAllergyTextView: UITextView!
     @IBOutlet weak var allergyResultTextView: UITextView!
     
     var disposeBag = DisposeBag()
@@ -28,7 +29,7 @@ class LoadAllergyDetailViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        viewModel = LoadAllergyDetailViewModel(AllergyResult(date: Date(), productName: "", productIngredient: "", compareResult: ""))
+        viewModel = LoadAllergyDetailViewModel(AllergyResult(date: Date(), productName: "", productIngredient: "", productAllergy: "", compareResult: ""))
         super.init(coder: coder)
     }
     
@@ -50,6 +51,10 @@ class LoadAllergyDetailViewController: UIViewController {
         
         viewModel.productIngredientText
             .bind(to: self.productIngredientTextView.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.productAllergyText
+            .bind(to: self.productAllergyTextView.rx.text)
             .disposed(by: disposeBag)
         
         viewModel.allergyResultText
