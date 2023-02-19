@@ -41,7 +41,6 @@ class FetchProductInfo {
 //                print("success \(randomPosts)")
                 return completion(nil, randomPosts)
             }
-  
         }
     }
     
@@ -59,15 +58,13 @@ class FetchProductInfo {
                 if let product = product {
                     print(product, "프로덕트")
                     
-                    let nutrient = product.body.items[0].item.nutrient
-                    let allergy = product.body.items[0].item.allergy
-                    
-                    let item = product.body.items[0].item
-                    
-                    
-                    print(nutrient,"zzzzzzz")
-                    print(allergy,"zzzz")
-                    observer.onNext(product)
+                    if product.body.items.isEmpty {
+                        print("에러났다")
+                        observer.onError(NSError(domain: "why", code: 404))
+                    } else {
+                        print("보내졌다")
+                        observer.onNext(product)
+                    }
                     
                 }
                 
