@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,10 +54,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20p-yJ-L1l">
-                                <rect key="frame" x="0.0" y="117.33333333333333" width="111" height="34.333333333333329"/>
+                                <rect key="frame" x="0.0" y="117.33333333333333" width="116.66666666666667" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" 전체 체크">
-                                    <imageReference key="image" image="checkmark.square" catalog="system" symbolScale="medium"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 전체 체크">
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
                                 </buttonConfiguration>
                             </button>
@@ -97,8 +95,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="7rP-oW-A99">
+                                <rect key="frame" x="14" y="20.000000000000004" width="365" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5to-VL-B8K">
+                                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 전체 체크">
+                                            <color key="baseForegroundColor" systemColor="linkColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-vt-yOU">
+                                        <rect key="frame" x="214.66666666666663" y="0.0" width="150.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 내 알러지 체크"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eHy-iP-2qJ">
-                                <rect key="frame" x="14" y="73" width="365" height="682.66666666666663"/>
+                                <rect key="frame" x="14" y="64.333333333333314" width="365" height="691.33333333333348"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="43E-tE-Kiy">
@@ -125,9 +140,12 @@
                         <viewLayoutGuide key="safeArea" id="9x6-MV-5ac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eHy-iP-2qJ" firstAttribute="top" secondItem="9x6-MV-5ac" secondAttribute="top" constant="14" id="4At-Qi-Usc"/>
                             <constraint firstItem="9x6-MV-5ac" firstAttribute="bottom" secondItem="43E-tE-Kiy" secondAttribute="bottom" constant="14" id="Mth-dP-hCP"/>
+                            <constraint firstItem="7rP-oW-A99" firstAttribute="leading" secondItem="eHy-iP-2qJ" secondAttribute="leading" id="OwD-JP-4kn"/>
+                            <constraint firstItem="eHy-iP-2qJ" firstAttribute="top" secondItem="7rP-oW-A99" secondAttribute="bottom" constant="10" id="TeO-d0-eUm"/>
                             <constraint firstItem="43E-tE-Kiy" firstAttribute="centerX" secondItem="9x6-MV-5ac" secondAttribute="centerX" id="eYl-wh-rVJ"/>
+                            <constraint firstAttribute="top" secondItem="7rP-oW-A99" secondAttribute="top" constant="-20" id="fA0-FX-2qb"/>
+                            <constraint firstItem="7rP-oW-A99" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" id="fcQ-aj-pWE"/>
                             <constraint firstItem="43E-tE-Kiy" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="14" id="i71-Jj-Fl3"/>
                             <constraint firstItem="9x6-MV-5ac" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" constant="14" id="nWt-hD-ohm"/>
                             <constraint firstItem="eHy-iP-2qJ" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="14" id="woE-Pu-0FQ"/>
@@ -135,15 +153,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allCheckButton" destination="5to-VL-B8K" id="0H5-1D-wv6"/>
                         <outlet property="deleteAllergyButton" destination="DF3-mT-mkI" id="UKN-GF-ATv"/>
                         <outlet property="dismissButton" destination="Lz8-Pz-DBp" id="XSZ-5T-gZx"/>
+                        <outlet property="myAllergyCheckButton" destination="2pJ-vt-yOU" id="dbk-e2-wJH"/>
                         <outlet property="registerMyAllergyButton" destination="XEF-93-7Ac" id="Rxa-ql-Spv"/>
                         <outlet property="totalAllergyTableView" destination="eHy-iP-2qJ" id="u1s-yX-BH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4S-5f-9SC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1055" y="-310"/>
+            <point key="canvasLocation" x="-1055.7251908396945" y="-310.56338028169017"/>
         </scene>
         <!--Direct Add My Allergy View Controller-->
         <scene sceneID="f5M-c7-cNa">

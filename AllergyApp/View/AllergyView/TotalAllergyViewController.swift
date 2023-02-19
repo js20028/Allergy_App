@@ -18,6 +18,9 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var deleteAllergyButton: UIButton!
     
+    @IBOutlet weak var allCheckButton: UIButton!
+    @IBOutlet weak var myAllergyCheckButton: UIButton!
+    
     var totalAllergyViewModel: TotalAllergyViewModel?
     
     let disposeBag = DisposeBag()
@@ -37,7 +40,7 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
 
         
         // tableview bind
-        totalAllergyViewModel?.totalAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
+        totalAllergyViewModel?.checkAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
             
             cell.allergyTitleLabel.text = model.allergyName
             cell.checkAllergyImageView.isHidden = !model.myAllergy
@@ -85,6 +88,40 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
             self.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
+        
+        
+        // 전체체크 버튼
+        allCheckButton.rx.tap.bind(onNext: {
+            print("전체 알러지 전체 체크 버튼 클릭")
+            if self.totalAllergyViewModel?.totalAllergyAllCheckStatus == .check {
+                print("체크")
+                self.totalAllergyViewModel?.totalAllergyAllCheckStatusSubject.onNext(.check)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                
+            } else {
+                print("체크x")
+                self.totalAllergyViewModel?.totalAllergyAllCheckStatusSubject.onNext(.nonCheck)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
+        }).disposed(by: disposeBag)
+        
+        
+        
+        // 내 알러지 체크 버튼
+        myAllergyCheckButton.rx.tap.bind(onNext: {
+            print("전체 알러지 내 알러지 체크 버튼 클릭")
+            if self.totalAllergyViewModel?.myAllergyMyCheckStatus == .check {
+                print("체크인가")
+                self.totalAllergyViewModel?.myAllergyMyCheckStatusSubject.onNext(.check)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                
+            } else {
+                print("체크아닌가")
+                self.totalAllergyViewModel?.myAllergyMyCheckStatusSubject.onNext(.nonCheck)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
+            
+        }).disposed(by: disposeBag)
     }
     
 }

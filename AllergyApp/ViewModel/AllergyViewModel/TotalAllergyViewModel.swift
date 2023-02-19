@@ -36,8 +36,17 @@ class TotalAllergyViewModel {
     
     var directAddAllergy = PublishSubject<Allergy>() // allergy 직접 추가
     
-    var myAllergyCheckStatusSubject = BehaviorSubject<allCheckStatus>(value: .nonCheck)
-    var myAllergyCheckStatus: allCheckStatus = .nonCheck
+    // myAllergy에 전체 체크 속성
+    var myAllergyAllCheckStatusSubject = PublishSubject<allCheckStatus>()
+    var myAllergyAllCheckStatus: allCheckStatus = .check
+    
+    // totalAllergy에 전체 체크 속성
+    var totalAllergyAllCheckStatusSubject = PublishSubject<allCheckStatus>()
+    var totalAllergyAllCheckStatus: allCheckStatus = .nonCheck
+    
+    // totalAllergy에 내 알러지 체크 속성
+    var myAllergyMyCheckStatusSubject = PublishSubject<allCheckStatus>()
+    var myAllergyMyCheckStatus: allCheckStatus = .nonCheck
     
     let disposeBag = DisposeBag()
     
@@ -61,10 +70,11 @@ class TotalAllergyViewModel {
         
         // 등록하기 버튼을 누를때 실행 (allergyModel에 totalAllergy로 보냄)
         totalAllergy.bind(onNext: { allergy in
+            self.testAllergy = allergy
             // totalAllergyd에 값이 들어오면 true인것만 myAllergy에 값 전달
             self.myAllergy.accept(allergy.filter{ $0.myAllergy == true })
             self.checkAllergy.accept(allergy)
-            self.testAllergy = allergy
+            
             print(allergy,"값이 뭘까?")
             
             self.allergyModel.testAllergy = allergy
@@ -110,7 +120,7 @@ class TotalAllergyViewModel {
         // totalAllergy에서 값 삭제
         tapTotaldelete.bind(onNext: { checkTotalAllergy in
 
-            var deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == false }
+            let deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == false }
             
             self.totalAllergy.accept(deleteAllergy)
             
@@ -152,14 +162,14 @@ class TotalAllergyViewModel {
         
         
         
-        // 전체 체크 버튼 클릭시 체크 알러지 변경
-        myAllergyCheckStatusSubject.bind(onNext: { _ in
-            
+        // 마이 알러지 페이지에서 전체 체크 버튼 클릭시 체크 알러지 변경
+        myAllergyAllCheckStatusSubject.bind(onNext: { _ in
+            print("혹시?")
             let check = self.checkMyAllergy.value
             
-            switch self.myAllergyCheckStatus {
+            switch self.myAllergyAllCheckStatus {
             case .check :
-
+                print("이거")
                 let checkMy = check.map{ my in
                     var myAllergy = my
                     myAllergy.myAllergy = false
@@ -167,10 +177,10 @@ class TotalAllergyViewModel {
                 }
                 
                 self.checkMyAllergy.accept(checkMy)
-                self.myAllergyCheckStatus = .nonCheck
+                self.myAllergyAllCheckStatus = .nonCheck
                 
             case .nonCheck :
-
+                print("거이")
                 let checkMy = check.map{ my in
                     var myAllergy = my
                     myAllergy.myAllergy = true
@@ -179,11 +189,53 @@ class TotalAllergyViewModel {
                 
                 self.checkMyAllergy.accept(checkMy)
                 
-                self.myAllergyCheckStatus = .check
+                self.myAllergyAllCheckStatus = .check
                 
             }
         }).disposed(by: disposeBag)
         
+        
+        
+        
+        // 전체 알러지 페이지에서 전체 체크 버튼 클릭시 체크 알러지 변경
+        totalAllergyAllCheckStatusSubject.bind(onNext: { _ in
+            
+            let check = self.checkAllergy.value
+            
+            switch self.totalAllergyAllCheckStatus {
+            case .check :
+
+                let checkMy = check.map{ my in
+                    var myAllergy = my
+                    myAllergy.myAllergy = true
+                    return myAllergy
+                }
+                
+                self.checkAllergy.accept(checkMy)
+                self.totalAllergyAllCheckStatus = .nonCheck
+                
+            case .nonCheck :
+
+                let checkMy = check.map{ my in
+                    var myAllergy = my
+                    myAllergy.myAllergy = false
+                    return myAllergy
+                }
+                
+                self.checkAllergy.accept(checkMy)
+                
+                self.totalAllergyAllCheckStatus = .check
+                
+            }
+        }).disposed(by: disposeBag)
+        
+        
+        
+        
+        // 전체 알러지 페이지에서 내 알러지 체크 버튼 클릭시 체크 알러지 변경
+        myAllergyMyCheckStatusSubject.bind(onNext: { _ in
+            self.checkAllergy.accept(self.testAllergy)
+        }).disposed(by: disposeBag)
     }
 
 }
