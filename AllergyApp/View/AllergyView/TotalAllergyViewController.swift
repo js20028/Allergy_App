@@ -111,14 +111,12 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         myAllergyCheckButton.rx.tap.bind(onNext: {
             print("전체 알러지 내 알러지 체크 버튼 클릭")
             if self.totalAllergyViewModel?.myAllergyMyCheckStatus == .check {
-                print("체크인가")
                 self.totalAllergyViewModel?.myAllergyMyCheckStatusSubject.onNext(.check)
-                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                self.myAllergyCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
                 
             } else {
-                print("체크아닌가")
                 self.totalAllergyViewModel?.myAllergyMyCheckStatusSubject.onNext(.nonCheck)
-                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                self.myAllergyCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
             }
             
         }).disposed(by: disposeBag)

@@ -42,7 +42,7 @@ class TotalAllergyViewModel {
     
     // totalAllergy에 전체 체크 속성
     var totalAllergyAllCheckStatusSubject = PublishSubject<allCheckStatus>()
-    var totalAllergyAllCheckStatus: allCheckStatus = .nonCheck
+    var totalAllergyAllCheckStatus: allCheckStatus = .check
     
     // totalAllergy에 내 알러지 체크 속성
     var myAllergyMyCheckStatusSubject = PublishSubject<allCheckStatus>()
