@@ -35,6 +35,15 @@
 		932DF7C5299B5A58002223C9 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7C4299B5A58002223C9 /* BarCodeView.swift */; };
 		932DF7C7299B7456002223C9 /* CheckResultPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932DF7C6299B7456002223C9 /* CheckResultPopup.xib */; };
 		932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */; };
+		93577D1829A360AD00170EA6 /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1429A360AD00170EA6 /* NanumSquareRoundL.ttf */; };
+		93577D1929A360AD00170EA6 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1529A360AD00170EA6 /* NanumSquareRoundR.ttf */; };
+		93577D1A29A360AD00170EA6 /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1629A360AD00170EA6 /* NanumSquareRoundEB.ttf */; };
+		93577D1B29A360AD00170EA6 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1729A360AD00170EA6 /* NanumSquareRoundB.ttf */; };
+		93577D2029A364A400170EA6 /* NanumSquareB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1C29A364A400170EA6 /* NanumSquareB.ttf */; };
+		93577D2129A364A400170EA6 /* NanumSquareEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1D29A364A400170EA6 /* NanumSquareEB.ttf */; };
+		93577D2229A364A400170EA6 /* NanumSquareL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1E29A364A400170EA6 /* NanumSquareL.ttf */; };
+		93577D2329A364A400170EA6 /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1F29A364A400170EA6 /* NanumSquareR.ttf */; };
+		93577D2629A367CC00170EA6 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */; };
 		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
 		93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */; };
@@ -78,6 +87,15 @@
 		932DF7C4299B5A58002223C9 /* BarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 		932DF7C6299B7456002223C9 /* CheckResultPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckResultPopup.xib; sourceTree = "<group>"; };
 		932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckResultPopupViewController.swift; sourceTree = "<group>"; };
+		93577D1429A360AD00170EA6 /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
+		93577D1529A360AD00170EA6 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		93577D1629A360AD00170EA6 /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
+		93577D1729A360AD00170EA6 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
+		93577D1C29A364A400170EA6 /* NanumSquareB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.ttf; sourceTree = "<group>"; };
+		93577D1D29A364A400170EA6 /* NanumSquareEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareEB.ttf; sourceTree = "<group>"; };
+		93577D1E29A364A400170EA6 /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
+		93577D1F29A364A400170EA6 /* NanumSquareR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.ttf; sourceTree = "<group>"; };
+		93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
 		93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllergyTableViewCell.xib; sourceTree = "<group>"; };
@@ -198,13 +216,14 @@
 		0F8512B32843B7F800A059A1 /* AllergyApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F8512C22843B7FA00A059A1 /* Info.plist */,
+				93577D2429A365D500170EA6 /* Extension */,
+				932DF7CB29A35AF5002223C9 /* Assets */,
 				0F64C178299627FF009AB81C /* Service */,
 				0F83757D297FE0F900ACE1A5 /* App */,
 				0F83757A297FD9FC00ACE1A5 /* Model */,
 				0F83757C297FDA1700ACE1A5 /* View */,
 				0F83757B297FDA0200ACE1A5 /* ViewModel */,
-				0F8512BD2843B7FA00A059A1 /* Assets.xcassets */,
-				0F8512C22843B7FA00A059A1 /* Info.plist */,
 			);
 			path = AllergyApp;
 			sourceTree = "<group>";
@@ -226,6 +245,38 @@
 				932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		932DF7CB29A35AF5002223C9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				93577D0329A3603400170EA6 /* Font */,
+				0F8512BD2843B7FA00A059A1 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		93577D0329A3603400170EA6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				93577D1729A360AD00170EA6 /* NanumSquareRoundB.ttf */,
+				93577D1629A360AD00170EA6 /* NanumSquareRoundEB.ttf */,
+				93577D1429A360AD00170EA6 /* NanumSquareRoundL.ttf */,
+				93577D1529A360AD00170EA6 /* NanumSquareRoundR.ttf */,
+				93577D1C29A364A400170EA6 /* NanumSquareB.ttf */,
+				93577D1D29A364A400170EA6 /* NanumSquareEB.ttf */,
+				93577D1E29A364A400170EA6 /* NanumSquareL.ttf */,
+				93577D1F29A364A400170EA6 /* NanumSquareR.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		93577D2429A365D500170EA6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		93FBFBF2298960DE00337B86 /* AllergyView */ = {
@@ -321,9 +372,17 @@
 				0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */,
 				93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */,
 				0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */,
+				93577D1B29A360AD00170EA6 /* NanumSquareRoundB.ttf in Resources */,
 				93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */,
 				0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */,
+				93577D2229A364A400170EA6 /* NanumSquareL.ttf in Resources */,
+				93577D2329A364A400170EA6 /* NanumSquareR.ttf in Resources */,
+				93577D1A29A360AD00170EA6 /* NanumSquareRoundEB.ttf in Resources */,
+				93577D1929A360AD00170EA6 /* NanumSquareRoundR.ttf in Resources */,
+				93577D1829A360AD00170EA6 /* NanumSquareRoundL.ttf in Resources */,
 				932DF7C7299B7456002223C9 /* CheckResultPopup.xib in Resources */,
+				93577D2029A364A400170EA6 /* NanumSquareB.ttf in Resources */,
+				93577D2129A364A400170EA6 /* NanumSquareEB.ttf in Resources */,
 				0F83758B2982783300ACE1A5 /* LoadAllergyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +463,7 @@
 				0F52F8D9298AB1B0005E2C93 /* ScanResultViewController.swift in Sources */,
 				93CEC022298A6E330021BD4F /* ShowAllergyTableViewCell.swift in Sources */,
 				0F8375832980F03C00ACE1A5 /* AllergyResult.swift in Sources */,
+				93577D2629A367CC00170EA6 /* ExtensionUIColor.swift in Sources */,
 				0F8512B72843B7F800A059A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

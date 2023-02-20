@@ -2,10 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumSquareB.ttf</string>
+		<string>NanumSquareEB.ttf</string>
+		<string>NanumSquareL.ttf</string>
+		<string>NanumSquareR.ttf</string>
+		<string>NanumSquareRoundB.ttf</string>
+		<string>NanumSquareRoundEB.ttf</string>
+		<string>NanumSquareRoundL.ttf</string>
+		<string>NanumSquareRoundR.ttf</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>ㄱㄱ</string>
+	<string>바코드 스캔을 위한 카메라 사용 권한</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
