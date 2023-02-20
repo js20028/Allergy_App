@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
         <array key="NanumSquareR.ttf">
             <string>NanumSquareR</string>
         </array>
@@ -31,36 +34,48 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 알러지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-hH-zIr">
                                 <rect key="frame" x="163.33333333333334" y="73" width="66.333333333333343" height="33.333333333333343"/>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-GF-ioa">
-                                <rect key="frame" x="0.0" y="164.66666666666663" width="393" height="591.99999999999989"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-GF-ioa">
+                                <rect key="frame" x="14" y="173.33333333333331" width="365" height="583.33333333333348"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ozr-1e-N0p">
+                                        <rect key="frame" x="0.0" y="50" width="365" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ozr-1e-N0p" id="aza-Eg-kjt">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20p-yJ-L1l">
-                                <rect key="frame" x="0.0" y="120.33333333333333" width="116.66666666666667" height="34.333333333333329"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 전체 체크">
-                                    <color key="baseForegroundColor" systemColor="linkColor"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20p-yJ-L1l">
+                                <rect key="frame" x="14" y="134.33333333333334" width="82.333333333333329" height="29"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
+                                <color key="tintColor" name="primaryColor"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" 전체 체크" image="checkmark.square" catalog="system">
+                                    <color key="titleColor" name="primaryColor"/>
+                                </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pTm-WT-9VB">
-                                <rect key="frame" x="0.0" y="770.66666666666663" width="393" height="33.333333333333371"/>
+                                <rect key="frame" x="14" y="770.66666666666663" width="365" height="33.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbm-dF-zkU">
-                                        <rect key="frame" x="0.0" y="0.0" width="131" height="33.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="33.333333333333336"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="fi-rr-plus-small"/>
+                                        <state key="normal" image="fi-rr-plus"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY2-VO-QPi">
-                                        <rect key="frame" x="131" y="0.0" width="131" height="33.333333333333336"/>
+                                        <rect key="frame" x="121.66666666666666" y="0.0" width="121.66666666666666" height="33.333333333333336"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="fi-rr-pencil"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q52-cS-GZp">
-                                        <rect key="frame" x="262" y="0.0" width="131" height="33.333333333333336"/>
+                                        <rect key="frame" x="243.33333333333329" y="0.0" width="121.66666666666666" height="33.333333333333336"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="fi-rr-trash"/>
                                     </button>
@@ -76,14 +91,14 @@
                             <constraint firstItem="gxb-hH-zIr" firstAttribute="top" secondItem="qPv-YB-OnT" secondAttribute="top" id="D49-fs-HKn"/>
                             <constraint firstItem="pTm-WT-9VB" firstAttribute="leading" secondItem="d2X-GF-ioa" secondAttribute="leading" id="EUH-lh-Sfm"/>
                             <constraint firstItem="pTm-WT-9VB" firstAttribute="top" secondItem="d2X-GF-ioa" secondAttribute="bottom" constant="14" id="HH9-eX-XHI"/>
-                            <constraint firstItem="20p-yJ-L1l" firstAttribute="top" secondItem="qPv-YB-OnT" secondAttribute="bottom" constant="14" id="I6g-7I-yab"/>
-                            <constraint firstItem="20p-yJ-L1l" firstAttribute="leading" secondItem="d2X-GF-ioa" secondAttribute="leading" id="IvI-j4-qpX"/>
+                            <constraint firstItem="20p-yJ-L1l" firstAttribute="top" secondItem="qPv-YB-OnT" secondAttribute="bottom" constant="28" id="I6g-7I-yab"/>
                             <constraint firstItem="jFh-P7-FD3" firstAttribute="bottom" secondItem="pTm-WT-9VB" secondAttribute="bottom" constant="14" id="aIv-EJ-Ocn"/>
                             <constraint firstItem="qPv-YB-OnT" firstAttribute="top" secondItem="jFh-P7-FD3" secondAttribute="top" constant="14" id="ato-f0-R8R"/>
                             <constraint firstItem="pTm-WT-9VB" firstAttribute="trailing" secondItem="d2X-GF-ioa" secondAttribute="trailing" id="dh1-vc-BOy"/>
-                            <constraint firstItem="jFh-P7-FD3" firstAttribute="trailing" secondItem="d2X-GF-ioa" secondAttribute="trailing" id="gZH-pp-pPd"/>
+                            <constraint firstItem="jFh-P7-FD3" firstAttribute="trailing" secondItem="d2X-GF-ioa" secondAttribute="trailing" constant="14" id="gZH-pp-pPd"/>
                             <constraint firstItem="d2X-GF-ioa" firstAttribute="top" secondItem="20p-yJ-L1l" secondAttribute="bottom" constant="10" id="rVn-mO-aGm"/>
-                            <constraint firstItem="d2X-GF-ioa" firstAttribute="leading" secondItem="jFh-P7-FD3" secondAttribute="leading" id="w3H-pC-jm1"/>
+                            <constraint firstItem="20p-yJ-L1l" firstAttribute="leading" secondItem="d2X-GF-ioa" secondAttribute="leading" id="w2a-bw-FOH"/>
+                            <constraint firstItem="d2X-GF-ioa" firstAttribute="leading" secondItem="jFh-P7-FD3" secondAttribute="leading" constant="14" id="w3H-pC-jm1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -108,50 +123,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="7rP-oW-A99">
-                                <rect key="frame" x="14" y="20.000000000000004" width="365" height="34.333333333333343"/>
+                                <rect key="frame" x="14" y="50" width="365" height="39"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5to-VL-B8K">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 전체 체크">
-                                            <color key="baseForegroundColor" systemColor="linkColor"/>
-                                        </buttonConfiguration>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5to-VL-B8K">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="39"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
+                                        <color key="tintColor" name="primaryColor"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" 전체 체크" image="checkmark.square" catalog="system">
+                                            <color key="titleColor" name="primaryColor"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-vt-yOU">
-                                        <rect key="frame" x="214.66666666666663" y="0.0" width="150.33333333333337" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 내 알러지 체크"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-vt-yOU">
+                                        <rect key="frame" x="251.66666666666671" y="0.0" width="113.33333333333334" height="39"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
+                                        <color key="tintColor" name="primaryColor"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" 내 알러지 체크" image="checkmark.square" catalog="system">
+                                            <color key="titleColor" name="primaryColor"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eHy-iP-2qJ">
-                                <rect key="frame" x="14" y="64.333333333333314" width="365" height="691.33333333333348"/>
+                                <rect key="frame" x="14" y="99" width="365" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="43E-tE-Kiy">
-                                <rect key="frame" x="14" y="769.66666666666663" width="365" height="34.333333333333371"/>
+                                <rect key="frame" x="14" y="772" width="365" height="32"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-Pz-DBp">
-                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="34.333333333333336"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-mT-mkI">
+                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="삭제하기">
+                                            <color key="titleColor" name="primaryColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-93-7Ac">
+                                        <rect key="frame" x="182.66666666666663" y="0.0" width="182.33333333333337" height="32"/>
                                         <color key="backgroundColor" name="primaryColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="뒤로가기">
-                                            <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-mT-mkI">
-                                        <rect key="frame" x="121.66666666666666" y="0.0" width="121.66666666666666" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="삭제하기"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-93-7Ac">
-                                        <rect key="frame" x="243.33333333333329" y="0.0" width="121.66666666666666" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="등록하기"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="등록하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-Pz-DBp">
+                                <rect key="frame" x="345.66666666666669" y="14" width="33.333333333333314" height="33.333333333333336"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="fi-rr-cross">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9x6-MV-5ac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,8 +188,10 @@
                             <constraint firstItem="9x6-MV-5ac" firstAttribute="bottom" secondItem="43E-tE-Kiy" secondAttribute="bottom" constant="14" id="Mth-dP-hCP"/>
                             <constraint firstItem="7rP-oW-A99" firstAttribute="leading" secondItem="eHy-iP-2qJ" secondAttribute="leading" id="OwD-JP-4kn"/>
                             <constraint firstItem="eHy-iP-2qJ" firstAttribute="top" secondItem="7rP-oW-A99" secondAttribute="bottom" constant="10" id="TeO-d0-eUm"/>
+                            <constraint firstItem="9x6-MV-5ac" firstAttribute="trailing" secondItem="Lz8-Pz-DBp" secondAttribute="trailing" constant="14" id="aKF-xc-X2V"/>
                             <constraint firstItem="43E-tE-Kiy" firstAttribute="centerX" secondItem="9x6-MV-5ac" secondAttribute="centerX" id="eYl-wh-rVJ"/>
-                            <constraint firstAttribute="top" secondItem="7rP-oW-A99" secondAttribute="top" constant="-20" id="fA0-FX-2qb"/>
+                            <constraint firstAttribute="top" secondItem="7rP-oW-A99" secondAttribute="top" constant="-50" id="fA0-FX-2qb"/>
+                            <constraint firstItem="Lz8-Pz-DBp" firstAttribute="top" secondItem="1fE-tp-ebo" secondAttribute="top" constant="14" id="fP5-eo-Yjn"/>
                             <constraint firstItem="7rP-oW-A99" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" id="fcQ-aj-pWE"/>
                             <constraint firstItem="43E-tE-Kiy" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="14" id="i71-Jj-Fl3"/>
                             <constraint firstItem="9x6-MV-5ac" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" constant="14" id="nWt-hD-ohm"/>
@@ -269,15 +300,13 @@
     <resources>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="fi-rr-angle-small-left" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="fi-rr-cross" width="33.333332061767578" height="33.333332061767578"/>
         <image name="fi-rr-pencil" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="fi-rr-plus-small" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="fi-rr-plus" width="33.333332061767578" height="33.333332061767578"/>
         <image name="fi-rr-trash" width="33.333332061767578" height="33.333332061767578"/>
         <namedColor name="primaryColor">
             <color red="1" green="0.58823529411764708" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
