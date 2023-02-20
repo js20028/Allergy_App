@@ -15,10 +15,18 @@ class ShowAllergyTableViewCell: UITableViewCell {
     @IBOutlet weak var allergyTitleLabel: UILabel!
     @IBOutlet weak var checkAllergyImageView: UIImageView!
     
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Initialization code
+        // checkAllergtImageView 설정
+        checkAllergyImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        checkAllergyImageView.heightAnchor.constraint(equalToConstant: self.allergyTitleLabel.frame.height).isActive = true
+        checkAllergyImageView.widthAnchor.constraint(equalTo: checkAllergyImageView.heightAnchor).isActive = true
+        
         
     }
 }
