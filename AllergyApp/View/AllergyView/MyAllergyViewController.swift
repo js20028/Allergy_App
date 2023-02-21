@@ -19,6 +19,9 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var directAddMyAllergyButton: UIButton!
     @IBOutlet weak var allCheckButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
+    
+    @IBOutlet weak var opacityView: UIView!
     
     
     let totalAllergyViewModel: TotalAllergyViewModel
@@ -38,6 +41,11 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer()
+        self.opacityView.addGestureRecognizer(tapGesture)
+        
+        self.congigureAddButton()
         
         let tableViewNibName = UINib(nibName: "ShowAllergyTableViewCell", bundle: nil)
         myAllergyTableView.register(tableViewNibName, forCellReuseIdentifier: "ShowAllergyTableViewCell")
@@ -68,9 +76,11 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         
         
-        
+        // totalAllergy에서 추가하기
         addMyAllergyButton.rx.tap.bind(onNext: {
 
+            self.changeUIView(status: true)
+            
             guard let totalAllergyVC = self.storyboard?.instantiateViewController(withIdentifier: "TotalAllergyViewController") as? TotalAllergyViewController else { return }
 
             totalAllergyVC.totalAllergyViewModel = self.totalAllergyViewModel
@@ -79,7 +89,7 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
             totalAllergyVC.view.layer.cornerRadius = 20
             
             let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: totalAllergyVC)
-            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = self.view.bounds.size.height * 0.5
+            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = self.view.bounds.size.height * 0.7
             
             self.present(bottomSheet, animated: true)
             
@@ -99,6 +109,8 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         // 직접 추가하기 버튼 클릭
         directAddMyAllergyButton.rx.tap.bind(onNext: {
+            
+            self.changeUIView(status: true)
             
             guard let directAddMyAllergyViewController = self.storyboard?.instantiateViewController(withIdentifier: "DirectAddMyAllergyViewController") as? DirectAddMyAllergyViewController else { return }
 
@@ -139,5 +151,55 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         dismissButton.rx.tap.bind(onNext: {
             self.dismiss(animated: false)
         }).disposed(by: disposeBag)
+        
+        
+        
+        
+        
+        
+        addButton.rx.tap.bind(onNext: {
+            
+            if self.totalAllergyViewModel.addButtonStatus == .nonTap {
+                self.changeUIView(status: false)
+                
+            } else {
+                self.changeUIView(status: true)
+            }
+        }).disposed(by: disposeBag)
+        
+        
+        
+        tapGesture.rx.event.bind(onNext: { _ in
+            self.changeUIView(status: true)
+        }).disposed(by: disposeBag)
     }
+}
+
+
+// MARK: configure View
+extension MyAllergyViewController {
+    
+    func congigureAddButton() {
+        addButton.layer.cornerRadius = 0.5 * addButton.bounds.size.width
+        addButton.clipsToBounds = true
+        
+        addButton.layer.shadowColor = UIColor.black.cgColor // 색깔
+        addButton.layer.masksToBounds = false  // 내부에 속한 요소들이 UIView 밖을 벗어날 때, 잘라낼 것인지. 그림자는 밖에 그려지는 것이므로 false 로 설정
+        addButton.layer.shadowOffset = CGSize(width: 0, height: 4) // 위치조정
+        addButton.layer.shadowRadius = 5 // 반경
+        addButton.layer.shadowOpacity = 0.3 // alpha값
+    }
+    
+    
+    func changeUIView(status: Bool) {
+        
+        self.totalAllergyViewModel.addButtonStatus = status ? .nonTap : .tap
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.opacityView.isHidden = status
+            self.addMyAllergyButton.isHidden = status
+            self.directAddMyAllergyButton.isHidden = status
+        })
+    }
+    
 }

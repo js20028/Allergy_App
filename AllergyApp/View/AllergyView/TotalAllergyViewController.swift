@@ -38,6 +38,7 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         totalAllergyTableView.register(tableViewNibName, forCellReuseIdentifier: "ShowAllergyTableViewCell")
 
+        self.configureButton()
         
         // tableview bind
         totalAllergyViewModel?.checkAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
@@ -124,3 +125,10 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     
 }
 
+
+extension TotalAllergyViewController {
+    
+    func configureButton() {
+        self.registerMyAllergyButton.layer.cornerRadius = 10
+    }
+}
