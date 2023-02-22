@@ -12,7 +12,8 @@ import RxCocoa
 class LoadAllergyDetailViewController: UIViewController {
     
     
-    @IBOutlet weak var deleteButton: UIBarButtonItem!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var dismissButton: UIButton!
     
     @IBOutlet weak var createDateLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -63,12 +64,20 @@ class LoadAllergyDetailViewController: UIViewController {
             .bind(to: self.allergyResultTextView.rx.text)
             .disposed(by: disposeBag)
         
+        self.dismissButton.rx.tap
+            .bind(onNext: {
+                self.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         self.deleteButton.rx.tap
             .do(onNext: {
-                self.navigationController?.popViewController(animated: true)
+//                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true)
             })
             .bind(to: viewModel.deleteButtonTapped)
             .disposed(by: disposeBag)
+                
         
         
     }

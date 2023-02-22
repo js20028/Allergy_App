@@ -11,6 +11,7 @@ import RxCocoa
 
 class LoadAllergyViewController: UIViewController {
     
+    @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
 
     var disposeBag = DisposeBag()
@@ -65,7 +66,15 @@ class LoadAllergyViewController: UIViewController {
                     })
                     .disposed(by: self!.disposeBag)
                 
-                self?.navigationController?.pushViewController(loadDetailVC, animated: true)
+//                self?.navigationController?.pushViewController(loadDetailVC, animated: true)
+                loadDetailVC.modalPresentationStyle = .fullScreen
+                self?.present(loadDetailVC, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        dismissButton.rx.tap
+            .bind(onNext: {
+                self.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
     }

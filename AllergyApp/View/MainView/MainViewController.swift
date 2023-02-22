@@ -13,6 +13,7 @@ import Toast_Swift
 class MainViewController: UIViewController {
     
     @IBOutlet weak var registerAllergyButton: UIButton!
+    @IBOutlet weak var loadAllergyButton: UIButton!
     @IBOutlet weak var barcodeScanButton: UIButton!
     @IBOutlet weak var barcodeView: BarcodeView!
     
@@ -36,6 +37,7 @@ class MainViewController: UIViewController {
         
         self.barcodeView.delegate = self
         
+        // 알러지 등록 버튼 클릭
         registerAllergyButton.rx.tap
             .bind(onNext: {
                 let showAllergyStoryboard = UIStoryboard.init(name: "ShowAllergy", bundle: nil)
@@ -47,6 +49,16 @@ class MainViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        
+        // 알러지 불러오기 버튼 클릭
+        loadAllergyButton.rx.tap
+            .bind(onNext: {
+                guard let loadAllergyVC = self.storyboard?.instantiateViewController(withIdentifier: "LoadAllergyViewController") as? LoadAllergyViewController else { return }
+                
+                loadAllergyVC.modalPresentationStyle = .fullScreen
+                self.present(loadAllergyVC, animated: true)
+            })
+            .disposed(by: disposeBag)
         
         
 //         바코드 스캔 버튼 클릭
@@ -67,8 +79,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: ReaderViewDelegate {
     func readerComplete(status: ReaderStatus) {
-
-
         
         switch status {
         case let .success(code):
@@ -88,8 +98,6 @@ extension MainViewController: ReaderViewDelegate {
                 viewModel.popupCheckResultButtonIsHidden.onNext(false)
                 
                 self.present(checkResultPopup, animated: false, completion: nil)
-                
-                
             }
             
         case .fail:
