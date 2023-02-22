@@ -40,6 +40,9 @@ class LoadAllergyDetailViewController: UIViewController {
         productAllergyTextView.delegate = self
         allergyResultTextView.delegate = self
         
+        productIngredientTextView.textContainerInset = .init(top: 15, left: 10, bottom: 0, right: 10)
+        productAllergyTextView.textContainerInset = .init(top: 15, left: 10, bottom: 0, right: 10)
+        
         bindUI()
     }
     
@@ -72,13 +75,10 @@ class LoadAllergyDetailViewController: UIViewController {
         
         self.deleteButton.rx.tap
             .do(onNext: {
-//                self.navigationController?.popViewController(animated: true)
                 self.dismiss(animated: true)
             })
             .bind(to: viewModel.deleteButtonTapped)
             .disposed(by: disposeBag)
-                
-        
         
     }
 }

@@ -41,7 +41,7 @@ class LoadAllergyViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        collectionView.rx.contentInset.onNext(UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+        collectionView.rx.contentInset.onNext(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
     }
@@ -49,7 +49,15 @@ class LoadAllergyViewController: UIViewController {
     private func bindUI() {
         viewModel.loadAllergyList
             .bind(to: self.collectionView.rx.items(cellIdentifier: "LoadAllergyCell", cellType: LoadAllergyCollectionViewCell.self)) { index, item, cell in
-                cell.allergyName.text = item.productName
+                
+                cell.productNameLabel.text = item.productName
+                cell.createDateLabel.text = item.dateToString()
+                cell.compareResultLabel.text = item.compareResult
+                
+                if item.compareResult == "알러지가 없습니다" {
+                    cell.contentView.layer.borderColor = UIColor.primaryCGColor
+                }
+                
             }
             .disposed(by: disposeBag)
         
@@ -82,6 +90,6 @@ class LoadAllergyViewController: UIViewController {
 
 extension LoadAllergyViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 100)
+        return CGSize(width: UIScreen.main.bounds.width - 40, height: 100)
     }
 }
