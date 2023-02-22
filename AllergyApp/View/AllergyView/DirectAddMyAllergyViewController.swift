@@ -13,7 +13,7 @@ import RxCocoa
 
 class DirectAddMyAllergyViewController: UIViewController {
     
-    @IBOutlet weak var directAllergyTextField: UITextField!
+    @IBOutlet weak var directAllergyTextField: CustomTextField!
     @IBOutlet weak var textStatusLabel: UILabel!
     @IBOutlet weak var directMyAllergyAddButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!

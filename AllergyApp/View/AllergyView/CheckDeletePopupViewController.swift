@@ -29,6 +29,8 @@ class CheckDeletePopupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.layer.cornerRadius = 20
+        
         self.configureButton()
         self.configurePopupView()
         

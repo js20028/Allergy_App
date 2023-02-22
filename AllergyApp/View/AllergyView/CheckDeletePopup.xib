@@ -32,7 +32,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" restorationIdentifier="CheckDeletePopupViewController" translatesAutoresizingMaskIntoConstraints="NO" id="Pf3-YU-5as">
-                    <rect key="frame" x="39.333333333333343" y="319.66666666666669" width="314.33333333333326" height="213.00000000000006"/>
+                    <rect key="frame" x="39.333333333333343" y="323" width="314.33333333333326" height="206.33333333333337"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정말로 삭제하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-uD-7T1">
                             <rect key="frame" x="48.999999999999986" y="30" width="216.33333333333331" height="22.333333333333329"/>
@@ -47,7 +47,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bpE-YL-DYX">
-                            <rect key="frame" x="20" y="129" width="274.33333333333331" height="38"/>
+                            <rect key="frame" x="20" y="128.33333333333331" width="274.33333333333331" height="38"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0d-pn-fha">
                                     <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="38"/>
@@ -72,8 +72,9 @@
                     <constraints>
                         <constraint firstItem="bpE-YL-DYX" firstAttribute="centerX" secondItem="Pf3-YU-5as" secondAttribute="centerX" id="17W-ts-ul7"/>
                         <constraint firstItem="OI3-Sr-TNB" firstAttribute="centerX" secondItem="tjr-uD-7T1" secondAttribute="centerX" id="Iox-4M-MyN"/>
-                        <constraint firstItem="bpE-YL-DYX" firstAttribute="top" secondItem="OI3-Sr-TNB" secondAttribute="bottom" constant="40.666666666666686" id="OzD-6a-M8m"/>
+                        <constraint firstItem="bpE-YL-DYX" firstAttribute="top" secondItem="OI3-Sr-TNB" secondAttribute="bottom" constant="40" id="OzD-6a-M8m"/>
                         <constraint firstItem="bpE-YL-DYX" firstAttribute="leading" secondItem="Pf3-YU-5as" secondAttribute="leading" constant="20" id="QQ7-cy-Yem"/>
+                        <constraint firstAttribute="bottom" secondItem="bpE-YL-DYX" secondAttribute="bottom" constant="40" id="hm0-5B-u6y"/>
                         <constraint firstItem="tjr-uD-7T1" firstAttribute="centerX" secondItem="Pf3-YU-5as" secondAttribute="centerX" id="oLO-3d-dRQ"/>
                         <constraint firstItem="tjr-uD-7T1" firstAttribute="top" secondItem="Pf3-YU-5as" secondAttribute="top" constant="30" id="xMg-Gg-sEv"/>
                         <constraint firstItem="OI3-Sr-TNB" firstAttribute="top" secondItem="tjr-uD-7T1" secondAttribute="bottom" constant="17" id="xSa-JJ-Afw"/>
@@ -86,7 +87,6 @@
                 <constraint firstItem="Pf3-YU-5as" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="4En-Mj-FV5"/>
                 <constraint firstItem="Pf3-YU-5as" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6vk-zI-MAw"/>
                 <constraint firstItem="Pf3-YU-5as" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ESj-oI-9vd"/>
-                <constraint firstItem="Pf3-YU-5as" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="vCE-va-mL6"/>
             </constraints>
             <point key="canvasLocation" x="102" y="21"/>
         </view>

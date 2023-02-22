@@ -27,8 +27,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPv-YB-OnT">
-                                <rect key="frame" x="14" y="73" width="33.333333333333336" height="43.333333333333343"/>
+                                <rect key="frame" x="14.000000000000004" y="73" width="53.333333333333343" height="43.333333333333343"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="fi-rr-angle-small-left"/>
                             </button>
@@ -157,76 +158,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="7rP-oW-A99">
-                                <rect key="frame" x="14" y="81.333333333333329" width="365" height="39"/>
+                                <rect key="frame" x="14" y="91.333333333333329" width="365" height="38.999999999999986"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5to-VL-B8K">
-                                        <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="39"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
                                         <color key="tintColor" name="primaryColor"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title=" 전체 체크" image="checkmark.square" catalog="system">
+                                        <state key="normal" title="전체 체크" image="checkmark.square" catalog="system">
                                             <color key="titleColor" name="primaryColor"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-vt-yOU">
-                                        <rect key="frame" x="228.66666666666663" y="0.0" width="136.33333333333337" height="39"/>
+                                        <rect key="frame" x="231.66666666666663" y="0.0" width="133.33333333333337" height="39"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
                                         <color key="tintColor" name="primaryColor"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="10" maxY="10"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title=" 내 알러지만 체크" image="checkmark.square" catalog="system">
+                                        <state key="normal" title="내 알러지만 체크" image="checkmark.square" catalog="system">
                                             <color key="titleColor" name="primaryColor"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eHy-iP-2qJ">
-                                <rect key="frame" x="14" y="130.33333333333331" width="365" height="607.66666666666674"/>
+                                <rect key="frame" x="14" y="140.33333333333331" width="365" height="585.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="43E-tE-Kiy">
-                                <rect key="frame" x="14" y="766" width="365" height="38"/>
+                                <rect key="frame" x="14" y="754" width="365" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-mT-mkI">
-                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="38"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="삭제하기">
-                                            <color key="titleColor" name="primaryColor"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-93-7Ac">
-                                        <rect key="frame" x="182.66666666666663" y="0.0" width="182.33333333333337" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="50"/>
                                         <color key="backgroundColor" name="primaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cfu-wH-3tb"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="등록하기">
+                                        <state key="normal" title="내 알러지에 등록하기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-Pz-DBp">
-                                <rect key="frame" x="20.000000000000004" y="20.000000000000004" width="33.333333333333343" height="33.333333333333343"/>
+                                <rect key="frame" x="20.000000000000004" y="20.000000000000004" width="53.333333333333343" height="43.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="fi-rr-cross-small">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 알러지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2j-Hi-EBu">
-                                <rect key="frame" x="155.66666666666666" y="20.000000000000004" width="81.666666666666657" height="33.333333333333343"/>
+                                <rect key="frame" x="155.66666666666666" y="20.000000000000004" width="81.666666666666657" height="43.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-mT-mkI">
+                                <rect key="frame" x="329.66666666666669" y="20.000000000000004" width="43.333333333333314" height="43.333333333333343"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="0.0" maxY="10"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="smallTrash">
+                                    <color key="titleColor" name="primaryColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9x6-MV-5ac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DF3-mT-mkI" firstAttribute="trailing" secondItem="9x6-MV-5ac" secondAttribute="trailing" constant="-20" id="3pq-m5-ZF9"/>
                             <constraint firstItem="7rP-oW-A99" firstAttribute="top" secondItem="Lz8-Pz-DBp" secondAttribute="bottom" constant="28" id="4Pj-zM-zaE"/>
                             <constraint firstItem="S2j-Hi-EBu" firstAttribute="centerX" secondItem="9x6-MV-5ac" secondAttribute="centerX" id="5GQ-mX-BIe"/>
                             <constraint firstItem="Lz8-Pz-DBp" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="20" id="Lqh-wN-gpD"/>
@@ -235,6 +241,7 @@
                             <constraint firstItem="S2j-Hi-EBu" firstAttribute="bottom" secondItem="Lz8-Pz-DBp" secondAttribute="bottom" id="QzK-xT-epE"/>
                             <constraint firstItem="eHy-iP-2qJ" firstAttribute="top" secondItem="7rP-oW-A99" secondAttribute="bottom" constant="10" id="TeO-d0-eUm"/>
                             <constraint firstItem="S2j-Hi-EBu" firstAttribute="top" secondItem="Lz8-Pz-DBp" secondAttribute="top" id="XWP-nM-1g4"/>
+                            <constraint firstItem="DF3-mT-mkI" firstAttribute="top" secondItem="S2j-Hi-EBu" secondAttribute="top" id="doS-JR-FTq"/>
                             <constraint firstItem="43E-tE-Kiy" firstAttribute="centerX" secondItem="9x6-MV-5ac" secondAttribute="centerX" id="eYl-wh-rVJ"/>
                             <constraint firstItem="Lz8-Pz-DBp" firstAttribute="top" secondItem="1fE-tp-ebo" secondAttribute="top" constant="20" id="fP5-eo-Yjn"/>
                             <constraint firstItem="7rP-oW-A99" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" id="fcQ-aj-pWE"/>
@@ -242,6 +249,7 @@
                             <constraint firstItem="9x6-MV-5ac" firstAttribute="trailing" secondItem="eHy-iP-2qJ" secondAttribute="trailing" constant="14" id="nWt-hD-ohm"/>
                             <constraint firstItem="eHy-iP-2qJ" firstAttribute="leading" secondItem="9x6-MV-5ac" secondAttribute="leading" constant="14" id="woE-Pu-0FQ"/>
                             <constraint firstItem="43E-tE-Kiy" firstAttribute="top" secondItem="eHy-iP-2qJ" secondAttribute="bottom" constant="28" id="wy9-Vp-vP4"/>
+                            <constraint firstItem="DF3-mT-mkI" firstAttribute="bottom" secondItem="S2j-Hi-EBu" secondAttribute="bottom" id="yFk-Xw-RSJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -266,40 +274,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Pp-hGR">
-                                <rect key="frame" x="0.0" y="15" width="393" height="219"/>
+                                <rect key="frame" x="0.0" y="15" width="393" height="247"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직접 알러지 등록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-MH-pgQ">
-                                        <rect key="frame" x="138" y="14" width="117" height="33.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직접 알러지 등록하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-MH-pgQ">
+                                        <rect key="frame" x="122.66666666666669" y="14" width="148" height="33.333333333333336"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-X4-ysx">
-                                        <rect key="frame" x="20" y="67.333333333333329" width="353" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-X4-ysx" customClass="CustomTextField" customModule="AllergyApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="67.333333333333329" width="353" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QWP-3F-Pr0"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcm-J4-NrB">
-                                        <rect key="frame" x="20" y="111.33333333333333" width="353" height="14.666666666666671"/>
+                                        <rect key="frame" x="20" y="127.33333333333336" width="353" height="14.666666666666671"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
                                         <color key="textColor" red="0.92128556966781616" green="0.089917680200573114" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-Q9-O6v">
-                                        <rect key="frame" x="20" y="146" width="353" height="38"/>
+                                        <rect key="frame" x="20" y="162" width="353" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah5-so-E0Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="38"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="뒤로가기">
-                                                    <color key="titleColor" name="primaryColor"/>
-                                                </state>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-y7-E6w">
-                                                <rect key="frame" x="194.66666666666663" y="0.0" width="158.33333333333337" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                 <color key="backgroundColor" name="primaryColor"/>
-                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="onR-ll-ufa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="등록하기">
@@ -346,9 +352,9 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="pNQ-Pp-hGR" id="r07-DN-z6K"/>
-                        <outlet property="directAllergyTextField" destination="0Oz-X4-ysx" id="29Q-18-BMd"/>
+                        <outlet property="directAllergyTextField" destination="0Oz-X4-ysx" id="RKo-Xu-ey7"/>
                         <outlet property="directMyAllergyAddButton" destination="3tf-y7-E6w" id="JDN-lz-s0O"/>
-                        <outlet property="dismissButton" destination="Ah5-so-E0Y" id="TTD-85-9aD"/>
+                        <outlet property="dismissButton" destination="PLF-2a-jVW" id="3Ez-6F-atB"/>
                         <outlet property="textStatusLabel" destination="Hcm-J4-NrB" id="Ufp-zX-Fbn"/>
                     </connections>
                 </viewController>

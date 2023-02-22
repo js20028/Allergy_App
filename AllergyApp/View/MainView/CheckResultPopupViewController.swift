@@ -17,13 +17,16 @@ class CheckResultPopupViewController: UIViewController {
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var checkResultButton: UIButton!
     
+    @IBOutlet weak var popupView: UIView!
+    
     let disposeBag = DisposeBag()
     var viewModel: MainViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        popupView.layer.cornerRadius = 10
+        checkResultButton.layer.cornerRadius = 10
         
         viewModel?.popupTitleText
             .bind(to: self.scanResultTitleLabel.rx.text)
