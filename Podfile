@@ -10,5 +10,6 @@ target 'AllergyApp' do
   pod 'RxCocoa'
   pod 'MaterialComponents/BottomSheet'
   pod 'Alamofire', '~> 5.2'
+  pod 'Toast-Swift', '~> 5.0.1'
 
 end

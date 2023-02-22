@@ -9,7 +9,9 @@ import UIKit
 
 class LoadAllergyCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var allergyName: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var createDateLabel: UILabel!
+    @IBOutlet weak var compareResultLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,10 +20,10 @@ class LoadAllergyCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.contentView.layer.cornerRadius = 7.0
+        self.contentView.layer.cornerRadius = 10.0
         self.contentView.layer.borderWidth = 1.0
-        self.contentView.layer.borderColor = UIColor.black.cgColor
-        self.contentView.backgroundColor = .yellow
+        self.contentView.layer.borderColor = UIColor.veryLightGreyCGColor
+//        self.contentView.backgroundColor = .yellow
     }
 
 }

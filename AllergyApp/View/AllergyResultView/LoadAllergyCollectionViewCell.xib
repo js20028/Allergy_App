@@ -4,35 +4,89 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareR.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoadAllergyCell" id="gTV-IL-0wX" customClass="LoadAllergyCollectionViewCell" customModule="AllergyApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="137"/>
+            <rect key="frame" x="0.0" y="0.0" width="428" height="138"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="137"/>
+                <rect key="frame" x="0.0" y="0.0" width="428" height="138"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알러지 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPo-aZ-Zwg">
-                        <rect key="frame" x="36" y="58.333333333333336" width="78" height="20.333333333333336"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipV-vf-Jc6">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="138"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="csT-br-TcB">
+                                <rect key="frame" x="20" y="20" width="123" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="제품 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPo-aZ-Zwg">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="63.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RC-GB-NMw">
+                                        <rect key="frame" x="0.0" y="83.333333333333329" width="123" height="14.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알러지 비교 결과 : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-X7-LPN">
+                                        <rect key="frame" x="0.0" y="98" width="123" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fi-rr-angle-small-right" translatesAutoresizingMaskIntoConstraints="NO" id="RMS-Pf-bNG">
+                                <rect key="frame" x="388" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Gz4-jQ-Kdi"/>
+                                    <constraint firstAttribute="height" constant="20" id="NTD-pw-yZC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RMS-Pf-bNG" firstAttribute="top" secondItem="ipV-vf-Jc6" secondAttribute="top" constant="20" id="IYM-BP-f25"/>
+                            <constraint firstAttribute="trailing" secondItem="RMS-Pf-bNG" secondAttribute="trailing" constant="20" id="IiL-em-QIR"/>
+                            <constraint firstItem="csT-br-TcB" firstAttribute="top" secondItem="ipV-vf-Jc6" secondAttribute="top" constant="20" id="WGL-bE-P5n"/>
+                            <constraint firstItem="csT-br-TcB" firstAttribute="leading" secondItem="ipV-vf-Jc6" secondAttribute="leading" constant="20" id="g5m-gx-nLP"/>
+                            <constraint firstItem="RMS-Pf-bNG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="csT-br-TcB" secondAttribute="trailing" constant="20" id="m5g-fj-iTa"/>
+                            <constraint firstAttribute="bottom" secondItem="csT-br-TcB" secondAttribute="bottom" constant="20" id="yi8-zC-LWZ"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="LPo-aZ-Zwg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4sJ-0R-sDJ"/>
-                <constraint firstItem="LPo-aZ-Zwg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="XhA-lS-LE9"/>
+                <constraint firstItem="ipV-vf-Jc6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MfW-tZ-UsD"/>
+                <constraint firstAttribute="bottom" secondItem="ipV-vf-Jc6" secondAttribute="bottom" id="gfN-Lg-bd4"/>
+                <constraint firstAttribute="trailing" secondItem="ipV-vf-Jc6" secondAttribute="trailing" id="stj-H0-QqD"/>
+                <constraint firstItem="ipV-vf-Jc6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uSs-kb-UJW"/>
             </constraints>
-            <size key="customSize" width="150" height="137"/>
+            <size key="customSize" width="428" height="138"/>
             <connections>
-                <outlet property="allergyName" destination="LPo-aZ-Zwg" id="V9l-Ym-1u1"/>
+                <outlet property="compareResultLabel" destination="VDo-X7-LPN" id="s4G-Y6-kNE"/>
+                <outlet property="createDateLabel" destination="4RC-GB-NMw" id="x9L-Xr-jov"/>
+                <outlet property="productNameLabel" destination="LPo-aZ-Zwg" id="ZlE-r8-C0G"/>
             </connections>
-            <point key="canvasLocation" x="87.022900763358777" y="103.16901408450705"/>
+            <point key="canvasLocation" x="290" y="92"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="fi-rr-angle-small-right" width="33.333332061767578" height="33.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

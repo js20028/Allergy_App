@@ -7,6 +7,7 @@
     <entity name="CoreAllergyResult" representedClassName="CoreAllergyResult" syncable="YES" codeGenerationType="class">
         <attribute name="compareResult" optional="YES" attributeType="String"/>
         <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="productAllergy" optional="YES" attributeType="String"/>
         <attribute name="productIngredient" optional="YES" attributeType="String"/>
         <attribute name="productName" optional="YES" attributeType="String"/>
     </entity>

@@ -13,7 +13,8 @@ import RxCocoa
 
 class DirectAddMyAllergyViewController: UIViewController {
     
-    @IBOutlet weak var directAllergyTextField: UITextField!
+    @IBOutlet weak var directAllergyTextField: CustomTextField!
+    @IBOutlet weak var textStatusLabel: UILabel!
     @IBOutlet weak var directMyAllergyAddButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var contentView: UIView!
@@ -26,23 +27,65 @@ class DirectAddMyAllergyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        directAllergyTextField.text = nil
+        
+        // 높이를 저장시킴
         contentViewheight = contentView.frame.height
         
+        textStatusLabel.text = "알러지를 적어주세요"
         
+        
+        configureButton()
+        
+        
+        let allergyValid = directAllergyTextField.rx.text.orEmpty
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).count > 0}
+            .share(replay: 1) //
+        
+        
+        allergyValid
+            .bind(to: textStatusLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        
+        allergyValid
+            .bind(to: directMyAllergyAddButton.rx.isEnabled)
+            .disposed(by: disposeBag)
         
         
         directMyAllergyAddButton.rx.tap.bind(onNext: {
-            
-            if let directAllergytext = self.directAllergyTextField.text {
-                let allergies = Allergy(allergyName: directAllergytext, myAllergy: true)
-                self.totalAllergyViewModel?.directAddAllergy.onNext(allergies)
+            // textfield.text 앞과 뒤의 공백을 없애줌 + 빈값인지 확인
+            if let directAllergyText = self.directAllergyTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !directAllergyText.isEmpty {
+                let allergyExists = self.totalAllergyViewModel?.totalAllergy.value.contains(where: { $0.allergyName == directAllergyText }) ?? false
+                
+                if allergyExists {
+                    
+                    self.textStatusLabel.text = "이미 있는 알러지 입니다."
+                    
+                } else {
+                    let allergies = Allergy(allergyName: directAllergyText, myAllergy: true)
+                    self.totalAllergyViewModel?.directAddAllergy.onNext(allergies)
+                    self.dismiss(animated: true)
+                }
+            } else {
+                print("?")
+            }
+        })
+        .disposed(by: disposeBag)
+        
+        
+        dismissButton.rx.tap
+            .bind(onNext: {
                 self.dismiss(animated: true)
-            } // else가 실행안됨 textfield에 아무것도 안적어도 nil이 아니라 ""로됨
-
-        }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
         
     }
     
 
+}
+
+extension DirectAddMyAllergyViewController {
+    
+    func configureButton() {
+        self.directMyAllergyAddButton.layer.cornerRadius = 10
+    }
 }

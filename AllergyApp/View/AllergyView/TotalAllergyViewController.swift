@@ -16,6 +16,10 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var totalAllergyTableView: UITableView!
     @IBOutlet weak var registerMyAllergyButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var deleteAllergyButton: UIButton!
+    
+    @IBOutlet weak var allCheckButton: UIButton!
+    @IBOutlet weak var myAllergyCheckButton: UIButton!
     
     var totalAllergyViewModel: TotalAllergyViewModel?
     
@@ -34,9 +38,10 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         totalAllergyTableView.register(tableViewNibName, forCellReuseIdentifier: "ShowAllergyTableViewCell")
 
+        self.configureButton()
         
         // tableview bind
-        totalAllergyViewModel?.totalAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
+        totalAllergyViewModel?.checkAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
             
             cell.allergyTitleLabel.text = model.allergyName
             cell.checkAllergyImageView.isHidden = !model.myAllergy
@@ -70,12 +75,68 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         }).disposed(by: disposeBag)
         
         
+        
+        
+        deleteAllergyButton.rx.tap.bind(onNext: {
+//            self.totalAllergyViewModel?.tapTotaldelete.onNext(self.totalAllergyViewModel?.checkAllergy.value ?? [])
+            let checkDeletePopup = CheckDeletePopupViewController(nibName: "CheckDeletePopup", bundle: nil)
+            
+            checkDeletePopup.modalPresentationStyle = .overCurrentContext
+            checkDeletePopup.modalTransitionStyle = .crossDissolve // 뷰가 투명해지면서 넘어가는 애니메이션
+            checkDeletePopup.totalAllergyViewModel = self.totalAllergyViewModel
+            checkDeletePopup.allergyViewStatus = .totalAllergy
+            
+            self.present(checkDeletePopup, animated: false, completion: nil)
+        }).disposed(by: disposeBag)
+        
+        
+        
+        
         // 뒤로가기
         dismissButton.rx.tap.bind(onNext: {
             self.dismiss(animated: true)
         }).disposed(by: disposeBag)
 
+        
+        
+        // 전체체크 버튼
+        allCheckButton.rx.tap.bind(onNext: {
+            print("전체 알러지 전체 체크 버튼 클릭")
+            if self.totalAllergyViewModel?.totalAllergyAllCheckStatus == .check {
+                print("체크")
+                self.totalAllergyViewModel?.totalAllergyAllCheckStatusSubject.onNext(.check)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                
+            } else {
+                print("체크x")
+                self.totalAllergyViewModel?.totalAllergyAllCheckStatusSubject.onNext(.nonCheck)
+                self.allCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
+        }).disposed(by: disposeBag)
+        
+        
+        
+        // 내 알러지 체크 버튼
+        myAllergyCheckButton.rx.tap.bind(onNext: {
+            print("전체 알러지 내 알러지 체크 버튼 클릭")
+            if self.totalAllergyViewModel?.myAllergyMyCheckStatus == .check {
+                self.totalAllergyViewModel?.myAllergyMyCheckStatusSubject.onNext(.check)
+                self.myAllergyCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                
+            } else {
+                self.totalAllergyViewModel?.myAllergyMyCheckStatusSubject.onNext(.nonCheck)
+                self.myAllergyCheckButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
+            
+        }).disposed(by: disposeBag)
     }
     
 }
 
+
+extension TotalAllergyViewController {
+    
+    func configureButton() {
+        self.registerMyAllergyButton.layer.cornerRadius = 10
+    }
+}
