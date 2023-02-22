@@ -18,13 +18,20 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckDeletePopupViewController" customModule="AllergyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="Vx8-jx-2Fa" id="cFA-hu-Q80"/>
+                <outlet property="dismissButton" destination="I0d-pn-fha" id="UZW-ZE-hP2"/>
+                <outlet property="popUpView" destination="Pf3-YU-5as" id="Xwl-NK-Hof"/>
+                <outlet property="view" destination="iN0-l3-epB" id="AiS-AR-BsM"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" restorationIdentifier="CheckDeletePopup" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf3-YU-5as">
+                <view contentMode="scaleToFill" restorationIdentifier="CheckDeletePopupViewController" translatesAutoresizingMaskIntoConstraints="NO" id="Pf3-YU-5as">
                     <rect key="frame" x="39.333333333333343" y="319.66666666666669" width="314.33333333333326" height="213.00000000000006"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정말로 삭제하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-uD-7T1">
