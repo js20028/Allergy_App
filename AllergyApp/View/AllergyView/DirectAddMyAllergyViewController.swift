@@ -13,7 +13,7 @@ import RxCocoa
 
 class DirectAddMyAllergyViewController: UIViewController {
     
-    @IBOutlet weak var directAllergyTextField: UITextField!
+    @IBOutlet weak var directAllergyTextField: CustomTextField!
     @IBOutlet weak var textStatusLabel: UILabel!
     @IBOutlet weak var directMyAllergyAddButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
@@ -28,9 +28,13 @@ class DirectAddMyAllergyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 높이를 저장시킴
         contentViewheight = contentView.frame.height
         
         textStatusLabel.text = "알러지를 적어주세요"
+        
+        
+        configureButton()
         
         
         let allergyValid = directAllergyTextField.rx.text.orEmpty
@@ -54,10 +58,8 @@ class DirectAddMyAllergyViewController: UIViewController {
                 let allergyExists = self.totalAllergyViewModel?.totalAllergy.value.contains(where: { $0.allergyName == directAllergyText }) ?? false
                 
                 if allergyExists {
-                    print("이미 존재하는 알러지")
-                    DispatchQueue.main.async {
-                        self.textStatusLabel.text = "이미 있는 알러지 입니다."
-                    }
+                    
+                    self.textStatusLabel.text = "이미 있는 알러지 입니다."
                     
                 } else {
                     let allergies = Allergy(allergyName: directAllergyText, myAllergy: true)
@@ -79,4 +81,11 @@ class DirectAddMyAllergyViewController: UIViewController {
     }
     
 
+}
+
+extension DirectAddMyAllergyViewController {
+    
+    func configureButton() {
+        self.directMyAllergyAddButton.layer.cornerRadius = 10
+    }
 }

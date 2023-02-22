@@ -15,6 +15,11 @@ enum allCheckStatus {
     case nonCheck
 }
 
+enum addButtonStatus {
+    case tap
+    case nonTap
+}
+
 class TotalAllergyViewModel {
     
     var testAllergy = [Allergy]()
@@ -34,6 +39,8 @@ class TotalAllergyViewModel {
     var tapTotaldelete = PublishSubject<[Allergy]>() // totalAllergy에서 delete button 관리
     var tapdelete = PublishSubject<[Allergy]>() // delete button 관리
     
+    var tapAddButton = PublishSubject<[addButtonStatus]>() // add Button 관리
+    
     var directAddAllergy = PublishSubject<Allergy>() // allergy 직접 추가
     
     // myAllergy에 전체 체크 속성
@@ -48,17 +55,24 @@ class TotalAllergyViewModel {
     var myAllergyMyCheckStatusSubject = PublishSubject<allCheckStatus>()
     var myAllergyMyCheckStatus: allCheckStatus = .nonCheck
     
+    // button클릭 상태
+    var addButtonStatusSubject = PublishSubject<addButtonStatus>()
+    var addButtonStatus: addButtonStatus = .nonTap
+    
+    // ui 상태
+    var uiStatus = BehaviorSubject<Bool>(value: true)
+    
     let disposeBag = DisposeBag()
     
     init(allergyModel: AllergyModel) {
         print("init 실행")
         self.allergyModel = allergyModel
-
+        
         testAllergy = self.allergyModel.testAllergy
-
+        
         // viewModel에 있는 totalAllergy값을 넣어줌
         totalAllergy.accept(testAllergy)
-
+        
         // checkAllergy에는 totalAllergy 값을 먼저 넣어줌
         checkAllergy.accept(totalAllergy.value)
         
@@ -66,7 +80,7 @@ class TotalAllergyViewModel {
         checkMyAllergy.accept(myAllergy.value)
         
         
-
+        
         
         // 등록하기 버튼을 누를때 실행 (allergyModel에 totalAllergy로 보냄)
         totalAllergy.bind(onNext: { allergy in
@@ -103,7 +117,7 @@ class TotalAllergyViewModel {
         
         // checkMyallergy랑 totalAllergy를 비교해서 myAllergy에 값전달 해야함
         tapdelete.bind(onNext: { checkMyAllergy in
-
+            
             var totalAllergy = self.totalAllergy.value
             
             totalAllergy = totalAllergy.map { total in
@@ -119,10 +133,18 @@ class TotalAllergyViewModel {
         
         // totalAllergy에서 값 삭제
         tapTotaldelete.bind(onNext: { checkTotalAllergy in
-
-            let deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == false }
             
-            self.totalAllergy.accept(deleteAllergy)
+            // checkTotalAllergy에서 true인 값만 filter해서 totalAllergy랑 비교해서 그것만 삭제하면 될듯?
+            var totalAllergy = self.totalAllergy.value
+            let deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == true }
+
+            let filteredAllergies = totalAllergy.filter { allergy in
+                return !deleteAllergy.contains { $0.allergyName == allergy.allergyName }
+            }
+
+            print(totalAllergy, "이거 값이 잘 들어오면 될듯?")
+            self.totalAllergy.accept(filteredAllergies)
+            
             
         }).disposed(by: disposeBag)
         
@@ -204,7 +226,7 @@ class TotalAllergyViewModel {
             
             switch self.totalAllergyAllCheckStatus {
             case .check :
-
+                
                 let checkMy = check.map{ my in
                     var myAllergy = my
                     myAllergy.myAllergy = true
@@ -215,7 +237,7 @@ class TotalAllergyViewModel {
                 self.totalAllergyAllCheckStatus = .nonCheck
                 
             case .nonCheck :
-
+                
                 let checkMy = check.map{ my in
                     var myAllergy = my
                     myAllergy.myAllergy = false
@@ -236,6 +258,28 @@ class TotalAllergyViewModel {
         myAllergyMyCheckStatusSubject.bind(onNext: { _ in
             self.checkAllergy.accept(self.testAllergy)
         }).disposed(by: disposeBag)
+        
+        
+        
+        
+        // add 버튼 클릭시 상태 변경
+        tapAddButton.bind(onNext: { _ in
+            
+            switch self.addButtonStatus {
+            case .nonTap:
+                self.addButtonStatus = .tap
+                self.addButtonStatusSubject.onNext(.tap)
+                self.uiStatus.onNext(false)
+                
+            case .tap:
+                self.addButtonStatus = .nonTap
+                self.addButtonStatusSubject.onNext(.nonTap)
+                self.uiStatus.onNext(true)
+            }
+            
+        }).disposed(by: disposeBag)
+        
+        
     }
 
 }

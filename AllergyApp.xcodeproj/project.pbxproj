@@ -45,6 +45,9 @@
 		93577D2229A364A400170EA6 /* NanumSquareL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1E29A364A400170EA6 /* NanumSquareL.ttf */; };
 		93577D2329A364A400170EA6 /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1F29A364A400170EA6 /* NanumSquareR.ttf */; };
 		93577D2629A367CC00170EA6 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */; };
+		93577D2A29A4E6D500170EA6 /* CheckDeletePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93577D2929A4E6D500170EA6 /* CheckDeletePopup.xib */; };
+		93AF470A29A6462A0094D1A7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF470929A6462A0094D1A7 /* CustomTextField.swift */; };
+		93CDF9B329A4E8750087364D /* CheckDeletePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */; };
 		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
 		93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */; };
@@ -98,6 +101,9 @@
 		93577D1E29A364A400170EA6 /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
 		93577D1F29A364A400170EA6 /* NanumSquareR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.ttf; sourceTree = "<group>"; };
 		93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		93577D2929A4E6D500170EA6 /* CheckDeletePopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckDeletePopup.xib; sourceTree = "<group>"; };
+		93AF470929A6462A0094D1A7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDeletePopupViewController.swift; sourceTree = "<group>"; };
 		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
 		93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllergyTableViewCell.xib; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 		93577D2429A365D500170EA6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				93AF470929A6462A0094D1A7 /* CustomTextField.swift */,
 				93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */,
 				0FEB909529A39D3E00C64D3D /* ExtensionUIView.swift */,
 			);
@@ -290,6 +297,8 @@
 				93CEC021298A6E330021BD4F /* ShowAllergyTableViewCell.swift */,
 				93CEC01D298A5E300021BD4F /* ShowAllergyTableViewCell.xib */,
 				931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */,
+				93577D2929A4E6D500170EA6 /* CheckDeletePopup.xib */,
+				93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */,
 			);
 			path = AllergyView;
 			sourceTree = "<group>";
@@ -382,6 +391,7 @@
 				93577D2329A364A400170EA6 /* NanumSquareR.ttf in Resources */,
 				93577D1A29A360AD00170EA6 /* NanumSquareRoundEB.ttf in Resources */,
 				93577D1929A360AD00170EA6 /* NanumSquareRoundR.ttf in Resources */,
+				93577D2A29A4E6D500170EA6 /* CheckDeletePopup.xib in Resources */,
 				93577D1829A360AD00170EA6 /* NanumSquareRoundL.ttf in Resources */,
 				932DF7C7299B7456002223C9 /* CheckResultPopup.xib in Resources */,
 				93577D2029A364A400170EA6 /* NanumSquareB.ttf in Resources */,
@@ -444,6 +454,7 @@
 				93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */,
 				932DF7C5299B5A58002223C9 /* BarCodeView.swift in Sources */,
 				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
+				93CDF9B329A4E8750087364D /* CheckDeletePopupViewController.swift in Sources */,
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
 				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
 				932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */,
@@ -456,6 +467,7 @@
 				0F837581297FE2BC00ACE1A5 /* LoadAllergyDetailViewController.swift in Sources */,
 				0F64C1772994C4CE009AB81C /* AllergyResultModel.swift in Sources */,
 				0F52F8ED2990DC86005E2C93 /* CoreAllergyModel.xcdatamodeld in Sources */,
+				93AF470A29A6462A0094D1A7 /* CustomTextField.swift in Sources */,
 				0F83757F297FE14400ACE1A5 /* LoadAllergyViewController.swift in Sources */,
 				932DF7C0299B595D002223C9 /* ScanBarcode.swift in Sources */,
 				0F8512B52843B7F800A059A1 /* AppDelegate.swift in Sources */,

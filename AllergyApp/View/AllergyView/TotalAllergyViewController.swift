@@ -38,6 +38,7 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         totalAllergyTableView.register(tableViewNibName, forCellReuseIdentifier: "ShowAllergyTableViewCell")
 
+        self.configureButton()
         
         // tableview bind
         totalAllergyViewModel?.checkAllergy.bind(to: totalAllergyTableView.rx.items(cellIdentifier: "ShowAllergyTableViewCell", cellType: ShowAllergyTableViewCell.self )) { (index, model, cell) in
@@ -77,7 +78,15 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         
         deleteAllergyButton.rx.tap.bind(onNext: {
-            self.totalAllergyViewModel?.tapTotaldelete.onNext(self.totalAllergyViewModel?.checkAllergy.value ?? [])
+//            self.totalAllergyViewModel?.tapTotaldelete.onNext(self.totalAllergyViewModel?.checkAllergy.value ?? [])
+            let checkDeletePopup = CheckDeletePopupViewController(nibName: "CheckDeletePopup", bundle: nil)
+            
+            checkDeletePopup.modalPresentationStyle = .overCurrentContext
+            checkDeletePopup.modalTransitionStyle = .crossDissolve // 뷰가 투명해지면서 넘어가는 애니메이션
+            checkDeletePopup.totalAllergyViewModel = self.totalAllergyViewModel
+            checkDeletePopup.allergyViewStatus = .totalAllergy
+            
+            self.present(checkDeletePopup, animated: false, completion: nil)
         }).disposed(by: disposeBag)
         
         
@@ -124,3 +133,10 @@ class TotalAllergyViewController: UIViewController, UIScrollViewDelegate {
     
 }
 
+
+extension TotalAllergyViewController {
+    
+    func configureButton() {
+        self.registerMyAllergyButton.layer.cornerRadius = 10
+    }
+}
