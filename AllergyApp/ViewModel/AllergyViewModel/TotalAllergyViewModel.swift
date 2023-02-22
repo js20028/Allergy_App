@@ -134,9 +134,17 @@ class TotalAllergyViewModel {
         // totalAllergy에서 값 삭제
         tapTotaldelete.bind(onNext: { checkTotalAllergy in
             
-            let deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == false }
+            // checkTotalAllergy에서 true인 값만 filter해서 totalAllergy랑 비교해서 그것만 삭제하면 될듯?
+            var totalAllergy = self.totalAllergy.value
+            let deleteAllergy = checkTotalAllergy.filter { $0.myAllergy == true }
+
+            let filteredAllergies = totalAllergy.filter { allergy in
+                return !deleteAllergy.contains { $0.allergyName == allergy.allergyName }
+            }
+
+            print(totalAllergy, "이거 값이 잘 들어오면 될듯?")
+            self.totalAllergy.accept(filteredAllergies)
             
-            self.totalAllergy.accept(deleteAllergy)
             
         }).disposed(by: disposeBag)
         

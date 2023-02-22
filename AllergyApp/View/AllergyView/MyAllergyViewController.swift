@@ -100,7 +100,17 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         // 삭제하기 버튼 클릭
         deleteMyAllergyButton.rx.tap.bind(onNext: {
-            self.totalAllergyViewModel.tapdelete.onNext(self.totalAllergyViewModel.checkMyAllergy.value)
+//            self.totalAllergyViewModel.tapdelete.onNext(self.totalAllergyViewModel.checkMyAllergy.value)
+            
+            let checkDeletePopup = CheckDeletePopupViewController(nibName: "CheckDeletePopup", bundle: nil)
+            
+            checkDeletePopup.modalPresentationStyle = .overCurrentContext
+            checkDeletePopup.modalTransitionStyle = .crossDissolve // 뷰가 투명해지면서 넘어가는 애니메이션
+            checkDeletePopup.totalAllergyViewModel = self.totalAllergyViewModel
+            checkDeletePopup.allergyViewStatus = .myAllergy
+            
+            self.present(checkDeletePopup, animated: false, completion: nil)
+            
             print("삭제")
         }).disposed(by: disposeBag)
         
