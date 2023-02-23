@@ -54,7 +54,7 @@ class LoadAllergyViewController: UIViewController {
                 cell.createDateLabel.text = item.dateToString()
                 cell.compareResultLabel.text = item.compareResult
                 
-                if item.compareResult == "알러지가 없습니다" {
+                if item.compareResult != "알러지가 없습니다" {
                     cell.contentView.layer.borderColor = UIColor.primaryCGColor
                 }
                 
