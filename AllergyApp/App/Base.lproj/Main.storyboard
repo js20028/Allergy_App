@@ -231,7 +231,7 @@
                                                 <state key="normal" image="fi-rr-angle-small-left"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="저장된 결과" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-VL-2xY">
-                                                <rect key="frame" x="83.333333333333329" y="0.0" width="208.33333333333337" height="33.333333333333336"/>
+                                                <rect key="frame" x="83.333333333333329" y="0.0" width="208.33333333333343" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -533,6 +533,7 @@
                     <navigationItem key="navigationItem" title="바코드 스캔 결과" id="d9t-S9-Jm1"/>
                     <connections>
                         <outlet property="allergyResultTextView" destination="Quc-0L-vwv" id="FKF-Od-11k"/>
+                        <outlet property="dismissButton" destination="nxa-f4-Efs" id="Ycx-9J-rM1"/>
                         <outlet property="productAllergyTextView" destination="4TA-fl-YZw" id="AIh-jF-sAh"/>
                         <outlet property="productIngredientTextView" destination="Xml-QJ-GGa" id="TzM-v5-CqF"/>
                         <outlet property="productNameLabel" destination="jSh-lh-Va0" id="HbN-1j-v4x"/>
