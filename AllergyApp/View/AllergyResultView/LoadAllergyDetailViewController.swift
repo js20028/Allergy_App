@@ -73,11 +73,27 @@ class LoadAllergyDetailViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+//        self.deleteButton.rx.tap
+//            .do(onNext: {
+////                self.dismiss(animated: true)
+//                let resulDeletetPopup = ResultDeletePopupViewController(nibName: "ResultDeletePopup", bundle: nil)
+//
+//                resulDeletetPopup.modalPresentationStyle = .overCurrentContext
+//                resulDeletetPopup.modalTransitionStyle = .crossDissolve // 뷰가 투명해지면서 넘어가는 애니메이션
+//                resulDeletetPopup.viewModel = self.viewModel
+//            })
+//            .bind(to: viewModel.deleteButtonTapped)
+//            .disposed(by: disposeBag)
+        
         self.deleteButton.rx.tap
-            .do(onNext: {
-                self.dismiss(animated: true)
+            .bind(onNext: {
+                let resulDeletetPopup = ResultDeletePopupViewController(nibName: "ResultDeletePopup", bundle: nil)
+                resulDeletetPopup.modalPresentationStyle = .overCurrentContext
+                resulDeletetPopup.modalTransitionStyle = .crossDissolve
+                resulDeletetPopup.viewModel = self.viewModel
+                
+                self.present(resulDeletetPopup, animated: true, completion: nil)
             })
-            .bind(to: viewModel.deleteButtonTapped)
             .disposed(by: disposeBag)
         
     }

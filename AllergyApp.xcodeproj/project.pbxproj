@@ -27,6 +27,8 @@
 		0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8512BD2843B7FA00A059A1 /* Assets.xcassets */; };
 		0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8512BF2843B7FA00A059A1 /* LaunchScreen.storyboard */; };
 		0F8D57AE299A1BEB00CA4D1D /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D57AD299A1BEB00CA4D1D /* Barcode.swift */; };
+		0FD2A4D429A7562A005EC389 /* ResultDeletePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD2A4D329A7562A005EC389 /* ResultDeletePopup.xib */; };
+		0FD2A4D629A75F7E005EC389 /* ResultDeletePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2A4D529A75F7E005EC389 /* ResultDeletePopupViewController.swift */; };
 		0FEB909629A39D3E00C64D3D /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB909529A39D3E00C64D3D /* ExtensionUIView.swift */; };
 		52E5A03AE8D7D98201D1CCC9 /* Pods_AllergyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */; };
 		931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */; };
@@ -81,6 +83,8 @@
 		0F8512C02843B7FA00A059A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F8512C22843B7FA00A059A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F8D57AD299A1BEB00CA4D1D /* Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		0FD2A4D329A7562A005EC389 /* ResultDeletePopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultDeletePopup.xib; sourceTree = "<group>"; };
+		0FD2A4D529A75F7E005EC389 /* ResultDeletePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDeletePopupViewController.swift; sourceTree = "<group>"; };
 		0FEB909529A39D3E00C64D3D /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		1C562F17ECB7C790266BA6A4 /* Pods-AllergyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.debug.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1F000C0B8422157402BE36D8 /* Pods-AllergyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.release.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				0F8375882982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift */,
 				0F8375892982783200ACE1A5 /* LoadAllergyCollectionViewCell.xib */,
 				0F52F8D8298AB1B0005E2C93 /* ScanResultViewController.swift */,
+				0FD2A4D329A7562A005EC389 /* ResultDeletePopup.xib */,
+				0FD2A4D529A75F7E005EC389 /* ResultDeletePopupViewController.swift */,
 			);
 			path = AllergyResultView;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */,
 				93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */,
 				0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */,
+				0FD2A4D429A7562A005EC389 /* ResultDeletePopup.xib in Resources */,
 				93577D1B29A360AD00170EA6 /* NanumSquareRoundB.ttf in Resources */,
 				93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */,
 				0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */,
@@ -458,6 +465,7 @@
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
 				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
 				932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */,
+				0FD2A4D629A75F7E005EC389 /* ResultDeletePopupViewController.swift in Sources */,
 				0F8512B92843B7F800A059A1 /* MainViewController.swift in Sources */,
 				932DF7BE2997DAA9002223C9 /* Product.swift in Sources */,
 				93FBFBF12989605600337B86 /* Allergy.swift in Sources */,
