@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareR.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultDeletePopupViewController" customModule="AllergyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="Yfy-I1-dXs" id="KjY-jD-jB1"/>
+                <outlet property="dismissButton" destination="UD9-xh-DeN" id="3wT-Bp-fOA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qOP-E3-cgc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLd-Sy-e2T">
+                    <rect key="frame" x="39.333333333333343" y="339.33333333333331" width="314.33333333333326" height="198.33333333333331"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정말로 삭제하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-A1-XiO">
+                            <rect key="frame" x="48.999999999999986" y="30" width="216.33333333333331" height="22.333333333333329"/>
+                            <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WSF-aU-RYo">
+                            <rect key="frame" x="20" y="128.33333333333337" width="274.33333333333331" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UD9-xh-DeN">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="30"/>
+                                    <color key="backgroundColor" name="primaryColor"/>
+                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="취소"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-I1-dXs">
+                                    <rect key="frame" x="147.33333333333331" y="0.0" width="127" height="30"/>
+                                    <color key="backgroundColor" name="primaryColor"/>
+                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="삭제"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장된 알러지 결과가 삭제됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6W-oT-ArE">
+                            <rect key="frame" x="40.333333333333329" y="69.333333333333371" width="233.66666666666669" height="19"/>
+                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="f6W-oT-ArE" firstAttribute="top" secondItem="f0x-A1-XiO" secondAttribute="bottom" constant="17" id="9ii-VO-dEK"/>
+                        <constraint firstItem="WSF-aU-RYo" firstAttribute="top" secondItem="f6W-oT-ArE" secondAttribute="bottom" constant="40" id="Hl2-8D-7FT"/>
+                        <constraint firstItem="WSF-aU-RYo" firstAttribute="centerX" secondItem="qLd-Sy-e2T" secondAttribute="centerX" id="KXr-RY-x9T"/>
+                        <constraint firstItem="f0x-A1-XiO" firstAttribute="centerX" secondItem="qLd-Sy-e2T" secondAttribute="centerX" id="NkD-au-s2l"/>
+                        <constraint firstItem="f6W-oT-ArE" firstAttribute="centerX" secondItem="f0x-A1-XiO" secondAttribute="centerX" id="bAL-2h-1rX"/>
+                        <constraint firstAttribute="bottom" secondItem="WSF-aU-RYo" secondAttribute="bottom" constant="40" id="iyO-Sp-z4B"/>
+                        <constraint firstItem="f0x-A1-XiO" firstAttribute="top" secondItem="qLd-Sy-e2T" secondAttribute="top" constant="30" id="mp2-DF-a5a"/>
+                        <constraint firstItem="WSF-aU-RYo" firstAttribute="leading" secondItem="qLd-Sy-e2T" secondAttribute="leading" constant="20" id="qAA-Mq-hNP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34726821192052981" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="qLd-Sy-e2T" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="QOc-bd-uxh"/>
+                <constraint firstItem="qLd-Sy-e2T" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ZEF-CR-fHO"/>
+                <constraint firstItem="qLd-Sy-e2T" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="v6R-kw-aTL"/>
+            </constraints>
+            <point key="canvasLocation" x="49.618320610687022" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primaryColor">
+            <color red="1" green="0.58823529411764708" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
