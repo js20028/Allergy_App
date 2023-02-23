@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,89 +28,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="okG-ja-xYG">
-                                <rect key="frame" x="20" y="79" width="353" height="36.333333333333343"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-Mx-Yep" customClass="BarcodeView" customModule="AllergyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-OZ-QJS">
+                                <rect key="frame" x="20" y="79" width="74" height="84.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <color key="textColor" name="primaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-bY-Y5o">
+                                <rect key="frame" x="303.33333333333331" y="73" width="75.666666666666686" height="75.666666666666686"/>
+                                <color key="tintColor" name="veryLightGrey"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="10" maxY="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Ae-Cr-3Te">
+                                <rect key="frame" x="369" y="128.66666666666666" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-EE-5Db">
-                                        <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="36.333333333333336"/>
-                                        <color key="backgroundColor" name="primaryColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="등록하기">
-                                            <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-iP-Dyn">
-                                        <rect key="frame" x="191.66666666666663" y="0.0" width="161.33333333333337" height="36.333333333333336"/>
-                                        <color key="backgroundColor" name="primaryColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="불러오기">
-                                            <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HACCP의 등록된 식품만 스캔할 수 있습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwY-XH-gcH">
+                                        <rect key="frame" x="0.0" y="0.0" width="254.33333333333334" height="0.0"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
+                                        <color key="textColor" name="primaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-Mx-Yep" customClass="BarcodeView" customModule="AllergyApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="145.33333333333331" width="353" height="560.33333333333348"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tW-hV-HE3">
-                                <rect key="frame" x="0.0" y="782" width="393" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7P-2C-EmX">
+                                <rect key="frame" x="80" y="745.33333333333337" width="233" height="42.666666666666629"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="okG-ja-xYG">
+                                        <rect key="frame" x="0.0" y="5.3333333333332575" width="233" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-EE-5Db">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="등록하기">
+                                                    <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-iP-Dyn">
+                                                <rect key="frame" x="126.66666666666666" y="0.0" width="106.33333333333334" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="불러오기">
+                                                    <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10012755102040816" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="11d-Dd-waj"/>
+                                    <constraint firstItem="okG-ja-xYG" firstAttribute="centerX" secondItem="N7P-2C-EmX" secondAttribute="centerX" id="ESB-j5-IOK"/>
+                                    <constraint firstItem="okG-ja-xYG" firstAttribute="centerY" secondItem="N7P-2C-EmX" secondAttribute="centerY" id="utF-nk-MNf"/>
+                                    <constraint firstItem="okG-ja-xYG" firstAttribute="leading" secondItem="N7P-2C-EmX" secondAttribute="leading" id="zh7-k5-PpX"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX3-sr-8qz">
-                                <rect key="frame" x="20" y="725.66666666666663" width="353" height="36.333333333333371"/>
-                                <color key="backgroundColor" name="primaryColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="바코드 스캔하기">
-                                    <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="veryLightGrey"/>
                         <constraints>
-                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="leading" secondItem="okG-ja-xYG" secondAttribute="leading" id="1dk-9j-EKN"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="trailing" secondItem="9AJ-Mx-Yep" secondAttribute="trailing" id="3Xg-1X-ZLC"/>
-                            <constraint firstItem="okG-ja-xYG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8bR-mq-6wV"/>
-                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="trailing" secondItem="okG-ja-xYG" secondAttribute="trailing" id="9th-cR-Zaq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6tW-hV-HE3" secondAttribute="trailing" id="J5K-on-huD"/>
-                            <constraint firstItem="okG-ja-xYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NZF-7V-xGz"/>
-                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="top" secondItem="okG-ja-xYG" secondAttribute="bottom" constant="30" id="OGg-wB-1gf"/>
-                            <constraint firstItem="6tW-hV-HE3" firstAttribute="top" secondItem="VX3-sr-8qz" secondAttribute="bottom" constant="20" id="QYB-6B-6Qw"/>
-                            <constraint firstItem="6tW-hV-HE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TCU-zA-5SM"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="leading" secondItem="9AJ-Mx-Yep" secondAttribute="leading" id="gbt-gV-dLr"/>
-                            <constraint firstAttribute="bottom" secondItem="6tW-hV-HE3" secondAttribute="bottom" constant="20" id="kil-69-eSj"/>
-                            <constraint firstItem="okG-ja-xYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mFC-2e-RVQ"/>
-                            <constraint firstItem="VX3-sr-8qz" firstAttribute="top" secondItem="9AJ-Mx-Yep" secondAttribute="bottom" constant="20" id="wMy-b5-xbh"/>
+                            <constraint firstItem="N7P-2C-EmX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Qe-wW-tNj"/>
+                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="12T-1Z-gy7"/>
+                            <constraint firstItem="pTx-OZ-QJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2mr-M7-Qlj"/>
+                            <constraint firstItem="QQK-bY-Y5o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="9BS-W8-ZnX"/>
+                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JNb-gH-W6T"/>
+                            <constraint firstAttribute="bottom" secondItem="9AJ-Mx-Yep" secondAttribute="bottom" id="KPT-Z2-31s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QQK-bY-Y5o" secondAttribute="trailing" constant="14" id="N8X-PO-hVS"/>
+                            <constraint firstItem="N7P-2C-EmX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="S9s-Gl-wof"/>
+                            <constraint firstItem="N7P-2C-EmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Y0g-Rs-MI6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N7P-2C-EmX" secondAttribute="bottom" constant="30" id="bno-MM-GGp"/>
+                            <constraint firstItem="0Ae-Cr-3Te" firstAttribute="trailing" secondItem="QQK-bY-Y5o" secondAttribute="trailing" constant="-10" id="e8Q-fI-t6v"/>
+                            <constraint firstItem="9AJ-Mx-Yep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1y-nW-teH"/>
+                            <constraint firstItem="0Ae-Cr-3Te" firstAttribute="top" secondItem="QQK-bY-Y5o" secondAttribute="bottom" constant="-20" id="vmE-Im-V19"/>
+                            <constraint firstItem="pTx-OZ-QJS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xMl-me-8Xk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kbg-7f-0sx"/>
                     <connections>
-                        <outlet property="barcodeScanButton" destination="VX3-sr-8qz" id="Eeh-PM-fFI"/>
                         <outlet property="barcodeView" destination="9AJ-Mx-Yep" id="c1k-Vn-7e5"/>
                         <outlet property="loadAllergyButton" destination="SWl-iP-Dyn" id="HSn-9n-UFW"/>
+                        <outlet property="menuView" destination="N7P-2C-EmX" id="Enh-Nb-Shd"/>
                         <outlet property="registerAllergyButton" destination="2nb-EE-5Db" id="rkJ-gQ-Imn"/>
+                        <outlet property="showLabel" destination="AwY-XH-gcH" id="QQF-dJ-Nf8"/>
+                        <outlet property="showLabelButton" destination="QQK-bY-Y5o" id="SaT-L9-beq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -516,6 +545,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="exclamationmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="fi-rr-angle-small-left" width="33.333332061767578" height="33.333332061767578"/>
         <image name="smallTrash" width="23.333333969116211" height="23.333333969116211"/>
         <namedColor name="primaryColor">
@@ -529,9 +559,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
