@@ -202,10 +202,12 @@ extension MyAllergyViewController {
     
     
     func changeUIView(status: Bool) {
-        
+        let imageTitle = status ? "fi-rr-plus-1" : "fi-rr-cross-1"
         self.totalAllergyViewModel.addButtonStatus = status ? .nonTap : .tap
         
         UIView.animate(withDuration: 0.2, animations: {
+            self.addButton.setImage(UIImage(named: imageTitle), for: .normal)
+            self.addButton.setTitleColor(UIColor.white, for: .normal)
             self.opacityView.isHidden = status
             self.addMyAllergyButton.isHidden = status
             self.directAddMyAllergyButton.isHidden = status

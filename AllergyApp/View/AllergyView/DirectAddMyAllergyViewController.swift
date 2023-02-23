@@ -42,14 +42,7 @@ class DirectAddMyAllergyViewController: UIViewController {
             .share(replay: 1) //
         
         
-        allergyValid
-            .bind(to: textStatusLabel.rx.isHidden)
-            .disposed(by: disposeBag)
-        
-        
-        allergyValid
-            .bind(to: directMyAllergyAddButton.rx.isEnabled)
-            .disposed(by: disposeBag)
+
         
         
         directMyAllergyAddButton.rx.tap.bind(onNext: {
@@ -67,7 +60,7 @@ class DirectAddMyAllergyViewController: UIViewController {
                     self.dismiss(animated: true)
                 }
             } else {
-                print("?")
+                self.textStatusLabel.text = "알러지가 적혀 있지 않습니다."
             }
         })
         .disposed(by: disposeBag)
