@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Toast_Swift
+import Lottie
 
 enum showLabel {
     case show
@@ -19,7 +20,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var registerAllergyButton: UIButton!
     @IBOutlet weak var loadAllergyButton: UIButton!
-    @IBOutlet weak var barcodeScanButton: UIButton!
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var barcodeView: BarcodeView!
     @IBOutlet weak var showLabelButton: UIButton!
@@ -75,17 +75,7 @@ class MainViewController: UIViewController {
             .disposed(by: disposeBag)
         
         
-//         바코드 스캔 버튼 클릭
-//        barcodeScanButton.rx.tap
-//            .do(onNext: {
-//                self.view.hideToast()
-//                self.view.makeToast("바코드를 가운데 선에 맞춰주세요", duration: 1.5, position: .center)
-//
-//                self.barcodeView.start()
-//            })
-//            .bind(to: viewModel.scanButtonTapped)
-//            .disposed(by: disposeBag)
-
+        // 바코드 뷰 클릭
         tapGesture.rx.event
             .map { _ in print("바코드뷰 클릭") }
             .do(onNext: { _ in

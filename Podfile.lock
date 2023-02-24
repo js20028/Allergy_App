@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.2)
+  - lottie-ios (3.5.0)
   - MaterialComponents/Availability (124.2.0)
   - MaterialComponents/BottomSheet (124.2.0):
     - MaterialComponents/Elevation
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - lottie-ios
   - MaterialComponents/BottomSheet
   - RxCocoa
   - RxSwift
@@ -47,6 +49,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - lottie-ios
     - MaterialComponents
     - RxCocoa
     - RxRelay
@@ -55,12 +58,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 64f41cfae31bbb9e61902cc88d737d074c8f72b6
+PODFILE CHECKSUM: fd5c02608d8f93d6a4c05aa6a121af6a0f6331d4
 
 COCOAPODS: 1.11.3

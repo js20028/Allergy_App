@@ -32,12 +32,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-OZ-QJS">
-                                <rect key="frame" x="20" y="79" width="74" height="84.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
-                                <color key="textColor" name="primaryColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-bY-Y5o">
                                 <rect key="frame" x="303.33333333333331" y="73" width="75.666666666666686" height="75.666666666666686"/>
                                 <color key="tintColor" name="veryLightGrey"/>
@@ -117,7 +111,6 @@
                         <constraints>
                             <constraint firstItem="N7P-2C-EmX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Qe-wW-tNj"/>
                             <constraint firstItem="9AJ-Mx-Yep" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="12T-1Z-gy7"/>
-                            <constraint firstItem="pTx-OZ-QJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2mr-M7-Qlj"/>
                             <constraint firstItem="QQK-bY-Y5o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="9BS-W8-ZnX"/>
                             <constraint firstItem="9AJ-Mx-Yep" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JNb-gH-W6T"/>
                             <constraint firstAttribute="bottom" secondItem="9AJ-Mx-Yep" secondAttribute="bottom" id="KPT-Z2-31s"/>
@@ -128,7 +121,6 @@
                             <constraint firstItem="0Ae-Cr-3Te" firstAttribute="trailing" secondItem="QQK-bY-Y5o" secondAttribute="trailing" constant="-10" id="e8Q-fI-t6v"/>
                             <constraint firstItem="9AJ-Mx-Yep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1y-nW-teH"/>
                             <constraint firstItem="0Ae-Cr-3Te" firstAttribute="top" secondItem="QQK-bY-Y5o" secondAttribute="bottom" constant="-20" id="vmE-Im-V19"/>
-                            <constraint firstItem="pTx-OZ-QJS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xMl-me-8Xk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kbg-7f-0sx"/>
@@ -231,7 +223,7 @@
                                                 <state key="normal" image="fi-rr-angle-small-left"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="저장된 결과" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-VL-2xY">
-                                                <rect key="frame" x="83.333333333333329" y="0.0" width="208.33333333333343" height="33.333333333333336"/>
+                                                <rect key="frame" x="83.333333333333329" y="0.0" width="208.33333333333337" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -339,14 +331,14 @@
                                             </textView>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지 비교 결과" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q0v-Ux-X0i">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지 비교 결과" translatesAutoresizingMaskIntoConstraints="NO" id="q0v-Ux-X0i">
                                         <rect key="frame" x="0.0" y="615" width="365" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="2Xp-Ss-I3B"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -484,30 +476,30 @@
                                             </textView>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지 비교 결과" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-0L-vwv">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="알러지 비교 결과" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-0L-vwv">
                                         <rect key="frame" x="0.0" y="509.66666666666674" width="365" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="s46-ME-eih"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Dsx-wV-mmC">
                                         <rect key="frame" x="0.0" y="627.66666666666663" width="365" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsU-Hf-gaG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsU-Hf-gaG">
                                                 <rect key="frame" x="0.0" y="0.0" width="365" height="50"/>
                                                 <color key="backgroundColor" name="primaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Mu0-df-AYf"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="저장">
-                                                    <fontDescription key="titleFontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="저장">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="10"/>

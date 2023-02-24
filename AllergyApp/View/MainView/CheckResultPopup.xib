@@ -13,15 +13,13 @@
         <array key="NanumSquareB.ttf">
             <string>NanumSquareB</string>
         </array>
-        <array key="NanumSquareR.ttf">
-            <string>NanumSquareR</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckResultPopupViewController" customModule="AllergyApp" customModuleProvider="target">
             <connections>
                 <outlet property="checkResultButton" destination="WPA-nR-DAc" id="t5z-pQ-U93"/>
                 <outlet property="dismissButton" destination="qA8-2F-I5R" id="O5I-31-av0"/>
+                <outlet property="lottieIndicatorView" destination="ZdA-e6-RMg" id="Q7t-C5-QTL"/>
                 <outlet property="popupView" destination="XRb-8p-PYf" id="yrC-Bo-6dm"/>
                 <outlet property="scanResultContentLabel" destination="V5J-9G-tbg" id="dwj-a7-4n4"/>
                 <outlet property="scanResultTitleLabel" destination="Cst-W4-Fbh" id="A8r-50-Uee"/>
@@ -34,71 +32,94 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-8p-PYf">
-                    <rect key="frame" x="39.333333333333343" y="323" width="314.33333333333326" height="206.33333333333337"/>
+                    <rect key="frame" x="39.333333333333343" y="344" width="314.33333333333326" height="189.33333333333337"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVj-TE-Sbr">
-                            <rect key="frame" x="65.666666666666643" y="30.000000000000004" width="183.33333333333337" height="58.333333333333343"/>
+                            <rect key="frame" x="20" y="25.000000000000004" width="274.33333333333331" height="59.333333333333343"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스캔 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-W4-Fbh">
-                                    <rect key="frame" x="52.666666666666657" y="0.0" width="78" height="22.333333333333332"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
+                                    <rect key="frame" x="96.333333333333314" y="0.0" width="82" height="23.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과를 확인하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5J-9G-tbg">
-                                    <rect key="frame" x="0.0" y="39.333333333333314" width="183.33333333333334" height="19"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과를 확인하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5J-9G-tbg">
+                                    <rect key="frame" x="45.333333333333329" y="40.333333333333314" width="183.66666666666669" height="19"/>
+                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g97-KM-SAv">
-                            <rect key="frame" x="20" y="128.33333333333331" width="274.33333333333331" height="38"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g97-KM-SAv">
+                            <rect key="frame" x="20" y="119.33333333333331" width="274.33333333333331" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qA8-2F-I5R">
-                                    <rect key="frame" x="0.0" y="0.0" width="132.33333333333334" height="38"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="50"/>
+                                    <color key="backgroundColor" name="veryLightGrey"/>
+                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="취소">
-                                        <color key="titleColor" name="primaryColor"/>
+                                    <state key="normal" title="뒤로가기">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPA-nR-DAc">
-                                    <rect key="frame" x="142.33333333333331" y="0.0" width="132" height="38"/>
+                                    <rect key="frame" x="144.66666666666669" y="0.0" width="129.66666666666669" height="50"/>
                                     <color key="backgroundColor" name="primaryColor"/>
-                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                    <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="BJH-o0-211"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="확인하기"/>
                                 </button>
                             </subviews>
                         </stackView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-e6-RMg" customClass="LottieAnimationView" customModule="Lottie">
+                            <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="189.33333333333334"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.31382865646258501" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="lVj-TE-Sbr" firstAttribute="top" secondItem="XRb-8p-PYf" secondAttribute="top" constant="30" id="03U-kS-3HJ"/>
+                        <constraint firstItem="lVj-TE-Sbr" firstAttribute="top" secondItem="XRb-8p-PYf" secondAttribute="top" constant="25" id="03U-kS-3HJ"/>
+                        <constraint firstAttribute="trailing" secondItem="ZdA-e6-RMg" secondAttribute="trailing" id="3GY-N0-1Qe"/>
                         <constraint firstItem="lVj-TE-Sbr" firstAttribute="centerX" secondItem="XRb-8p-PYf" secondAttribute="centerX" id="7Zy-nE-rWk"/>
                         <constraint firstItem="g97-KM-SAv" firstAttribute="centerX" secondItem="XRb-8p-PYf" secondAttribute="centerX" id="CfM-S7-GdS"/>
+                        <constraint firstItem="ZdA-e6-RMg" firstAttribute="leading" secondItem="XRb-8p-PYf" secondAttribute="leading" id="JlJ-qM-CbT"/>
+                        <constraint firstItem="lVj-TE-Sbr" firstAttribute="leading" secondItem="XRb-8p-PYf" secondAttribute="leading" constant="20" id="PqZ-CP-SEW"/>
                         <constraint firstItem="g97-KM-SAv" firstAttribute="leading" secondItem="XRb-8p-PYf" secondAttribute="leading" constant="20" id="XF3-VR-GrL"/>
-                        <constraint firstAttribute="bottom" secondItem="g97-KM-SAv" secondAttribute="bottom" constant="40" id="j5J-C8-CJN"/>
-                        <constraint firstItem="g97-KM-SAv" firstAttribute="top" secondItem="lVj-TE-Sbr" secondAttribute="bottom" constant="40" id="wz3-gB-dR6"/>
+                        <constraint firstAttribute="bottom" secondItem="ZdA-e6-RMg" secondAttribute="bottom" id="Zdr-l4-mbW"/>
+                        <constraint firstAttribute="bottom" secondItem="g97-KM-SAv" secondAttribute="bottom" constant="20" id="j5J-C8-CJN"/>
+                        <constraint firstItem="g97-KM-SAv" firstAttribute="top" secondItem="lVj-TE-Sbr" secondAttribute="bottom" constant="35" id="wz3-gB-dR6"/>
+                        <constraint firstItem="ZdA-e6-RMg" firstAttribute="top" secondItem="XRb-8p-PYf" secondAttribute="top" id="x8Q-j9-SQs"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="XRb-8p-PYf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P3T-ux-nMS"/>
+                <constraint firstItem="XRb-8p-PYf" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="73z-Q4-oSA"/>
                 <constraint firstItem="XRb-8p-PYf" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="ch9-8v-IRd"/>
                 <constraint firstItem="XRb-8p-PYf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dWE-jr-tIY"/>
             </constraints>
             <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>
         </view>
     </objects>
+    <designables>
+        <designable name="ZdA-e6-RMg"/>
+    </designables>
     <resources>
         <namedColor name="primaryColor">
             <color red="1" green="0.58823529411764708" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightGrey">
+            <color red="0.89999997615814209" green="0.89999997615814209" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

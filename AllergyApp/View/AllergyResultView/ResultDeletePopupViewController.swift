@@ -11,6 +11,7 @@ import RxCocoa
 
 class ResultDeletePopupViewController: UIViewController {
     
+    @IBOutlet weak var popupTitleLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -19,6 +20,9 @@ class ResultDeletePopupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.popupTitleLabel.font = UIFont(name: "NanumSquareEB", size: 19.0)
         
         dismissButton.rx.tap
             .bind(onNext: {

@@ -49,6 +49,9 @@
 		93577D2629A367CC00170EA6 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */; };
 		93577D2A29A4E6D500170EA6 /* CheckDeletePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93577D2929A4E6D500170EA6 /* CheckDeletePopup.xib */; };
 		93AF470A29A6462A0094D1A7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF470929A6462A0094D1A7 /* CustomTextField.swift */; };
+		93AF470C29A89F040094D1A7 /* indicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 93AF470B29A89F040094D1A7 /* indicator.json */; };
+		93AF470E29A8A9EC0094D1A7 /* indicator2.json in Resources */ = {isa = PBXBuildFile; fileRef = 93AF470D29A8A9EB0094D1A7 /* indicator2.json */; };
+		93AF471029A8B67A0094D1A7 /* indicator3.json in Resources */ = {isa = PBXBuildFile; fileRef = 93AF470F29A8B6790094D1A7 /* indicator3.json */; };
 		93CDF9B329A4E8750087364D /* CheckDeletePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */; };
 		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
@@ -107,6 +110,9 @@
 		93577D2529A367CC00170EA6 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		93577D2929A4E6D500170EA6 /* CheckDeletePopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckDeletePopup.xib; sourceTree = "<group>"; };
 		93AF470929A6462A0094D1A7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		93AF470B29A89F040094D1A7 /* indicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicator.json; sourceTree = "<group>"; };
+		93AF470D29A8A9EB0094D1A7 /* indicator2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicator2.json; sourceTree = "<group>"; };
+		93AF470F29A8B6790094D1A7 /* indicator3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicator3.json; sourceTree = "<group>"; };
 		93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDeletePopupViewController.swift; sourceTree = "<group>"; };
 		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 		0F8512B32843B7F800A059A1 /* AllergyApp */ = {
 			isa = PBXGroup;
 			children = (
+				93AF470F29A8B6790094D1A7 /* indicator3.json */,
+				93AF470D29A8A9EB0094D1A7 /* indicator2.json */,
+				93AF470B29A89F040094D1A7 /* indicator.json */,
 				0F8512C22843B7FA00A059A1 /* Info.plist */,
 				93577D2429A365D500170EA6 /* Extension */,
 				932DF7CB29A35AF5002223C9 /* Assets */,
@@ -387,9 +396,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AF470C29A89F040094D1A7 /* indicator.json in Resources */,
 				0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */,
 				93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */,
+				93AF471029A8B67A0094D1A7 /* indicator3.json in Resources */,
 				0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */,
+				93AF470E29A8A9EC0094D1A7 /* indicator2.json in Resources */,
 				0FD2A4D429A7562A005EC389 /* ResultDeletePopup.xib in Resources */,
 				93577D1B29A360AD00170EA6 /* NanumSquareRoundB.ttf in Resources */,
 				93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */,
@@ -636,7 +648,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5YFP2CJ2SY;
+				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -665,7 +677,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5YFP2CJ2SY;
+				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

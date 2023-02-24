@@ -159,7 +159,7 @@ class MyAllergyViewController: UIViewController, UIScrollViewDelegate {
         
         
         dismissButton.rx.tap.bind(onNext: {
-            self.dismiss(animated: false)
+            self.dismiss(animated: true)
         }).disposed(by: disposeBag)
         
         
