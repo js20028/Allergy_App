@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Cafe24Ssurround.ttf</string>
 		<string>NanumSquareB.ttf</string>
 		<string>NanumSquareEB.ttf</string>
 		<string>NanumSquareL.ttf</string>

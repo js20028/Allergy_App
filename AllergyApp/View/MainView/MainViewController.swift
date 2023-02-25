@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var barcodeView: BarcodeView!
     @IBOutlet weak var showLabelButton: UIButton!
     @IBOutlet weak var showLabel: UILabel!
+    @IBOutlet weak var logoLabel: UILabel!
     
     let viewModel: MainViewModel
     
@@ -44,6 +45,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.barcodeView.delegate = self
+        self.logoLabel.font = UIFont(name: "Cafe24Ssurround", size: 24.0)
         
         
         let tapGesture = UITapGestureRecognizer()

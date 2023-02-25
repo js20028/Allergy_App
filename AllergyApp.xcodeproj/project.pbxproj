@@ -52,6 +52,7 @@
 		93AF470C29A89F040094D1A7 /* indicator.json in Resources */ = {isa = PBXBuildFile; fileRef = 93AF470B29A89F040094D1A7 /* indicator.json */; };
 		93AF470E29A8A9EC0094D1A7 /* indicator2.json in Resources */ = {isa = PBXBuildFile; fileRef = 93AF470D29A8A9EB0094D1A7 /* indicator2.json */; };
 		93AF471029A8B67A0094D1A7 /* indicator3.json in Resources */ = {isa = PBXBuildFile; fileRef = 93AF470F29A8B6790094D1A7 /* indicator3.json */; };
+		93AF475529AA0EE70094D1A7 /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93AF475429AA0EE70094D1A7 /* Cafe24Ssurround.ttf */; };
 		93CDF9B329A4E8750087364D /* CheckDeletePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */; };
 		93CEBFCB298A43B60021BD4F /* TotalAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */; };
 		93CEBFCD298A44140021BD4F /* TotalAllergyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */; };
@@ -113,6 +114,7 @@
 		93AF470B29A89F040094D1A7 /* indicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicator.json; sourceTree = "<group>"; };
 		93AF470D29A8A9EB0094D1A7 /* indicator2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicator2.json; sourceTree = "<group>"; };
 		93AF470F29A8B6790094D1A7 /* indicator3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicator3.json; sourceTree = "<group>"; };
+		93AF475429AA0EE70094D1A7 /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
 		93CDF9B229A4E8750087364D /* CheckDeletePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDeletePopupViewController.swift; sourceTree = "<group>"; };
 		93CEBFCA298A43B60021BD4F /* TotalAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewController.swift; sourceTree = "<group>"; };
 		93CEBFCC298A44140021BD4F /* TotalAllergyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAllergyViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		93577D0329A3603400170EA6 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				93AF475429AA0EE70094D1A7 /* Cafe24Ssurround.ttf */,
 				93577D1729A360AD00170EA6 /* NanumSquareRoundB.ttf */,
 				93577D1629A360AD00170EA6 /* NanumSquareRoundEB.ttf */,
 				93577D1429A360AD00170EA6 /* NanumSquareRoundL.ttf */,
@@ -403,6 +406,7 @@
 				0F8512BE2843B7FA00A059A1 /* Assets.xcassets in Resources */,
 				93AF470E29A8A9EC0094D1A7 /* indicator2.json in Resources */,
 				0FD2A4D429A7562A005EC389 /* ResultDeletePopup.xib in Resources */,
+				93AF475529AA0EE70094D1A7 /* Cafe24Ssurround.ttf in Resources */,
 				93577D1B29A360AD00170EA6 /* NanumSquareRoundB.ttf in Resources */,
 				93CEC01E298A5E300021BD4F /* ShowAllergyTableViewCell.xib in Resources */,
 				0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */,

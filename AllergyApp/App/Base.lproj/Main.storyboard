@@ -32,6 +32,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알러드림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-rd-rzR">
+                                <rect key="frame" x="24" y="83" width="59" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-bY-Y5o">
                                 <rect key="frame" x="303.33333333333331" y="73" width="75.666666666666686" height="75.666666666666686"/>
                                 <color key="tintColor" name="veryLightGrey"/>
@@ -119,7 +125,9 @@
                             <constraint firstItem="N7P-2C-EmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Y0g-Rs-MI6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N7P-2C-EmX" secondAttribute="bottom" constant="30" id="bno-MM-GGp"/>
                             <constraint firstItem="0Ae-Cr-3Te" firstAttribute="trailing" secondItem="QQK-bY-Y5o" secondAttribute="trailing" constant="-10" id="e8Q-fI-t6v"/>
+                            <constraint firstItem="ZLv-rd-rzR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="gbo-vn-yTn"/>
                             <constraint firstItem="9AJ-Mx-Yep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1y-nW-teH"/>
+                            <constraint firstItem="ZLv-rd-rzR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="m81-4n-S23"/>
                             <constraint firstItem="0Ae-Cr-3Te" firstAttribute="top" secondItem="QQK-bY-Y5o" secondAttribute="bottom" constant="-20" id="vmE-Im-V19"/>
                         </constraints>
                     </view>
@@ -127,6 +135,7 @@
                     <connections>
                         <outlet property="barcodeView" destination="9AJ-Mx-Yep" id="c1k-Vn-7e5"/>
                         <outlet property="loadAllergyButton" destination="SWl-iP-Dyn" id="HSn-9n-UFW"/>
+                        <outlet property="logoLabel" destination="ZLv-rd-rzR" id="plq-y7-dCc"/>
                         <outlet property="menuView" destination="N7P-2C-EmX" id="Enh-Nb-Shd"/>
                         <outlet property="registerAllergyButton" destination="2nb-EE-5Db" id="rkJ-gQ-Imn"/>
                         <outlet property="showLabel" destination="AwY-XH-gcH" id="QQF-dJ-Nf8"/>
@@ -223,7 +232,7 @@
                                                 <state key="normal" image="fi-rr-angle-small-left"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="저장된 결과" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-VL-2xY">
-                                                <rect key="frame" x="83.333333333333329" y="0.0" width="208.33333333333337" height="33.333333333333336"/>
+                                                <rect key="frame" x="83.333333333333329" y="0.0" width="208.33333333333343" height="33.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
