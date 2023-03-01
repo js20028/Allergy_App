@@ -43,6 +43,8 @@ class MainViewModel {
     let checkResultButtonTapped = PublishSubject<Void>()
     let scanButtonTapped = PublishSubject<Void>()
     
+    let descriptionStatus = PublishRelay<showLabel>()
+    
     init(allergyModel: AllergyModel, fetchBarcodeInfo: FetchBarcodeInfo, fetchProductInfo: FetchProductInfo) {
         self.allergyModel = allergyModel
         self.fetchBarcodeInfo = fetchBarcodeInfo
@@ -108,6 +110,15 @@ class MainViewModel {
                         
                     })
                     .disposed(by: self.disposeBag)
+            })
+            .disposed(by: disposeBag)
+        
+        descriptionStatus
+//            .distinctUntilChanged()
+            .subscribe(onNext: {
+                print($0, " 달라 0")
+                UserDefault().setUserDefault(check: $0)
+                print($0, " 달라 0 1")
             })
             .disposed(by: disposeBag)
     }
