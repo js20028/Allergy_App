@@ -12,7 +12,7 @@ import CoreData
 
 class AllergyModel {
     
-    
+    let fisrtOn = PublishRelay<Bool>()
     var testAllergy: [Allergy] = []
             
     // value에는 coredata에서 받아온 값을 넣어줌 (일단은 임시로 testAllergy를 넣음)
@@ -22,7 +22,41 @@ class AllergyModel {
     
     init() {
         // 첨에 allergyModel이 init될때 coredata 불러오기
-        fetchAllergies()
+        
+        if UserDefault().loadFirstOnUserDefault() == true {
+            print("이거")
+            fetchAllergies()
+        } else {
+            print("이거거")
+            UserDefault().setFirestOnUserDeafault(firstOn: true)
+            
+            testAllergy = [
+                Allergy(allergyName: "우유", myAllergy: false),
+                Allergy(allergyName: "메밀", myAllergy: false),
+                Allergy(allergyName: "땅콩", myAllergy: false),
+                Allergy(allergyName: "대두", myAllergy: false),
+                Allergy(allergyName: "밀", myAllergy: false),
+                Allergy(allergyName: "고등어", myAllergy: false),
+                Allergy(allergyName: "게", myAllergy: false),
+                Allergy(allergyName: "새우", myAllergy: false),
+                Allergy(allergyName: "복숭아", myAllergy: false),
+                Allergy(allergyName: "토마토", myAllergy: false),
+                Allergy(allergyName: "아황산류", myAllergy: false),
+                Allergy(allergyName: "호두", myAllergy: false),
+                Allergy(allergyName: "닭고기", myAllergy: false),
+                Allergy(allergyName: "쇠고기", myAllergy: false),
+                Allergy(allergyName: "돼지고기", myAllergy: false),
+                Allergy(allergyName: "오징어", myAllergy: false),
+                Allergy(allergyName: "조개류", myAllergy: false),
+                Allergy(allergyName: "잣", myAllergy: false),
+                Allergy(allergyName: "깨", myAllergy: false),
+                Allergy(allergyName: "두유", myAllergy: false)
+            ]
+            
+            self.totalAllergy.accept(testAllergy)
+            saveAllergies()
+        }
+        
 
         totalAllergy.bind(onNext: { allergies in
             // 여기에 totalAllergy값을 coredata에 저장
@@ -77,7 +111,10 @@ class AllergyModel {
                 result.append(Allergy(allergyName: allergy.allergyName ?? "nothing", myAllergy: allergy.myAllergy))
             }
             
+            result.sort { $0.allergyName < $1.allergyName }
             self.testAllergy = result // testAllergy에 불러온값 저장
+            
+            
             print(result,"불러온값 있음?")
             // result 변수에 [Allergy]가 담겨있습니다.
         } catch {

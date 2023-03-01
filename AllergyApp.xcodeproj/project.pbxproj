@@ -39,6 +39,7 @@
 		932DF7C5299B5A58002223C9 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7C4299B5A58002223C9 /* BarCodeView.swift */; };
 		932DF7C7299B7456002223C9 /* CheckResultPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932DF7C6299B7456002223C9 /* CheckResultPopup.xib */; };
 		932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */; };
+		9348AE5F29AF6C760028B798 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348AE5E29AF6C760028B798 /* LaunchScreenViewController.swift */; };
 		93577D1829A360AD00170EA6 /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1429A360AD00170EA6 /* NanumSquareRoundL.ttf */; };
 		93577D1929A360AD00170EA6 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1529A360AD00170EA6 /* NanumSquareRoundR.ttf */; };
 		93577D1A29A360AD00170EA6 /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93577D1629A360AD00170EA6 /* NanumSquareRoundEB.ttf */; };
@@ -102,6 +103,7 @@
 		932DF7C4299B5A58002223C9 /* BarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 		932DF7C6299B7456002223C9 /* CheckResultPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckResultPopup.xib; sourceTree = "<group>"; };
 		932DF7C8299B7595002223C9 /* CheckResultPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckResultPopupViewController.swift; sourceTree = "<group>"; };
+		9348AE5E29AF6C760028B798 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		93577D1429A360AD00170EA6 /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		93577D1529A360AD00170EA6 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		93577D1629A360AD00170EA6 /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				0F8512BA2843B7F800A059A1 /* Main.storyboard */,
 				93FBFBF8298A3B1900337B86 /* ShowAllergy.storyboard */,
 				0F8512BF2843B7FA00A059A1 /* LaunchScreen.storyboard */,
+				9348AE5E29AF6C760028B798 /* LaunchScreenViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				0F83758A2982783200ACE1A5 /* LoadAllergyCollectionViewCell.swift in Sources */,
 				93CDF9B329A4E8750087364D /* CheckDeletePopupViewController.swift in Sources */,
 				0F837587298263BF00ACE1A5 /* LoadAllergyViewModel.swift in Sources */,
+				9348AE5F29AF6C760028B798 /* LaunchScreenViewController.swift in Sources */,
 				0F64C17A2996285D009AB81C /* FetchBarcodeInfo.swift in Sources */,
 				932DF7C9299B7595002223C9 /* CheckResultPopupViewController.swift in Sources */,
 				0FD2A4D629A75F7E005EC389 /* ResultDeletePopupViewController.swift in Sources */,
@@ -656,11 +660,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5YFP2CJ2SY;
+				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 스캔을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -685,11 +690,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5YFP2CJ2SY;
+				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 스캔을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

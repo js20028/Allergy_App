@@ -23,6 +23,16 @@ class UserDefault {
         
         return loadDescriptionDecoder
     }
+    
+    func setFirestOnUserDeafault(firstOn: Bool) {
+        userDefault.set(firstOn, forKey: "firstOn")
+    }
+    
+    func loadFirstOnUserDefault() -> Bool {
+        guard let loadFirstOn = userDefault.bool(forKey: "firstOn") as? Bool else { return false }
+        print(loadFirstOn,"asdasdas")
+        return loadFirstOn
+    }
 }
 
 
