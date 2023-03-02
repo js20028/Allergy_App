@@ -32,6 +32,8 @@
 		0FD2A4D829AF3E84005EC389 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2A4D729AF3E84005EC389 /* UserDefault.swift */; };
 		0FEB909629A39D3E00C64D3D /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB909529A39D3E00C64D3D /* ExtensionUIView.swift */; };
 		52E5A03AE8D7D98201D1CCC9 /* Pods_AllergyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */; };
+		930F371729B09A3A00457CAD /* circleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 930F371629B09A3A00457CAD /* circleLogo.png */; };
+		930F371D29B09CC200457CAD /* label1.png in Resources */ = {isa = PBXBuildFile; fileRef = 930F371C29B09CC200457CAD /* label1.png */; };
 		931716CE2993EC5E00819089 /* DirectAddMyAllergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */; };
 		932DF7BC2997DA49002223C9 /* FetchProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */; };
 		932DF7BE2997DAA9002223C9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932DF7BD2997DAA9002223C9 /* Product.swift */; };
@@ -96,6 +98,8 @@
 		1C562F17ECB7C790266BA6A4 /* Pods-AllergyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.debug.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1F000C0B8422157402BE36D8 /* Pods-AllergyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyApp.release.xcconfig"; path = "Target Support Files/Pods-AllergyApp/Pods-AllergyApp.release.xcconfig"; sourceTree = "<group>"; };
 		4FF71929408CA382399B6C83 /* Pods_AllergyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930F371629B09A3A00457CAD /* circleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleLogo.png; sourceTree = "<group>"; };
+		930F371C29B09CC200457CAD /* label1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = label1.png; sourceTree = "<group>"; };
 		931716CD2993EC5E00819089 /* DirectAddMyAllergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAddMyAllergyViewController.swift; sourceTree = "<group>"; };
 		932DF7BB2997DA49002223C9 /* FetchProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductInfo.swift; sourceTree = "<group>"; };
 		932DF7BD2997DAA9002223C9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 		932DF7CB29A35AF5002223C9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				930F371C29B09CC200457CAD /* label1.png */,
+				930F371629B09A3A00457CAD /* circleLogo.png */,
 				93577D0329A3603400170EA6 /* Font */,
 				0F8512BD2843B7FA00A059A1 /* Assets.xcassets */,
 			);
@@ -405,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930F371729B09A3A00457CAD /* circleLogo.png in Resources */,
 				93AF470C29A89F040094D1A7 /* indicator.json in Resources */,
 				0F8512C12843B7FA00A059A1 /* LaunchScreen.storyboard in Resources */,
 				93FBFBF9298A3B1A00337B86 /* ShowAllergy.storyboard in Resources */,
@@ -418,6 +425,7 @@
 				0F8512BC2843B7F800A059A1 /* Main.storyboard in Resources */,
 				93577D2229A364A400170EA6 /* NanumSquareL.ttf in Resources */,
 				93577D2329A364A400170EA6 /* NanumSquareR.ttf in Resources */,
+				930F371D29B09CC200457CAD /* label1.png in Resources */,
 				93577D1A29A360AD00170EA6 /* NanumSquareRoundEB.ttf in Resources */,
 				93577D1929A360AD00170EA6 /* NanumSquareRoundR.ttf in Resources */,
 				93577D2A29A4E6D500170EA6 /* CheckDeletePopup.xib in Resources */,
@@ -588,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -642,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -664,23 +672,29 @@
 				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "알러드림";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 스캔을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sun.AllergyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -696,23 +710,29 @@
 				DEVELOPMENT_TEAM = 4J3RK7L42Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllergyApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "알러드림";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 스캔을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sun.AllergyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
