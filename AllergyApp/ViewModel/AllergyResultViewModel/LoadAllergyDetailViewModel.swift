@@ -22,6 +22,10 @@ class LoadAllergyDetailViewModel {
     
     let deleteButtonTapped: PublishSubject<Void>
     
+//    let popupTitleText = BehaviorSubject<String>(value: "정말로 삭제하시겠습니까?")
+//    let popupContentText = BehaviorSubject<String>(value: "저장된 알러지 결과가 삭제됩니다.")
+//    let popupConfirmButtonText = BehaviorSubject<String>(value: "삭제")
+    
     init(_ selectedAllergy: AllergyResult) {
         
         allergyDetail = PublishSubject()

@@ -159,6 +159,7 @@ class BarcodeView: UIView {
 extension BarcodeView {
     func start() {
         print("start")
+        
         DispatchQueue.global(qos: .background).async {
             // Call startRunning() method here
             self.captureSession?.startRunning()

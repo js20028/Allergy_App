@@ -16,7 +16,8 @@ enum allergyViewStatus {
 }
 
 class CheckDeletePopupViewController: UIViewController {
-    
+    @IBOutlet weak var popupTitleLabel: UILabel!
+    @IBOutlet weak var popupContentLabel: UILabel!
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
@@ -61,9 +62,15 @@ extension CheckDeletePopupViewController {
     func configureButton() {
         self.dismissButton.layer.cornerRadius = 10
         self.deleteButton.layer.cornerRadius = 10
+        self.popUpView.layer.cornerRadius = 20
+        self.popupTitleLabel.font = UIFont(name: "NanumSquareEB", size: 19.0)
     }
     
     func configurePopupView() {
-        self.popUpView.layer.cornerRadius = 10
+        
+    }
+    
+    func configureLabel() {
+        
     }
 }
