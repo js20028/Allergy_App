@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 네트워크 감지
         startMonitoring()
         
-        sleep(5)
+        sleep(1)
         
 //        for family in UIFont.familyNames{
 //            print(family)
