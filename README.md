@@ -28,8 +28,6 @@
 
 
 - 결과창, 상세 결과창
-)
-![resultView](https://user-images.githubusercontent.com/53727139/222715327-7b9ccdc6-4852-4e2f-9d96-b624f21c9d0e.PNG
 <p>
 <img width="250" src="resultView](https://user-images.githubusercontent.com/53727139/222715327-7b9ccdc6-4852-4e2f-9d96-b624f21c9d0e.PNG"/>
 
