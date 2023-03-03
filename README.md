@@ -26,6 +26,8 @@
 - Splash 화면
 <img width="250" src="https://user-images.githubusercontent.com/53727139/222715787-bcba072c-9cc8-4488-864d-4f3efdf3c2b0.gif"/>
 
+- 메인 화면(바코드 스캔 화면)
+<img width="250" src="https://user-images.githubusercontent.com/68904961/222719198-8307a445-8e19-4d23-9743-11753693b687.gif"/>
 >
 - 결과창, 상세 결과창
 <p>
