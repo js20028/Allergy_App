@@ -1,19 +1,24 @@
 # Allergy_App
 
-<h2>DB 모델링<h2><br>
-  
-|Allergy| |
-|---------|---|
-|id|integer|
-|level|integer|
-|myAllergy|varchar(10)|
-|allergyName|varchar(30)|
-|highLevelAllergy|varchar(30)|
+### 알러드림
 
-|Result| |
-|---------|---|
-|id|integer|
-|productName|varchar(100)|
-|productContent|text|
-|allergyResult|text|
-|create_date|text|
+> 김정태
+> 
+
+> 프로젝트 기간 : 2023.01.26 ~ 2023.03.02
+> 
+
+### 1. 개발 환경
+
+- xcode 14.2
+- swift 5.7.0
+
+### 2. 라이브러리
+
+- Toast-Swift
+- MaterialComponents/BottomSheet
+- lottie-io
+- RxSwift, RxCocoa
+- Alamofire
+
+### 3. 앱 소개
