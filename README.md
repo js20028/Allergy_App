@@ -40,6 +40,8 @@
 <img width="250" src="https://user-images.githubusercontent.com/53727139/222715321-d5ab7666-75ce-4092-9e4f-b5ad9dcad4dd.PNG"/>
 </p>
 
+<br>
+
 - 전체 알러지, 나의 알러지 
 <p>
 <img width="250" src="https://user-images.githubusercontent.com/53727139/222715286-b49febd5-f9ff-47bd-b25d-6c4445a7e50f.PNG"/>
