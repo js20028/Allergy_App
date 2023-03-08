@@ -15,6 +15,7 @@
 
 ### 2. 라이브러리
 
+- CoreData
 - Toast-Swift
 - MaterialComponents/BottomSheet
 - lottie-io
