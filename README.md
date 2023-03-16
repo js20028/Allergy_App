@@ -18,7 +18,7 @@
 - CoreData
 - Toast-Swift
 - MaterialComponents/BottomSheet
-- lottie-io
+- lottie-ios
 - RxSwift, RxCocoa
 - Alamofire
 
